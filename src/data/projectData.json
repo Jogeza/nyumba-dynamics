@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "House Cleaning",
+        "description": "Metus nibh mattis eget nibh placerat nulla cursus. Diam sit lorem vulputate risus aliquet morbi. Sagittis commodo urna turpis mauris maecenas adipiscing eros orci neque.",
+        "image": "project-img1.jpg",
+        "link": "/Project1Single"
+    },
+    {
+        "id": 2,
+        "title": "Office Cleaning",
+        "description": "Metus nibh mattis eget nibh placerat nulla cursus. Diam sit lorem vulputate risus aliquet morbi. Sagittis commodo urna turpis mauris maecenas adipiscing eros orci neque.",
+        "image": "project-img2.jpg",
+        "link": "/Project2Single"
+    },
+    {
+        "id": 3,
+        "title": "Carpet Cleaning",
+        "description": "Metus nibh mattis eget nibh placerat nulla cursus. Diam sit lorem vulputate risus aliquet morbi. Sagittis commodo urna turpis mauris maecenas adipiscing eros orci neque.",
+        "image": "project-img3.jpg",
+        "link": "/Project3Single"
+    },
+    {
+        "id": 4,
+        "title": "Kitchen Cleaning",
+        "description": "Metus nibh mattis eget nibh placerat nulla cursus. Diam sit lorem vulputate risus aliquet morbi. Sagittis commodo urna turpis mauris maecenas adipiscing eros orci neque.",
+        "image": "project-img4.jpg",
+        "link": "/Project1Single"
+    },
+    {
+        "id": 5,
+        "title": "Window Cleaning",
+        "description": "Metus nibh mattis eget nibh placerat nulla cursus. Diam sit lorem vulputate risus aliquet morbi. Sagittis commodo urna turpis mauris maecenas adipiscing eros orci neque.",
+        "image": "project-img5.jpg",
+        "link": "/Project2Single"
+    },
+    {
+        "id": 6,
+        "title": "Corporate Cleaning",
+        "description": "Metus nibh mattis eget nibh placerat nulla cursus. Diam sit lorem vulputate risus aliquet morbi. Sagittis commodo urna turpis mauris maecenas adipiscing eros orci neque.",
+        "image": "project-img6.jpg",
+        "link": "/Project2Single"
+    }
+]
