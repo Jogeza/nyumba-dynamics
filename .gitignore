@@ -1,6 +1,5 @@
 node_modules/
 .next/
+build/
 .env
 .env.local
-out/
-coverage/
