@@ -40,12 +40,14 @@ const About: React.FC = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-xxl-6 col-xl-6 col-lg-6">
-                            <p className="cap-text fade_in">about home rakshak cleaning</p>
-                            <h2 className="sec-text fade_up">Let Us Handle The Mess, You Enjoy The Clean</h2>
-                            <p className="sec-sub-text fade_up">Eu ornare ac amet at tempor id sollicitudin. Mi nam faucibus turpis
-                                eu feugiat feugiat aliquet. Ac tristique nibh vulputate convallis elementum risus nisl mus. Amet
-                                ornare suscipit arcu feugiat. Rhoncus varius egestas quis ut vitae elit enim egestas gravida
-                                duis id morbi gravida tellus vitae ac.</p>
+                            <p className="cap-text fade_in">about nyumba dynamics</p>
+                            <h2 className="sec-text fade_up">Our Mission Is Your Peace of Mind</h2>
+                            <p className="sec-sub-text fade_up">HEMS Nyumba Dynamics Company Limited (NYD) is a handyman services
+                                company based in Kampala, Uganda, founded in 2025. We specialise in Home and Enterprise
+                                Maintenance Services (HEMS) — from basic construction and repair, such as electrical, plumbing
+                                and masonry, to advanced solutions like smart home integration and security systems. Our mission
+                                is to provide exceptional, professional and trustworthy service that keeps homes and businesses
+                                functional, efficient and stress-free.</p>
                             <div className="about-grid-box-main">
                                 <div className="about-box-main zoom_in">
                                     <div className="about-svg-main">
@@ -166,7 +168,7 @@ const About: React.FC = () => {
                     <div className="row why-choose-row">
                         <div className="col-xxl-6 col-xl-6 col-lg-6">
                             <p className="cap-text fade_up">why choose us</p>
-                            <h2 className="sec-text fade_up">We Will Make Absolutely Any Place Clean, Neat & Tidy.</h2>
+                            <h2 className="sec-text fade_up">All Services Under One Roof, Done Right The First Time.</h2>
                             <p className="sec-sub-text fade_up">Eu nascetur vitae odio faucibus sed pharetra. Mus tempus risus purus
                                 diam orci mi. Amet cras urna amet tincidunt enim arcu aliquet massa enim. A aliquam quis
                                 sagittis sapien. Vel aliquam mi pulvinar pulvinar urna.</p>

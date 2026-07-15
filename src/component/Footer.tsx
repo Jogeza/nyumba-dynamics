@@ -98,7 +98,7 @@ const Footer = () => {
                             </div>
                             <div>
                                 <p>CALL US NOW!</p>
-                                <a href="tel:+13457869999">+1 345-786-9999</a>
+                                <a href="tel:+256751353757">+256 7513 53757</a>
                             </div>
                         </div>
                         <div className="footer-med-icons-main">
@@ -111,7 +111,7 @@ const Footer = () => {
                             <a href="https://www.instagram.com" className="footer-med-icons">
                                 <img src={insta} alt="insta" />
                             </a>
-                            <a href="https://wa.me/+1234567890" className="footer-med-icons">
+                            <a href="https://wa.me/+256751353757" className="footer-med-icons">
                                 <img src={whatsapp} alt="whatsapp" />
                             </a>
                         </div>

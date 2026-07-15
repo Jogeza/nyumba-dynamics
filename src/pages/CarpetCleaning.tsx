@@ -16,11 +16,11 @@ const CarpetCleaning: React.FC = () => {
             {/* <!-- ====================================== About Hero Section ===================================== --> */}
             <section className="heroSection">
                 <div className="container">
-                    <h1 className="img-header-text fade_down">Carpet Cleaning</h1>
+                    <h1 className="img-header-text fade_down">Painting & Finishing</h1>
                     <div className="breadcrumb-group fade_up">
                         <Link to="/">HOME / </Link>
                         <Link to="/Services">Service / </Link>
-                        <Link to="/CarpetCleaning">Carpet Cleaning</Link>
+                        <Link to="/CarpetCleaning">Painting & Finishing</Link>
                     </div>
                 </div>
             </section>
@@ -29,7 +29,7 @@ const CarpetCleaning: React.FC = () => {
                 <div className="container">
                     <div className="row all-services-row">
                         <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12">
-                            <h2 className="sec-text pb-0 fade_up">Deep Carpet Cleaning for a Healthier Home</h2>
+                            <h2 className="sec-text pb-0 fade_up">Interior & Exterior Painting, Done Right</h2>
                             <img className="layers-img1 zoom_in" src={CarpetImg1} alt="carpet-img1" />
                             <p className="fusce pb-2">Volutpat et malesuada maecenas amet. Ultrices volutpat auctor euismod eget
                                 pulvinar nulla porttitor. Faucibus faucibus consectetur et tellus magnis. Nunc proin mauris enim
@@ -194,7 +194,7 @@ const CarpetCleaning: React.FC = () => {
                                             `service-list-arow-main ${isActive ? "active" : ""}`
                                         }
                                     >
-                                        <p>Carpet Cleaning</p>
+                                        <p>Painting & Finishing</p>
                                         <img src={CrossArrow} alt="right-arrow" />
                                     </NavLink>
 

@@ -16,11 +16,11 @@ const KitchenCleaning: React.FC = () => {
             {/* <!-- ====================================== About Hero Section ===================================== --> */}
             <section className="heroSection">
                 <div className="container">
-                    <h1 className="img-header-text fade_down">Kitchen Cleaning</h1>
+                    <h1 className="img-header-text fade_down">Plumbing Services</h1>
                     <div className="breadcrumb-group fade_up">
                         <Link to="/">HOME / </Link>
                         <Link to="/Services">Service / </Link>
-                        <Link to="/KitchenCleaning">Kitchen Cleaning</Link>
+                        <Link to="/KitchenCleaning">Plumbing Services</Link>
                     </div>
                 </div>
             </section>
@@ -29,7 +29,7 @@ const KitchenCleaning: React.FC = () => {
                 <div className="container">
                     <div className="row all-services-row">
                         <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12">
-                            <h2 className="sec-text pb-0 fade_up">Best Kitchen Cleaning Deals Near You</h2>
+                            <h2 className="sec-text pb-0 fade_up">Professional Plumbing Installation & Repairs</h2>
                             <img className="layers-img1" src={KitchanDetails1} alt="house-clening-img1" />
                             <p className="fusce pb-2">Volutpat et malesuada maecenas amet. Ultrices volutpat auctor euismod eget
                                 pulvinar nulla porttitor. Faucibus faucibus consectetur et tellus magnis. Nunc proin mauris enim
@@ -167,7 +167,7 @@ const KitchenCleaning: React.FC = () => {
                                             `service-list-arow-main ${isActive ? "active" : ""}`
                                         }
                                     >
-                                        <p>Kitchen Cleaning</p>
+                                        <p>Plumbing Services</p>
                                         <img src={CrossArrow} alt="right-arrow" />
                                     </NavLink>
 

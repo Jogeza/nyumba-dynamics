@@ -30,10 +30,11 @@ const HomeHeroSlider: React.FC = () => {
                             <div className="container">
                                 <div className="row main-swiper-row">
                                     <div className="col-xxl-6 col-xl-6 col-lg-10 clearfix-space animate-slide">
-                                        <p className="needs-text">needs professional cleaning</p>
-                                        <h1 className="lets-us-do">Let Us Do Your Dirty Work</h1>
-                                        <h2 className="residents">Hire us! We are a professional cleaning company offering all
-                                            type of cleaning and maintenance services.</h2>
+                                        <p className="needs-text">home and enterprise maintenance services</p>
+                                        <h1 className="lets-us-do">Hire The Right Professionals</h1>
+                                        <h2 className="residents">From electrical repairs and plumbing to CCTV installation, smart home
+                                            automation, interior design, cleaning and maintenance — Nyumba Dynamics delivers
+                                            trusted solutions for modern living, under one roof.</h2>
                                         <Link to="/Services" className="btn-quote our-services-btn">Our Services
                                             <img src={CrossArrow} alt="cross-arrow" />
                                         </Link>
@@ -61,10 +62,10 @@ const HomeHeroSlider: React.FC = () => {
                             <div className="container">
                                 <div className="row main-swiper-row">
                                     <div className="col-xxl-6 col-xl-6 col-lg-10 clearfix-space animate-slide">
-                                        <p className="needs-text">needs professional cleaning</p>
-                                        <h1 className="lets-us-do">Amazing quality cleaning service</h1>
-                                        <h2 className="residents">Hire us! We are a professional cleaning company offering all
-                                            type of cleaning and maintenance services.</h2>
+                                        <p className="needs-text">smart homes and security solutions</p>
+                                        <h1 className="lets-us-do">Smart Living, Made Simple</h1>
+                                        <h2 className="residents">CCTV systems, smart locks, smart lighting and home automation —
+                                            professionally installed and maintained by Nyumba Dynamics.</h2>
                                         <Link to="/Services" className="btn-quote our-services-btn">Our Services
                                             <img src={CrossArrow} alt="cross-arrow" />
                                         </Link>
@@ -95,10 +96,10 @@ const HomeHeroSlider: React.FC = () => {
                             <div className="container">
                                 <div className="row main-swiper-row">
                                     <div className="col-xxl-6 col-xl-6 col-lg-10 clearfix-space animate-slide">
-                                        <p className="needs-text">needs professional cleaning</p>
-                                        <h1 className="lets-us-do">Crystal Cove Cleaning Service</h1>
-                                        <h2 className="residents">Hire us! We are a professional cleaning company offering all
-                                            type of cleaning and maintenance services.</h2>
+                                        <p className="needs-text">construction, repair and handyman services</p>
+                                        <h1 className="lets-us-do">Nyumba Dynamics</h1>
+                                        <h2 className="residents">Electrical, plumbing, masonry, carpentry, welding and painting —
+                                            delivered by trusted professionals across Kampala.</h2>
                                         <Link to="/Services" className="btn-quote our-services-btn">Our Services
                                             <img src={CrossArrow} alt="cross-arrow" />
                                         </Link>

@@ -3,48 +3,48 @@
         "id": 1,
         "img": "slider-img1.jpg",
         "svg": "services-svg1.svg",
-        "title": "House Cleaning",
-        "desc": "Et massa lobortis velit facilisi nulla eu aliquam semper vestibulum. Nunc in morbi phasellus volutpat mi dolor viverra nibh mi.",
+        "title": "Electrical Services",
+        "desc": "Electrical wiring, lighting installation, repairs and maintenance — carried out safely by trained technicians.",
         "link": "/HouseCleaning"
     },
     {
         "id": 2,
         "img": "slider-img2.jpg",
         "svg": "services-svg2.svg",
-        "title": "Kitchen Cleaning",
-        "desc": "Feugiat nec magnis tellus nisl. Ut quam urna magna augue netus volutpat. Habitasse nulla tellus venenatis enim curabitur.",
+        "title": "Plumbing Services",
+        "desc": "Pipe installation, plumbing repairs, drainage systems and water system maintenance for homes and businesses.",
         "link": "/KitchenCleaning"
     },
     {
         "id": 3,
         "img": "slider-img3.jpg",
         "svg": "services-svg3.svg",
-        "title": "Office Cleaning",
-        "desc": "Lacinia consequat libero etiam non eget ut vel fermentum bibendum. Ullamcorper aliquam mauris venenatis id velit ut.",
+        "title": "Masonry Works",
+        "desc": "Bricklaying, concrete works, plastering and renovations handled by skilled, professionally managed teams.",
         "link": "/OfficeCleaning"
     },
     {
         "id": 4,
         "img": "slider-img4.jpg",
         "svg": "services-svg4.svg",
-        "title": "Window Cleaning",
-        "desc": "Netus vestibulum hendrerit amet nulla erat nulla aliquam magna faucibus. Purus nunc nulla pulvinar in luctus sodales.",
+        "title": "Carpentry & Joinery",
+        "desc": "Furniture installation, cabinet works, door and window framing, and wood finishing built to last.",
         "link": "/WindowCleaning"
     },
     {
         "id": 5,
         "img": "slider-img5.jpg",
         "svg": "services-svg5.svg",
-        "title": "Corporate Cleaning",
-        "desc": "Feugiat lorem tellus neque ipsum. A cras in pharetra at congue sed nulla ultricies. Tortor risus netus nisl risus ante nibh.",
+        "title": "Welding & Fabrication",
+        "desc": "Metal gates, security doors, structural fabrication and welding repairs for homes and enterprises.",
         "link": "/CorporateCleaning"
     },
     {
         "id": 6,
         "img": "slider-img6.jpg",
         "svg": "services-svg6.svg",
-        "title": "Carpet Cleaning",
-        "desc": "Tempus lobortis sit vel eu pellentesque ipsum habitant. Ut posuere arcu venenatis egestas sed hac vel nisi massa interdum lorem.",
+        "title": "Painting & Finishing",
+        "desc": "Interior and exterior painting with decorative finishes that protect and refresh every space.",
         "link": "/CarpetCleaning"
     }
 ]

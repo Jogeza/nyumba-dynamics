@@ -40,24 +40,25 @@ const ContactForm: React.FC = () => {
                         <div className="row form-sec-row">
 
                             <div className="col-xxl-6 col-xl-6 col-lg-5">
-                                <p className="cap-text fade_up">contact home rakshak</p>
+                                <p className="cap-text fade_up">contact nyumba dynamics</p>
                                 <h2 className="sec-text get-toch fade_up">Get In Touch With Us</h2>
                                 <p className="sec-sub-text fade_up">
-                                    Vel orci ullamcorper adipiscing nisl ac sed ut. In arcu morbi morbi euismod auctor nulla nunc adipiscing et aliquet vestibulum.
+                                    Request a service, ask for a quotation, or register as a partner or vendor —
+                                    our team responds fast, every day of the week.
                                 </p>
 
-                                <p className="call-support-text">Call Support Center 24/7</p>
-                                <a href="tel:+18042568899" className="tel-num">+1 804 256 8899</a>
+                                <p className="call-support-text">Call Us</p>
+                                <a href="tel:+256751353757" className="tel-num">+256 7513 53757</a>
 
                                 <div className="adres-main-home fade_up">
                                     <div>
                                         <p className="call-support-text">Our Address</p>
-                                        <p className="tel-num addees">12 Luc Lake City, NY, USA</p>
+                                        <p className="tel-num addees">Opposite St. Francis Primary School, Ntinda, Kampala, Uganda</p>
                                     </div>
                                     <div>
                                         <p className="call-support-text">Our Mail Address</p>
-                                        <a href="mailto:homerakshak@mail.com" className="tel-num addees">
-                                            homerakshak@mail.com
+                                        <a href="mailto:info@nyumbadynamics.com" className="tel-num addees">
+                                            info@nyumbadynamics.com
                                         </a>
                                     </div>
                                 </div>

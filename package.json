@@ -1,5 +1,6 @@
 {
-  "name": "cleaning",
+  "name": "nyumba-dynamics",
+  "description": "Nyumba Dynamics - Hire The Right Professionals",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

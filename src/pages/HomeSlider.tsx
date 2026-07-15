@@ -40,12 +40,12 @@ const HomeSlider: React.FC = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-xxl-6 col-xl-6 col-lg-6">
-                            <p className="cap-text fade_in">about home rakshak cleaning</p>
-                            <h2 className="sec-text fade_up">Let Us Handle The Mess, You Enjoy The Clean</h2>
-                            <p className="sec-sub-text fade_up">Eu ornare ac amet at tempor id sollicitudin. Mi nam faucibus turpis
-                                eu feugiat feugiat aliquet. Ac tristique nibh vulputate convallis elementum risus nisl mus. Amet
-                                ornare suscipit arcu feugiat. Rhoncus varius egestas quis ut vitae elit enim egestas gravida
-                                duis id morbi gravida tellus vitae ac.</p>
+                            <p className="cap-text fade_in">about nyumba dynamics</p>
+                            <h2 className="sec-text fade_up">Home and Enterprise Maintenance Services, Under One Roof</h2>
+                            <p className="sec-sub-text fade_up">HEMS Nyumba Dynamics Company Limited delivers professional handyman,
+                                construction and maintenance services for homes, offices, schools, hotels and shopping arcades
+                                across Kampala. We bridge the gap between unreliable informal technicians and expensive
+                                specialized contractors — offering affordable, dependable service you can trust.</p>
                             <div className="about-grid-box-main">
                                 <div className="about-box-main zoom_in">
                                     <div className="about-svg-main">
