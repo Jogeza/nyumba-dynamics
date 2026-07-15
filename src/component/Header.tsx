@@ -23,110 +23,115 @@ const Header = () => {
     const location = useLocation();
 
 
-    const toggleDropdown = (index: number) => {
-        setOpenDropdown(openDropdown === index ? null : index);
-    };
-
-
-    const isParentActive = (children: MenuChild[]) => {
-        return children.some(
-            (child) => child.link === location.pathname
+    const toggleDropdown = (index:number) => {
+        setOpenDropdown(
+            openDropdown === index ? null : index
         );
     };
+
+
+    const isParentActive = (children:MenuChild[]) => {
+
+        return children.some(
+            child => child.link === location.pathname
+        );
+
+    };
+
 
 
     const menuItems = [
 
         {
-            label: "Services",
-            children: [
+            label:"Services",
+            children:[
                 {
-                    label: "All Services",
-                    link: "/services"
+                    label:"All Services",
+                    link:"/services"
                 },
                 {
-                    label: "Property Development",
-                    link: "/services"
+                    label:"Property Development",
+                    link:"/services"
                 },
                 {
-                    label: "Real Estate Management",
-                    link: "/services"
+                    label:"Real Estate Management",
+                    link:"/services"
                 },
                 {
-                    label: "Interior Design",
-                    link: "/services"
+                    label:"Interior Design",
+                    link:"/services"
                 },
                 {
-                    label: "Construction Solutions",
-                    link: "/services"
+                    label:"Construction Solutions",
+                    link:"/services"
                 }
             ]
         },
 
 
         {
-            label: "Properties",
-            children: [
+            label:"Properties",
+            children:[
                 {
-                    label: "Residential Properties",
-                    link: "/properties"
+                    label:"Residential Properties",
+                    link:"/properties"
                 },
                 {
-                    label: "Commercial Properties",
-                    link: "/properties"
+                    label:"Commercial Properties",
+                    link:"/properties"
                 },
                 {
-                    label: "Luxury Developments",
-                    link: "/properties"
+                    label:"Luxury Developments",
+                    link:"/properties"
                 }
             ]
         },
 
 
         {
-            label: "Company",
-            children: [
+            label:"Company",
+            children:[
                 {
-                    label: "About Nyumba Dynamics",
-                    link: "/about"
+                    label:"About Nyumba Dynamics",
+                    link:"/about"
                 },
                 {
-                    label: "Our Team",
-                    link: "/team"
+                    label:"Our Team",
+                    link:"/team"
                 },
                 {
-                    label: "Request Consultation",
-                    link: "/consultation"
+                    label:"Request Consultation",
+                    link:"/consultation"
                 }
             ]
         },
 
 
         {
-            label: "Projects",
-            children: [
+            label:"Projects",
+            children:[
                 {
-                    label: "Completed Projects",
-                    link: "/properties"
+                    label:"Completed Projects",
+                    link:"/properties"
                 },
                 {
-                    label: "Upcoming Developments",
-                    link: "/properties"
+                    label:"Upcoming Developments",
+                    link:"/properties"
                 }
             ]
         },
 
 
         {
-            label: "Insights",
-            children: [
+            label:"Insights",
+            children:[
                 {
-                    label: "Real Estate News",
-                    link: "/blog"
+                    label:"Real Estate News",
+                    link:"/blog"
                 },
                 {
-                    label: "Property Guides",
-                    link: "/blog"
+                    label:"Property Guides",
+                    link:"/blog"
                 }
             ]
         }
@@ -135,141 +140,194 @@ const Header = () => {
 
 
 
+
     return (
 
         <>
 
-            {menuOpen && (
+
+            {
+                menuOpen &&
+
                 <div
                     className="overlay active"
                     onClick={() => setMenuOpen(false)}
                 />
-            )}
+
+            }
 
 
-            <header className="header" id="top-navbar">
+
+
+            <header 
+                className="header"
+                id="top-navbar"
+            >
+
+
 
                 <div className="header-container">
 
 
-                    <Link to="/" className="logo">
 
-                        <img 
-                            src={LogoSvg} 
-                            alt="Nyumba Dynamics Logo" 
+                    <Link
+                        to="/"
+                        className="logo nyumba-logo"
+                    >
+
+                        <img
+                            src={LogoSvg}
+                            alt="Nyumba Dynamics - Real Estate and Property Development"
                         />
 
                     </Link>
 
 
 
-                    <div 
+
+                    <div
                         className="hamburger"
                         onClick={() => setMenuOpen(!menuOpen)}
                     >
 
-                        {!menuOpen && (
-                            <img 
+
+                        {
+
+                            !menuOpen &&
+
+                            <img
                                 src={menu2}
                                 className="menu-icon"
-                                alt="menu"
+                                alt="Open menu"
                             />
-                        )}
+
+                        }
 
 
-                        {menuOpen && (
+
+                        {
+
+                            menuOpen &&
+
                             <img
                                 src={CloseIcon}
                                 className="close-icon"
-                                alt="close"
+                                alt="Close menu"
                             />
-                        )}
+
+                        }
+
 
                     </div>
 
 
 
 
-                    <nav 
+
+
+
+                    <nav
                         className={`nav ${menuOpen ? "open" : ""}`}
                     >
+
+
 
 
                         <div className="for-mobile-menu position-relative">
 
 
-                            <Link 
-                                to="/" 
-                                className="mobile-logo"
+
+                            <Link
+                                to="/"
+                                className="mobile-logo nyumba-mobile-logo"
                             >
 
                                 <img
                                     src={LogoSvg}
-                                    alt="Nyumba Dynamics"
+                                    alt="Nyumba Dynamics Logo"
                                 />
 
+
                             </Link>
+
+
 
 
 
                             <ul className="menu">
 
 
-                                {
-                                    menuItems.map((item,index)=>(
+                            {
 
-                                        <li 
-                                            key={index}
-                                            className="dropdown"
-                                        >
+                                menuItems.map((item,index)=>(
 
 
-                                            <button
-                                                className={
-                                                    `dropdown-btn ${
+                                    <li
+                                        key={index}
+                                        className="dropdown"
+                                    >
+
+
+
+
+                                        <button
+                                            className={
+                                                `dropdown-btn ${
                                                     isParentActive(item.children)
                                                     ? "active"
                                                     :""
-                                                    }`
-                                                }
+                                                }`
+                                            }
 
-                                                onClick={() =>
-                                                    toggleDropdown(index)
-                                                }
-                                            >
-
-                                                {item.label}
+                                            onClick={() =>
+                                                toggleDropdown(index)
+                                            }
+                                        >
 
 
-                                                <img
-                                                    src={DropdownArrow}
-                                                    alt="arrow"
-                                                />
-
-
-                                                <span className="dots-circle"></span>
-
-
-                                            </button>
+                                            {item.label}
 
 
 
+                                            <img
+                                                src={DropdownArrow}
+                                                alt="Dropdown arrow"
+                                            />
 
-                                            <ul
-                                                className={
-                                                    `submenu ${
+
+
+                                            <span className="dots-circle"></span>
+
+
+
+                                        </button>
+
+
+
+
+
+                                        <ul
+                                            className={
+                                                `submenu ${
                                                     openDropdown === index
                                                     ? "open"
                                                     :""
-                                                    }`
-                                                }
-                                            >
+                                                }`
+                                            }
+                                        >
 
-                                                {
-                                                    item.children.map(
-                                                        (sub,i)=>(
 
-                                                        <li key={i}>
+
+                                            {
+
+                                                item.children.map(
+                                                    (sub,i)=>(
+
+
+                                                        <li
+                                                            key={i}
+                                                        >
+
 
                                                             <Link
 
@@ -277,9 +335,10 @@ const Header = () => {
 
                                                                 className={
                                                                     location.pathname === sub.link
-                                                                    ? "active"
+                                                                    ?"active"
                                                                     :""
                                                                 }
+
 
                                                                 onClick={() =>
                                                                     setMenuOpen(false)
@@ -291,19 +350,29 @@ const Header = () => {
 
                                                             </Link>
 
+
                                                         </li>
 
-                                                    ))
-                                                }
+
+                                                    )
+
+                                                )
+
+                                            }
 
 
-                                            </ul>
+
+                                        </ul>
 
 
-                                        </li>
 
-                                    ))
-                                }
+
+                                    </li>
+
+
+                                ))
+
+                            }
 
 
 
@@ -333,7 +402,13 @@ const Header = () => {
 
 
 
+
+
+
                         <div className="nav-actions">
+
+
+
 
 
                             <div className="call">
@@ -341,31 +416,41 @@ const Header = () => {
 
                                 <div className="headphone-main">
 
+
                                     <img
                                         src={headphoneIcon}
-                                        alt="phone"
+                                        alt="Contact Nyumba Dynamics"
                                     />
+
 
                                 </div>
 
 
 
+
                                 <div className="need-help-main">
+
 
                                     <p>
                                         Talk To An Expert
                                     </p>
 
 
-                                    <a href="tel:+256700000000">
-                                        +256 700 000 000
+                                    <a href="tel:+256751353757">
+
+                                        +256 7513 537570
+
                                     </a>
 
 
                                 </div>
 
 
+
                             </div>
+
+
+
 
 
 
@@ -375,15 +460,20 @@ const Header = () => {
                                 className="btn-quote get-quote-btn"
                             >
 
+
                                 Request Consultation
+
 
 
                                 <img
                                     src={CrossArrow}
-                                    alt="arrow"
+                                    alt="Arrow"
                                 />
 
+
                             </Link>
+
+
 
 
 
@@ -391,13 +481,21 @@ const Header = () => {
 
 
 
+
+
                     </nav>
+
+
+
 
 
                 </div>
 
 
+
             </header>
+
+
 
 
         </>
