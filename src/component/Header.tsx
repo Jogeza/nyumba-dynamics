@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import LogoSvg from '../assets/images/svg/logo.svg';
+import LogoSvg from '../assets/images/svg/nyumba-dynamics-logo.svg';
 import menu2 from '../assets/images/svg/menu2.svg';
 import CloseIcon from '../assets/images/svg/close-icon.svg';
 import dsad from '../assets/images/home/dsad.png';
@@ -85,7 +85,11 @@ const Header = () => {
             <header className={`header`} id="top-navbar">
                 <div className="header-container">
                     <Link to="/" className="logo">
-                        <img src={LogoSvg} alt="Logo" />
+                        <img 
+                                src={LogoSvg} 
+                                alt="Nyumba Dynamics Logo" 
+                                style={{width:"180px", height:"auto"}}
+                        />
                     </Link>
 
                     <div className="hamburger" id="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
@@ -140,7 +144,7 @@ const Header = () => {
                                 </div>
                                 <div className="need-help-main">
                                     <p>Need Help Now?</p>
-                                    <a href="tel:+12483578866">+1 (248) 357 8866</a>
+                                    <a href="tel:+256751353757">+256 (751) 353 757</a>
                                 </div>
                             </div>
                             <Link to="/GetQuote" className="btn-quote get-quote-btn">Get A Quote
