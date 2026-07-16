@@ -5,7 +5,7 @@
         "svg": "services-svg1.svg",
         "title": "Electrical Services",
         "desc": "Electrical wiring, lighting installation, repairs and maintenance — carried out safely by trained technicians.",
-        "link": "/HouseCleaning"
+        "link": "/services/electrical"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "svg": "services-svg2.svg",
         "title": "Plumbing Services",
         "desc": "Pipe installation, plumbing repairs, drainage systems and water system maintenance for homes and businesses.",
-        "link": "/KitchenCleaning"
+        "link": "/services/plumbing"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "svg": "services-svg3.svg",
         "title": "Masonry Works",
         "desc": "Bricklaying, concrete works, plastering and renovations handled by skilled, professionally managed teams.",
-        "link": "/OfficeCleaning"
+        "link": "/services/masonry"
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "svg": "services-svg4.svg",
         "title": "Carpentry & Joinery",
         "desc": "Furniture installation, cabinet works, door and window framing, and wood finishing built to last.",
-        "link": "/WindowCleaning"
+        "link": "/services/carpentry"
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "svg": "services-svg5.svg",
         "title": "Welding & Fabrication",
         "desc": "Metal gates, security doors, structural fabrication and welding repairs for homes and enterprises.",
-        "link": "/CorporateCleaning"
+        "link": "/services/welding"
     },
     {
         "id": 6,
@@ -45,6 +45,6 @@
         "svg": "services-svg6.svg",
         "title": "Painting & Finishing",
         "desc": "Interior and exterior painting with decorative finishes that protect and refresh every space.",
-        "link": "/CarpetCleaning"
+        "link": "/services/painting"
     }
 ]

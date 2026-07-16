@@ -117,18 +117,18 @@ const About: React.FC = () => {
                 <div className="container position-relative">
                     <img className="how-to-work-bg" src={HowWorkBg} alt="how-to-work-bg" />
                     <p className="cap-text cost-cal position-relative fade_up">How it works</p>
-                    <h2 className="sec-text mazing position-relative fade_up">Get Amazing Cleaning in 3 Simple Steps</h2>
-                    <p className="sec-sub-text scetur position-relative fade_up">At amet in adipiscing hac suspendisse. Laoreet sit
-                        consectetur donec odio ornare elementum pellentesque. Ante gravida netus dignissim sed tristique mauris
-                        egestas egestas aenean turpis id eget.</p>
+                    <h2 className="sec-text mazing position-relative fade_up">Get the Job Done Right in 3 Simple Steps</h2>
+                    <p className="sec-sub-text scetur position-relative fade_up">From the first call to the final walkthrough, our
+                        vetted tradespeople keep you informed at every step — no surprises, no guesswork, just work done
+                        right the first time.</p>
                     <div className="how-work-step-box">
                         <div className="how-work-step-box-sub fade_up">
                             <div className="how-to-work-circle">
                                 <img src={HowWorkSvg1} alt="how-to-work-svg1" />
                             </div>
-                            <h3>Pick a suitable plan</h3>
-                            <p className="fessional send-info">Rule first third above first tree saw Grass subdue great eep saying
-                                forth rule hath to the replenish.
+                            <h3>Tell us the job</h3>
+                            <p className="fessional send-info">Describe what you need done and get matched with the
+                                right trade — electrical, plumbing, masonry, carpentry, welding or painting.
                             </p>
                         </div>
                         <div className="how-work-step-box-sub how-to-work-arrow">
@@ -140,9 +140,9 @@ const About: React.FC = () => {
                             <div className="how-to-work-circle">
                                 <img src={HowWorkSvg2} alt="how-to-work-svg2" />
                             </div>
-                            <h3>Set your schedule</h3>
-                            <p className="fessional send-info">Quam nulla maecenas aliquam non erat auctor tristique. Ut quis quam
-                                donec cum. Eu sed ante scelerisque massa.
+                            <h3>Book a time that works</h3>
+                            <p className="fessional send-info">Pick a date and time that suits you. Our team confirms
+                                the appointment and sends a professional to your door.
                             </p>
                         </div>
                         <div className="how-work-step-box-sub how-to-work-arrow">
@@ -154,9 +154,9 @@ const About: React.FC = () => {
                             <div className="how-to-work-circle">
                                 <img src={HowWorkSvg3} alt="how-to-work-svg3" />
                             </div>
-                            <h3>Get things done</h3>
-                            <p className="fessional send-info">Urna praesent fusce risus pellentesque odio. Eget nulla volutpat
-                                proin sagittis lacus ornare sagittis risus.
+                            <h3>Job done, guaranteed</h3>
+                            <p className="fessional send-info">Our professional completes the work to spec, cleans up
+                                after themselves, and every job is backed by our workmanship guarantee.
                             </p>
                         </div>
                     </div>

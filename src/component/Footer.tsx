@@ -140,36 +140,43 @@ const Footer = () => {
                             <ul>
 
                                 <li>
-                                    <Link to="/services">
-                                        Property Development
+                                    <Link to="/services/electrical">
+                                        Electrical Services
                                     </Link>
                                 </li>
 
 
                                 <li>
-                                    <Link to="/services">
-                                        Real Estate Management
+                                    <Link to="/services/plumbing">
+                                        Plumbing Services
                                     </Link>
                                 </li>
 
 
                                 <li>
-                                    <Link to="/services">
-                                        Interior Design
+                                    <Link to="/services/masonry">
+                                        Masonry Works
                                     </Link>
                                 </li>
 
 
                                 <li>
-                                    <Link to="/services">
-                                        Property Consultancy
+                                    <Link to="/services/carpentry">
+                                        Carpentry & Joinery
                                     </Link>
                                 </li>
 
 
                                 <li>
-                                    <Link to="/properties">
-                                        Property Listings
+                                    <Link to="/services/welding">
+                                        Welding & Fabrication
+                                    </Link>
+                                </li>
+
+
+                                <li>
+                                    <Link to="/services/painting">
+                                        Painting & Finishing
                                     </Link>
                                 </li>
 

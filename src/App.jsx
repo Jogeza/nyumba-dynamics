@@ -14,6 +14,12 @@ import HomeSlider from "./pages/HomeSlider.tsx";
 import About from "./pages/About.tsx";
 import Team from "./pages/Team.tsx";
 import Services from "./pages/Services.tsx";
+import Electrical from "./pages/Electrical.tsx";
+import Plumbing from "./pages/Plumbing.tsx";
+import Masonry from "./pages/Masonry.tsx";
+import Carpentry from "./pages/Carpentry.tsx";
+import Welding from "./pages/Welding.tsx";
+import Painting from "./pages/Painting.tsx";
 import Project1 from "./pages/Project1.tsx";
 import Project1Single from "./pages/Project1Single.tsx";
 import OurBlog from "./pages/OurBlog.tsx";
@@ -70,6 +76,36 @@ function App() {
         <Route 
           path="/services" 
           element={<Services />} 
+        />
+
+        <Route 
+          path="/services/electrical" 
+          element={<Electrical />} 
+        />
+
+        <Route 
+          path="/services/plumbing" 
+          element={<Plumbing />} 
+        />
+
+        <Route 
+          path="/services/masonry" 
+          element={<Masonry />} 
+        />
+
+        <Route 
+          path="/services/carpentry" 
+          element={<Carpentry />} 
+        />
+
+        <Route 
+          path="/services/welding" 
+          element={<Welding />} 
+        />
+
+        <Route 
+          path="/services/painting" 
+          element={<Painting />} 
         />
 
 

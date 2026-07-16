@@ -6,7 +6,7 @@ import CrossArrow from "../assets/images/svg/cross-arrow.svg";
 const ContactForm: React.FC = () => {
     const location = useLocation();
 
-    const [cleanType, setCleanType] = useState<string>("Full Cleaning");
+    const [cleanType, setCleanType] = useState<string>("Electrical Services");
     const [openDropdown, setOpenDropdown] = useState<"clean" | null>(null);
 
     const dropdownRef1 = useRef<HTMLDivElement | null>(null);
@@ -23,13 +23,12 @@ const ContactForm: React.FC = () => {
     }, []);
 
     const cleanTypeOptions: string[] = [
-        "Full Cleaning",
-        "House Cleaning",
-        "Kitchen Cleaning",
-        "Office Cleaning",
-        "Window Cleaning",
-        "Corporate Cleaning",
-        "Carpet Cleaning",
+        "Electrical Services",
+        "Plumbing Services",
+        "Masonry Works",
+        "Carpentry & Joinery",
+        "Welding & Fabrication",
+        "Painting & Finishing",
     ];
 
     return (
@@ -83,7 +82,7 @@ const ContactForm: React.FC = () => {
                                         </div>
 
                                         <div>
-                                            <h3 className="input-label-text">choose cleaning area*</h3>
+                                            <h3 className="input-label-text">choose a service*</h3>
 
                                             <div className="input-main" ref={dropdownRef1}>
                                                 <div className="wrapper">

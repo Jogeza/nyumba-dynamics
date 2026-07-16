@@ -4,8 +4,8 @@ import CrossArrow from "../assets/images/svg/cross-arrow.svg";
 
 const CostCalculator: React.FC = () => {
 
-    const [service, setService] = useState("Residential Cleaning");
-    const [cleanType, setCleanType] = useState("Full Cleaning");
+    const [service, setService] = useState("Electrical Services");
+    const [cleanType, setCleanType] = useState("Standard Job");
     const [openDropdown, setOpenDropdown] = useState<"service" | "clean" | null>(null);
 
     const dropdownRef1 = useRef<HTMLDivElement | null>(null);
@@ -27,23 +27,20 @@ const CostCalculator: React.FC = () => {
     }, []);
 
     const serviceOptions = [
-        "Residential Cleaning",
-        "House Cleaning",
-        "Kitchen Cleaning",
-        "Office Cleaning",
-        "Window Cleaning",
-        "Corporate Cleaning",
-        "Carpet Cleaning",
+        "Electrical Services",
+        "Plumbing Services",
+        "Masonry Works",
+        "Carpentry & Joinery",
+        "Welding & Fabrication",
+        "Painting & Finishing",
     ];
 
     const cleanTypeOptions = [
-        "Full Cleaning",
-        "House Cleaning",
-        "Kitchen Cleaning",
-        "Office Cleaning",
-        "Window Cleaning",
-        "Corporate Cleaning",
-        "Carpet Cleaning",
+        "Standard Job",
+        "Emergency / Same-Day",
+        "New Installation",
+        "Repair & Maintenance",
+        "Inspection Only",
     ];
 
     return (
@@ -89,9 +86,9 @@ const CostCalculator: React.FC = () => {
                     </div>
                 </div>
 
-                {/* --- CLEAN TYPE DROPDOWN --- */}
+                {/* --- JOB TYPE DROPDOWN --- */}
                 <div>
-                    <h3 className="input-label-text">TYPE OF CLEAN</h3>
+                    <h3 className="input-label-text">TYPE OF JOB</h3>
                     <div className="input-main" ref={dropdownRef2}>
                         <div className="wrapper">
                             <div
@@ -129,10 +126,10 @@ const CostCalculator: React.FC = () => {
                     </div>
                 </div>
 
-                {/* --- TOTAL FLOOR AREA --- */}
+                {/* --- PROPERTY / SITE SIZE --- */}
                 <div>
-                    <h3 className="input-label-text">TOTAL FLOOR AREA</h3>
-                    <input type="text" placeholder="ex. 1590 sq ft" />
+                    <h3 className="input-label-text">PROPERTY SIZE</h3>
+                    <input type="text" placeholder="ex. 3-bedroom house, 1590 sq ft" />
                 </div>
 
                 {/* --- NAME --- */}

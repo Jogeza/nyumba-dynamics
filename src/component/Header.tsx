@@ -50,42 +50,34 @@ const Header = () => {
                     link:"/services"
                 },
                 {
-                    label:"Property Development",
-                    link:"/services"
+                    label:"Electrical Services",
+                    link:"/services/electrical"
                 },
                 {
-                    label:"Real Estate Management",
-                    link:"/services"
+                    label:"Plumbing Services",
+                    link:"/services/plumbing"
                 },
                 {
-                    label:"Interior Design",
-                    link:"/services"
+                    label:"Masonry Works",
+                    link:"/services/masonry"
                 },
                 {
-                    label:"Construction Solutions",
-                    link:"/services"
+                    label:"Carpentry & Joinery",
+                    link:"/services/carpentry"
+                },
+                {
+                    label:"Welding & Fabrication",
+                    link:"/services/welding"
+                },
+                {
+                    label:"Painting & Finishing",
+                    link:"/services/painting"
                 }
             ]
         },
 
 
-        {
-            label:"Properties",
-            children:[
-                {
-                    label:"Residential Properties",
-                    link:"/properties"
-                },
-                {
-                    label:"Commercial Properties",
-                    link:"/properties"
-                },
-                {
-                    label:"Luxury Developments",
-                    link:"/properties"
-                }
-            ]
-        },
+
 
 
         {
@@ -108,14 +100,10 @@ const Header = () => {
 
 
         {
-            label:"Projects",
+            label:"Our Work",
             children:[
                 {
                     label:"Completed Projects",
-                    link:"/properties"
-                },
-                {
-                    label:"Upcoming Developments",
                     link:"/properties"
                 }
             ]
@@ -126,11 +114,11 @@ const Header = () => {
             label:"Insights",
             children:[
                 {
-                    label:"Real Estate News",
+                    label:"Home & Trade Tips",
                     link:"/blog"
                 },
                 {
-                    label:"Property Guides",
+                    label:"Latest News",
                     link:"/blog"
                 }
             ]

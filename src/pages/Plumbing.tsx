@@ -1,16 +1,17 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
-import KitchanDetails1 from '../assets/images/house-cleaning/kitchan-details.jpg';
-import KitchanDetails2 from '../assets/images/house-cleaning/kitchan-details2.jpg';
-import KitchanDetails3 from '../assets/images/house-cleaning/kitchan-details3.jpg';
-import KitchanDetails4 from '../assets/images/house-cleaning/kitchan-details4.jpg';
+import Img1 from '../assets/images/plumbing/plumbing-img1.jpg';
+import Img2 from '../assets/images/plumbing/plumbing-img2.jpg';
+import Img3 from '../assets/images/plumbing/plumbing-img3.jpg';
+import Img4 from '../assets/images/plumbing/plumbing-img4.jpg';
 import CrossArrow from '../assets/images/svg/cross-arrow.svg';
-import AddImg from '../assets/images/house-cleaning/add-img.jpg';
-import DownloadImg from '../assets/images/house-cleaning/download.png';
+import AddImg from '../assets/images/shared/promo-img.jpg';
+import DownloadImg from '../assets/images/shared/download-icon.png';
 import Brochure from '../assets/images/svg/brochure.svg';
 import Brochure2 from '../assets/images/svg/brochure2.svg';
 
-const KitchenCleaning: React.FC = () => {
+
+const Plumbing: React.FC = () => {
     return (
         <>
             {/* <!-- ====================================== About Hero Section ===================================== --> */}
@@ -19,8 +20,8 @@ const KitchenCleaning: React.FC = () => {
                     <h1 className="img-header-text fade_down">Plumbing Services</h1>
                     <div className="breadcrumb-group fade_up">
                         <Link to="/">HOME / </Link>
-                        <Link to="/Services">Service / </Link>
-                        <Link to="/KitchenCleaning">Plumbing Services</Link>
+                        <Link to="/services">Service / </Link>
+                        <Link to="/services/plumbing">Plumbing Services</Link>
                     </div>
                 </div>
             </section>
@@ -29,121 +30,94 @@ const KitchenCleaning: React.FC = () => {
                 <div className="container">
                     <div className="row all-services-row">
                         <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12">
-                            <h2 className="sec-text pb-0 fade_up">Professional Plumbing Installation & Repairs</h2>
-                            <img className="layers-img1" src={KitchanDetails1} alt="house-clening-img1" />
-                            <p className="fusce pb-2">Volutpat et malesuada maecenas amet. Ultrices volutpat auctor euismod eget
-                                pulvinar nulla porttitor. Faucibus faucibus consectetur et tellus magnis. Nunc proin mauris enim
-                                duis aliquet fringilla. Erat semper amet turpis cursus. Vel tellus tellus risus eu lacus
-                                volutpat morbi. Cursus tincidunt urna condimentum egestas integer.</p>
-                            <p className="fusce mt-0 ">Purus auctor eu rhoncus mi enim facilisi. In suspendisse libero
-                                suspendisse lacinia vulputate faucibus fusce. Blandit ultrices morbi eu rhoncus amet at.
-                                Placerat in mi id dolor odio nulla. Feugiat in volutpat iaculis sit. Tincidunt gravida enim eget
-                                arcu turpis sed nunc metus est. Purus sed elementum tristique sit malesuada sagittis odio. Ipsum
-                                dolor enim nulla sed nulla dignissim. Tincidunt quam tellus vitae hac scelerisque massa.
-                                Condimentum sit interdum eget vel congue egestas pretium.</p>
-                            <h3 className="ourServicesPrcoes mt-0">We Hope You Find What You are Looking for</h3>
-                            <p className="fusce pb-0">Volutpat et malesuada maecenas amet. Ultrices volutpat auctor euismod eget
-                                pulvinar nulla porttitor. Faucibus faucibus consectetur et tellus magnis. Nunc proin mauris enim
-                                duis aliquet fringilla. Erat semper amet turpis cursus. Vel tellus tellus risus eu lacus
-                                volutpat morbi. Cursus tincidunt urna condimentum egestas integer.</p>
+                            <h2 className="sec-text pb-0 fade_up">Dependable Plumbing Repairs & Installations</h2>
+                            <img className="layers-img1 zoom_in" src={Img1} alt="plumbing-img1" />
+                            <p className="fusce pb-2">Leaking pipes, blocked drains, low water pressure, or a full bathroom re-plumb — our plumbers diagnose the real problem first, rather than just patching symptoms, so the fix actually lasts.</p>
+                            <p className="fusce mt-0 ">We work with copper, PEX, and PVC systems, and handle everything from kitchen and bathroom fit-outs to water heater installation and drainage repair. Every job is quoted up front, and we clean up after ourselves before we leave.</p>
+                            <h3 className="ourServicesPrcoes mt-0">What's Included In Every Plumbing Job</h3>
+                            <p className="fusce pb-0">We arrive with the tools and common parts needed to fix most issues on the first visit, pressure-test all new connections, and walk you through what was done and why.</p>
                             <div className="swiper singleServicesSlider">
                                 <div className="swiper-wrapper">
                                     <div className="swiper-slide">
-                                        <img src={KitchanDetails2} alt="house-clening-img2" />
+                                        <img src={Img2} alt="plumbing-img2" />
                                     </div>
                                     <div className="swiper-slide">
-                                        <img src={KitchanDetails3} alt="house-clening-img3" />
+                                        <img src={Img3} alt="plumbing-img3" />
                                     </div>
                                     <div className="swiper-slide">
-                                        <img src={KitchanDetails4} alt="house-clening-img4" />
+                                        <img src={Img4} alt="plumbing-img4" />
                                     </div>
                                 </div>
                             </div>
-                            <h3 className="ourServicesPrcoes mt-0">Ipsum eget non faucibus platea vel euismod dui ut</h3>
-                            <p className="fusce">Purus auctor eu rhoncus mi enim facilisi. In suspendisse libero
-                                suspendisse lacinia vulputate faucibus fusce. Blandit ultrices morbi eu rhoncus amet at.
-                                Placerat in mi id dolor odio nulla. Feugiat in volutpat iaculis sit. Tincidunt gravida enim eget
-                                arcu turpis sed nunc metus est. Purus sed elementum tristique sit malesuada sagittis odio. Ipsum
-                                dolor enim nulla sed nulla dignissim. Tincidunt quam tellus vitae hac scelerisque massa.
-                                Condimentum sit interdum eget vel congue egestas pretium.</p>
+                            <h3 className="ourServicesPrcoes mt-0">Frequently Asked Questions</h3>
                             <div className="accordion" id="accordionExample">
                                 <div className="accordion-item">
-                                    <h2 className="accordion-header" id="headingOne">
+                                    <h2 className="accordion-header" id="heading1">
                                         <button className="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            What are the most common Cleaning materials?
+                                            data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                            What causes low water pressure in a home?
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                    <div id="collapse1" className="accordion-collapse collapse show" aria-labelledby="heading1"
                                         data-bs-parent="#accordionExample">
                                         <div className="accordion-body">
-                                            Donec massa sapien faucibus et molestie ac. Sed blandit libero volutpat sed cras
-                                            ornare arcu. Vulputate mi sit amet mauris. Integer enim neque volutpat ac tincidunt.
-                                            Augue neque gravida in fermentum et sollicitudin.
+                                            It's usually a partially closed valve, a clogged aerator, mineral buildup in older pipes, or a failing pressure regulator. We test the system to pinpoint the cause rather than guessing.
                                         </div>
                                     </div>
                                 </div>
                                 <div className="accordion-item">
-                                    <h2 className="accordion-header" id="headingThree">
+                                    <h2 className="accordion-header" id="heading2">
                                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            What causes Cleaning leaks?
+                                            data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                            Can you fix a leak without tearing out the wall?
                                         </button>
                                     </h2>
-                                    <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree"
+                                    <div id="collapse2" className="accordion-collapse collapse" aria-labelledby="heading2"
                                         data-bs-parent="#accordionExample">
                                         <div className="accordion-body">
-                                            Donec massa sapien faucibus et molestie ac. Sed blandit libero volutpat sed cras
-                                            ornare arcu. Vulputate mi sit amet mauris. Integer enim neque volutpat ac tincidunt.
-                                            Augue neque gravida in fermentum et sollicitudin.
+                                            In many cases, yes — we use leak-detection equipment to pinpoint the source before opening anything up, which usually means a smaller, cheaper repair.
                                         </div>
                                     </div>
                                 </div>
                                 <div className="accordion-item">
-                                    <h2 className="accordion-header" id="headingFour">
+                                    <h2 className="accordion-header" id="heading3">
                                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                            Can I Cleaning myself?
+                                            data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                            Do you install water heaters and boilers?
                                         </button>
                                     </h2>
-                                    <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    <div id="collapse3" className="accordion-collapse collapse" aria-labelledby="heading3"
                                         data-bs-parent="#accordionExample">
                                         <div className="accordion-body">
-                                            Donec massa sapien faucibus et molestie ac. Sed blandit libero volutpat sed cras
-                                            ornare arcu. Vulputate mi sit amet mauris. Integer enim neque volutpat ac tincidunt.
-                                            Augue neque gravida in fermentum et sollicitudin.
+                                            Yes, we install, replace, and service both tank and tankless water heaters as well as domestic boilers.
                                         </div>
                                     </div>
                                 </div>
                                 <div className="accordion-item">
-                                    <h2 className="accordion-header" id="headingFive">
+                                    <h2 className="accordion-header" id="heading4">
                                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                            What services do architects provide?
+                                            data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                            How do I know if I have a blocked drain versus a sewer issue?
                                         </button>
                                     </h2>
-                                    <div id="collapseFive" className="accordion-collapse collapse" aria-labelledby="headingFive"
+                                    <div id="collapse4" className="accordion-collapse collapse" aria-labelledby="heading4"
                                         data-bs-parent="#accordionExample">
                                         <div className="accordion-body">
-                                            Donec massa sapien faucibus et molestie ac. Sed blandit libero volutpat sed cras
-                                            ornare arcu. Vulputate mi sit amet mauris. Integer enim neque volutpat ac tincidunt.
-                                            Augue neque gravida in fermentum et sollicitudin.
+                                            Slow drains in just one fixture usually point to a local blockage; multiple fixtures backing up at once often means a main line issue. We can inspect and confirm before recommending work.
                                         </div>
                                     </div>
                                 </div>
                                 <div className="accordion-item">
-                                    <h2 className="accordion-header" id="headingSix">
-                                        <button className="accordion-button mb-0 collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                            Can A Handyman Do Cleaning Work?
+                                    <h2 className="accordion-header" id="heading5">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                            Can plumbing work be done myself?
                                         </button>
                                     </h2>
-                                    <div id="collapseSix" className="accordion-collapse collapse" aria-labelledby="headingSix"
+                                    <div id="collapse5" className="accordion-collapse collapse" aria-labelledby="heading5"
                                         data-bs-parent="#accordionExample">
                                         <div className="accordion-body">
-                                            Donec massa sapien faucibus et molestie ac. Sed blandit libero volutpat sed cras
-                                            ornare arcu. Vulputate mi sit amet mauris. Integer enim neque volutpat ac tincidunt.
-                                            Augue neque gravida in fermentum et sollicitudin.
+                                            Simple maintenance like clearing an aerator is fine, but anything touching supply lines, gas connections, or drainage should go through a licensed plumber to avoid water damage or code violations.
                                         </div>
                                     </div>
                                 </div>
@@ -153,16 +127,16 @@ const KitchenCleaning: React.FC = () => {
                             <div className="services-list-box zoom_in">
                                 <h2 className="all-service-text">Our All Service</h2>
                                 <div className="roofing-services-list-main">
-                                    <NavLink to="/HouseCleaning"
+                                    <NavLink to="/services/electrical"
                                         className={({ isActive }) =>
                                             `service-list-arow-main ${isActive ? "active" : ""}`
                                         }
                                     >
-                                        <p>House Cleaning</p>
+                                        <p>Electrical Services</p>
                                         <img src={CrossArrow} alt="right-arrow" />
                                     </NavLink>
 
-                                    <NavLink to="/KitchenCleaning"
+                                    <NavLink to="/services/plumbing"
                                         className={({ isActive }) =>
                                             `service-list-arow-main ${isActive ? "active" : ""}`
                                         }
@@ -171,39 +145,39 @@ const KitchenCleaning: React.FC = () => {
                                         <img src={CrossArrow} alt="right-arrow" />
                                     </NavLink>
 
-                                    <NavLink to="/OfficeCleaning"
+                                    <NavLink to="/services/masonry"
                                         className={({ isActive }) =>
                                             `service-list-arow-main ${isActive ? "active" : ""}`
                                         }
                                     >
-                                        <p>Office Cleaning</p>
+                                        <p>Masonry Works</p>
                                         <img src={CrossArrow} alt="right-arrow" />
                                     </NavLink>
 
-                                    <NavLink to="/WindowCleaning"
+                                    <NavLink to="/services/carpentry"
                                         className={({ isActive }) =>
                                             `service-list-arow-main ${isActive ? "active" : ""}`
                                         }
                                     >
-                                        <p>Window Cleaning</p>
+                                        <p>Carpentry & Joinery</p>
                                         <img src={CrossArrow} alt="right-arrow" />
                                     </NavLink>
 
-                                    <NavLink to="/RoofSolarPanels"
+                                    <NavLink to="/services/welding"
                                         className={({ isActive }) =>
                                             `service-list-arow-main ${isActive ? "active" : ""}`
                                         }
                                     >
-                                        <p>Carpet Cleaning</p>
+                                        <p>Welding & Fabrication</p>
                                         <img src={CrossArrow} alt="right-arrow" />
                                     </NavLink>
 
-                                    <NavLink to="/CorporateCleaning"
+                                    <NavLink to="/services/painting"
                                         className={({ isActive }) =>
                                             `service-list-arow-main mb-0 ${isActive ? "active" : ""}`
                                         }
                                     >
-                                        <p>Corporate Cleaning</p>
+                                        <p>Painting & Finishing</p>
                                         <img src={CrossArrow} alt="right-arrow" />
                                     </NavLink>
                                 </div>
@@ -213,7 +187,7 @@ const KitchenCleaning: React.FC = () => {
                                     <img className="adds-img-home w-100" src={AddImg} alt="adds-img-home" />
                                     <img className="shape-img" src={DownloadImg} alt="download" />
                                     <h3>Get 10% Off on Your First Service</h3>
-                                    <Link to="/Contact" className="btn-quote">Contact Us
+                                    <Link to="/contact" className="btn-quote">Contact Us
                                         <img src={CrossArrow} alt="right-arrow" />
                                     </Link>
                                 </div>
@@ -223,7 +197,7 @@ const KitchenCleaning: React.FC = () => {
                                     <div className="brochure">
                                         <img src={Brochure} alt="brochure" />
                                     </div>
-                                    <h3>Cleaning Models.doc</h3>
+                                    <h3>Service Price List.doc</h3>
                                 </button>
                                 <button className="brochure-main mb-0">
                                     <div className="brochure">
@@ -240,4 +214,4 @@ const KitchenCleaning: React.FC = () => {
     )
 }
 
-export default KitchenCleaning
+export default Plumbing
