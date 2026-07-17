@@ -7,7 +7,7 @@ import FooterImg2 from "../assets/images/footer/footer-img2.jpg";
 import FooterImg3 from "../assets/images/footer/footer-img3.jpg";
 
 import InstaSvg from "../assets/images/svg/insta.svg";
-import WhiteLogoSvg from "../assets/images/svg/white-logo.svg";
+import WhiteLogoSvg from "../assets/images/svg/nyumba-dynamics-white-logo.svg";
 import CallWhite from "../assets/images/svg/callWhite.svg";
 
 import facebook from "../assets/images/svg/facebook.svg";
@@ -30,15 +30,16 @@ const Footer = () => {
                 <div className="subscribe-section">
 
                     <h2 className="sec-text updat pb-0">
-                        Stay Updated With Nyumba Dynamics Properties & Insights
+                        Stay Updated With Nyumba Dynamics Projects & Property News
                     </h2>
 
 
                     <div className="subscribe-input-main">
 
                         <input
-                            type="text"
-                            placeholder="Enter your email or phone number"
+                            type="email"
+                            placeholder="Enter your email address"
+                            name="subscribe"
                         />
 
 
@@ -46,16 +47,14 @@ const Footer = () => {
 
                             Subscribe Now
 
-                            <img
-                                src={CrossArrowSvg}
-                                alt="arrow"
+                            <img 
+                                src={CrossArrowSvg} 
+                                alt="arrow" 
                             />
 
                         </button>
 
-
                     </div>
-
 
                 </div>
 
@@ -67,23 +66,24 @@ const Footer = () => {
 
 
 
-                    {/* Office Hours */}
+                    {/* Contact */}
 
                     <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6">
 
+
                         <h2 className="working-hours">
-                            Office Hours
+                            Contact Us
                         </h2>
 
 
                         <div className="timing-hrw pt-0">
 
                             <p>
-                                Monday - Friday
+                                Location
                             </p>
 
                             <p>
-                                8:00 AM - 5:00 PM
+                                Ntinda, Kampala
                             </p>
 
                         </div>
@@ -93,11 +93,11 @@ const Footer = () => {
                         <div className="timing-hrw">
 
                             <p>
-                                Saturday
+                                Email
                             </p>
 
                             <p>
-                                9:00 AM - 2:00 PM
+                                info@nyumbadynamics.com
                             </p>
 
                         </div>
@@ -107,11 +107,11 @@ const Footer = () => {
                         <div className="timing-hrw border-0 pb-0">
 
                             <p>
-                                Sunday
+                                Office Hours
                             </p>
 
                             <p>
-                                Closed
+                                Mon - Fri: 8AM - 5PM
                             </p>
 
                         </div>
@@ -123,9 +123,7 @@ const Footer = () => {
 
 
 
-
-
-                    {/* Links */}
+                    {/* Services */}
 
                     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 quicklinks-main">
 
@@ -154,37 +152,30 @@ const Footer = () => {
 
 
                                 <li>
-                                    <Link to="/services/masonry">
-                                        Masonry Works
+                                    <Link to="/services/smart-home">
+                                        Smart Home Solutions
                                     </Link>
                                 </li>
 
 
                                 <li>
-                                    <Link to="/services/carpentry">
-                                        Carpentry & Joinery
+                                    <Link to="/services/construction">
+                                        Construction & Renovation
                                     </Link>
                                 </li>
 
 
                                 <li>
-                                    <Link to="/services/welding">
-                                        Welding & Fabrication
+                                    <Link to="/services/maintenance">
+                                        Property Maintenance
                                     </Link>
                                 </li>
-
-
-                                <li>
-                                    <Link to="/services/painting">
-                                        Painting & Finishing
-                                    </Link>
-                                </li>
-
 
                             </ul>
 
 
                         </div>
+
 
 
 
@@ -199,6 +190,7 @@ const Footer = () => {
 
                             <ul>
 
+
                                 <li>
                                     <Link to="/about">
                                         About Us
@@ -207,8 +199,8 @@ const Footer = () => {
 
 
                                 <li>
-                                    <Link to="/team">
-                                        Our Team
+                                    <Link to="/projects">
+                                        Our Projects
                                     </Link>
                                 </li>
 
@@ -222,14 +214,14 @@ const Footer = () => {
 
                                 <li>
                                     <Link to="/consultation">
-                                        Consultation
+                                        Request Consultation
                                     </Link>
                                 </li>
 
 
                                 <li>
                                     <Link to="/contact">
-                                        Contact
+                                        Contact Us
                                     </Link>
                                 </li>
 
@@ -247,86 +239,49 @@ const Footer = () => {
 
 
 
-
-
-                    {/* Gallery */}
+                    {/* Projects */}
 
                     <div className="col-xxl-4 col-xl-4 col-lg-4">
 
 
                         <h2 className="working-hours">
-                            Property Gallery
+                            Our Projects
                         </h2>
 
 
                         <div className="footer-img-group">
 
 
-                            <a href="#" className="img-container">
+                            {[FooterImg1, FooterImg2, FooterImg3].map(
+                                (image,index)=>(
 
-                                <img
-                                    className="footer-imgs"
-                                    src={FooterImg1}
-                                    alt="property"
-                                />
-
-                                <div className="footer-img-overlay">
-
-                                    <img
-                                        src={InstaSvg}
-                                        alt="instagram"
-                                    />
-
-                                </div>
-
-                            </a>
-
-
-
-                            <a href="#" className="img-container">
-
-                                <img
-                                    className="footer-imgs"
-                                    src={FooterImg2}
-                                    alt="property"
-                                />
-
-                                <div className="footer-img-overlay">
+                                <a 
+                                    href="#" 
+                                    className="img-container" 
+                                    key={index}
+                                >
 
                                     <img
-                                        src={InstaSvg}
-                                        alt="instagram"
+                                        className="footer-imgs"
+                                        src={image}
+                                        alt="Nyumba Dynamics Project"
                                     />
 
-                                </div>
 
-                            </a>
+                                    <div className="footer-img-overlay">
 
+                                        <img
+                                            src={InstaSvg}
+                                            className="brand-instagram"
+                                            alt="instagram"
+                                        />
 
-
-
-
-                            <a href="#" className="img-container">
-
-                                <img
-                                    className="footer-imgs"
-                                    src={FooterImg3}
-                                    alt="property"
-                                />
+                                    </div>
 
 
-                                <div className="footer-img-overlay">
+                                </a>
 
-                                    <img
-                                        src={InstaSvg}
-                                        alt="instagram"
-                                    />
-
-                                </div>
-
-
-                            </a>
-
+                            ))}
 
 
                         </div>
@@ -345,6 +300,7 @@ const Footer = () => {
 
                 {/* Bottom Footer */}
 
+
                 <div className="media-logo-call-footer fade_up show">
 
 
@@ -352,10 +308,11 @@ const Footer = () => {
 
                         <img
                             src={WhiteLogoSvg}
-                            alt="Nyumba Dynamics"
+                            alt="Nyumba Dynamics Logo"
                         />
 
                     </Link>
+
 
 
 
@@ -367,7 +324,7 @@ const Footer = () => {
 
                             <img
                                 src={CallWhite}
-                                alt="call"
+                                alt="phone"
                             />
 
                         </div>
@@ -381,8 +338,14 @@ const Footer = () => {
                             </p>
 
 
-                            <a href="tel:+256700000000">
-                                +256 700 000 000
+                            <a href="tel:+256751353757">
+                                +256 7513 53757
+                            </a>
+
+                            <span> / </span>
+
+                            <a href="tel:+256761648679">
+                                +256 7616 48679
                             </a>
 
 
@@ -395,50 +358,27 @@ const Footer = () => {
 
 
 
+
                     <div className="footer-med-icons-main">
 
 
-                        <a href="#" className="footer-med-icons">
-
-                            <img
-                                src={facebook}
-                                alt="facebook"
-                            />
-
+                        <a href="https://www.facebook.com" className="footer-med-icons">
+                            <img src={facebook} alt="facebook" />
                         </a>
 
 
-
-                        <a href="#" className="footer-med-icons">
-
-                            <img
-                                src={twitter}
-                                alt="twitter"
-                            />
-
+                        <a href="https://x.com" className="footer-med-icons">
+                            <img src={twitter} alt="twitter" />
                         </a>
 
 
-
-
-                        <a href="#" className="footer-med-icons">
-
-                            <img
-                                src={insta}
-                                alt="instagram"
-                            />
-
+                        <a href="https://www.instagram.com" className="footer-med-icons">
+                            <img src={insta} alt="instagram" />
                         </a>
 
 
-
-                        <a href="#" className="footer-med-icons">
-
-                            <img
-                                src={whatsapp}
-                                alt="whatsapp"
-                            />
-
+                        <a href="https://wa.me/256751353757" className="footer-med-icons">
+                            <img src={whatsapp} alt="whatsapp" />
                         </a>
 
 
@@ -452,17 +392,12 @@ const Footer = () => {
 
 
 
-
                 <div className="copyrights-main">
 
-
                     <p>
-
                         Copyright © {new Date().getFullYear()} 
                         Nyumba Dynamics. All Rights Reserved.
-
                     </p>
-
 
 
                     <p>

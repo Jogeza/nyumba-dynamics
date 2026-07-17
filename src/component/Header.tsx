@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import LogoSvg from "../assets/images/svg/logo.svg";
+import LogoSvg from "../assets/images/svg/nyumba-dynamics-logo.svg";
 import menu2 from "../assets/images/svg/menu2.svg";
 import CloseIcon from "../assets/images/svg/close-icon.svg";
 import DropdownArrow from "../assets/images/svg/dropdown-arrow.svg";
@@ -12,6 +12,12 @@ import CrossArrow from "../assets/images/svg/cross-arrow.svg";
 interface MenuChild {
     label: string;
     link: string;
+}
+
+
+interface MenuItem {
+    label: string;
+    children: MenuChild[];
 }
 
 
@@ -31,16 +37,13 @@ const Header = () => {
 
 
     const isParentActive = (children:MenuChild[]) => {
-
         return children.some(
             child => child.link === location.pathname
         );
-
     };
 
 
-
-    const menuItems = [
+    const menuItems: MenuItem[] = [
 
         {
             label:"Services",
@@ -77,9 +80,6 @@ const Header = () => {
         },
 
 
-
-
-
         {
             label:"Company",
             children:[
@@ -104,7 +104,7 @@ const Header = () => {
             children:[
                 {
                     label:"Completed Projects",
-                    link:"/properties"
+                    link:"/projects"
                 }
             ]
         },
@@ -128,22 +128,17 @@ const Header = () => {
 
 
 
-
     return (
 
         <>
 
-
             {
                 menuOpen &&
-
                 <div
                     className="overlay active"
                     onClick={() => setMenuOpen(false)}
                 />
-
             }
-
 
 
 
@@ -152,11 +147,10 @@ const Header = () => {
                 id="top-navbar"
             >
 
-
-
                 <div className="header-container">
 
 
+                    {/* LOGO */}
 
                     <Link
                         to="/"
@@ -165,51 +159,40 @@ const Header = () => {
 
                         <img
                             src={LogoSvg}
-                            alt="Nyumba Dynamics - Real Estate and Property Development"
+                            alt="Nyumba Dynamics Logo"
                         />
 
                     </Link>
 
 
 
+                    {/* MOBILE BUTTON */}
 
                     <div
                         className="hamburger"
                         onClick={() => setMenuOpen(!menuOpen)}
                     >
 
-
                         {
-
                             !menuOpen &&
-
                             <img
                                 src={menu2}
                                 className="menu-icon"
                                 alt="Open menu"
                             />
-
                         }
 
 
-
                         {
-
                             menuOpen &&
-
                             <img
                                 src={CloseIcon}
                                 className="close-icon"
                                 alt="Close menu"
                             />
-
                         }
 
-
                     </div>
-
-
-
 
 
 
@@ -220,24 +203,20 @@ const Header = () => {
 
 
 
-
                         <div className="for-mobile-menu position-relative">
-
 
 
                             <Link
                                 to="/"
-                                className="mobile-logo nyumba-mobile-logo"
+                                className="mobile-logo"
                             >
 
                                 <img
                                     src={LogoSvg}
-                                    alt="Nyumba Dynamics Logo"
+                                    alt="Nyumba Dynamics"
                                 />
 
-
                             </Link>
-
 
 
 
@@ -245,122 +224,84 @@ const Header = () => {
                             <ul className="menu">
 
 
-                            {
-
-                                menuItems.map((item,index)=>(
-
-
-                                    <li
-                                        key={index}
-                                        className="dropdown"
-                                    >
+                                {
+                                    menuItems.map((item,index)=>(
 
 
+                                        <li
+                                            key={index}
+                                            className="dropdown"
+                                        >
 
 
-                                        <button
-                                            className={
-                                                `dropdown-btn ${
+                                            <button
+                                                className={`dropdown-btn ${
                                                     isParentActive(item.children)
                                                     ? "active"
                                                     :""
-                                                }`
-                                            }
+                                                }`}
 
-                                            onClick={() =>
-                                                toggleDropdown(index)
-                                            }
-                                        >
+                                                onClick={() =>
+                                                    toggleDropdown(index)
+                                                }
+                                            >
 
+                                                {item.label}
 
-                                            {item.label}
+                                                <img
+                                                    src={DropdownArrow}
+                                                    alt="dropdown"
+                                                />
 
-
-
-                                            <img
-                                                src={DropdownArrow}
-                                                alt="Dropdown arrow"
-                                            />
+                                                <span className="dots-circle"></span>
 
 
-
-                                            <span className="dots-circle"></span>
-
-
-
-                                        </button>
+                                            </button>
 
 
 
 
-
-                                        <ul
-                                            className={
-                                                `submenu ${
+                                            <ul
+                                                className={`submenu ${
                                                     openDropdown === index
                                                     ? "open"
                                                     :""
-                                                }`
-                                            }
-                                        >
+                                                }`}
+                                            >
 
+                                                {
+                                                    item.children.map((sub,i)=>(
 
-
-                                            {
-
-                                                item.children.map(
-                                                    (sub,i)=>(
-
-
-                                                        <li
-                                                            key={i}
-                                                        >
-
+                                                        <li key={i}>
 
                                                             <Link
-
                                                                 to={sub.link}
-
-                                                                className={
-                                                                    location.pathname === sub.link
-                                                                    ?"active"
-                                                                    :""
-                                                                }
-
-
                                                                 onClick={() =>
                                                                     setMenuOpen(false)
                                                                 }
-
+                                                                className={
+                                                                    location.pathname === sub.link
+                                                                    ? "active"
+                                                                    :""
+                                                                }
                                                             >
 
                                                                 {sub.label}
 
                                                             </Link>
 
-
                                                         </li>
 
+                                                    ))
+                                                }
 
-                                                    )
-
-                                                )
-
-                                            }
+                                            </ul>
 
 
+                                        </li>
 
-                                        </ul>
-
-
-
-
-                                    </li>
-
-
-                                ))
-
-                            }
+                                    ))
+                                }
 
 
 
@@ -391,12 +332,9 @@ const Header = () => {
 
 
 
-
+                        {/* RIGHT SIDE */}
 
                         <div className="nav-actions">
-
-
-
 
 
                             <div className="call">
@@ -404,20 +342,16 @@ const Header = () => {
 
                                 <div className="headphone-main">
 
-
                                     <img
                                         src={headphoneIcon}
                                         alt="Contact Nyumba Dynamics"
                                     />
 
-
                                 </div>
 
 
 
-
                                 <div className="need-help-main">
-
 
                                     <p>
                                         Talk To An Expert
@@ -425,19 +359,14 @@ const Header = () => {
 
 
                                     <a href="tel:+256751353757">
-
-                                        +256 7513 537570
-
+                                        +256 7513 53757
                                     </a>
 
 
                                 </div>
 
 
-
                             </div>
-
-
 
 
 
@@ -448,26 +377,17 @@ const Header = () => {
                                 className="btn-quote get-quote-btn"
                             >
 
-
                                 Request Consultation
-
-
 
                                 <img
                                     src={CrossArrow}
                                     alt="Arrow"
                                 />
 
-
                             </Link>
 
 
-
-
-
                         </div>
-
-
 
 
 
@@ -475,15 +395,10 @@ const Header = () => {
 
 
 
-
-
                 </div>
 
 
-
             </header>
-
-
 
 
         </>
