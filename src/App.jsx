@@ -36,6 +36,7 @@ import Preloader from "./component/Preloader.tsx";
 import ScrollToTopButton from "./component/ScrollToTopButton.tsx";
 import SmoothScroll from "./hooks/SmoothScroll.ts";
 import ContactForm from "./component/ContactForm.tsx";
+import WhatsAppWidget from "./component/WhatsAppWidget";
 
 
 function App() {
@@ -148,6 +149,8 @@ function App() {
 
       </Routes>
 
+
+       <WhatsAppWidget />
 
       <ContactForm />
 

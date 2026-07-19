@@ -157,13 +157,16 @@ const Header = () => {
                         className="logo nyumba-logo"
                     >
 
-                        <img
-                            src={LogoSvg}
-                            alt="Nyumba Dynamics Logo"
-                        />
-
+                     <img
+                         src={LogoSvg}
+                     alt="Nyumba Dynamics Logo"
+                     style={{
+                       width:"180px",
+                          height:"auto",
+                         display:"block"
+                       }}
+                    />
                     </Link>
-
 
 
                     {/* MOBILE BUTTON */}
@@ -213,13 +216,10 @@ const Header = () => {
 
                                 <img
                                     src={LogoSvg}
-                                    alt="Nyumba Dynamics"
+                                    alt="nyumba dynamics logo"
                                 />
 
                             </Link>
-
-
-
 
                             <ul className="menu">
 
