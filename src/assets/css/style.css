@@ -23,8 +23,6 @@ Primary use:
 
 }
 
-<<<<<<< HEAD
-=======
 /* Typography */
 body {
     font-family: 'Poppins', 'Montserrat', sans-serif;
@@ -38,7 +36,6 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
->>>>>>> phase1-import
 
 /* Tablet */
 @media (max-width: 992px) {
@@ -179,7 +176,7 @@ button {
         height: 750px;
 
 }
-<<<<<<< HEAD
+
 /*-----------------------[ 4.Button CSS ]------------------------*/
 .btn-quote {
     color: var(--5, #FFF);
@@ -604,8 +601,7 @@ button {
         height: 35px;
     }
 }
-=======
->>>>>>> phase1-import
+
 
     .lets-us-do {
         font-size: 55px;
@@ -1836,12 +1832,10 @@ button {
     width: 130px;
 }
 
-<<<<<<< HEAD
-=======
 .nyumba-mobile-logo img {
     width: 120px;
 }
->>>>>>> phase1-import
+
 
 }
 .services-svg-main img {
@@ -1857,11 +1851,11 @@ button {
     flex-grow: 1;
 }
 .services-name {
-<<<<<<< HEAD
+
     color: var(--3, #000);
-=======
+
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     text-align: center;
     font-size: 24px;
     font-weight: 600;
@@ -1869,11 +1863,11 @@ button {
     padding-bottom: 10px;
 }
 .services-card-sub-text {
-<<<<<<< HEAD
+
     color: var(--4, #222);
-=======
+
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     text-align: center;
     font-size: 16px;
     font-style: normal;
@@ -1888,11 +1882,9 @@ button {
     justify-content: center;
     gap: 8px;
     padding: 20px;
-<<<<<<< HEAD
+
     color: var(--16, #F7941D);
-=======
     color: var(--16, var(--nyumba-gold));
->>>>>>> phase1-import
     font-size: 18px;
     font-weight: 600;
     line-height: 24px;
@@ -1918,11 +1910,11 @@ button {
     top: 0;
     height: 0;
     width: 100%;
-<<<<<<< HEAD
+
     background-color: #F7941D;
-=======
+
     background-color: var(--nyumba-gold);
->>>>>>> phase1-import
+
     z-index: -1;
     transition: inherit;
 }
@@ -1943,22 +1935,21 @@ button {
     margin-top: 30px;
 }
 .check-box-main-sub h2 {
-<<<<<<< HEAD
+
     color: var(--3, #000);
-=======
+
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     font-size: 24px;
     font-weight: 600;
     line-height: 32px;
     padding-bottom: 5px;
 }
 .check-box-main-sub p {
-<<<<<<< HEAD
     color: var(--4, #222);
-=======
+
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -1978,11 +1969,8 @@ button {
 .sadas {
     width: 360px;
     height: 100%;
-<<<<<<< HEAD
     border: 2px solid #F7941D;
-=======
     border: 2px solid var(--nyumba-gold);
->>>>>>> phase1-import
     border-radius: 180px;
     position: absolute;
     left: 130px;
@@ -2029,11 +2017,10 @@ button {
     gap: 30px;
 }
 .input-label-text {
-<<<<<<< HEAD
     color: var(--3, #000);
-=======
+
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -2044,11 +2031,11 @@ button {
 .calcult-from-grid input,
 .your-message-input input {
     border-radius: 10px;
-<<<<<<< HEAD
+
     border: 2px solid var(--12, #F8FAFC);
-=======
+
     border: 2px solid var(--nyumba-bg, #F8FAFC);
->>>>>>> phase1-import
+
     background: var(--5, #FFF);
     padding: 12px 15px;
     width: 100%;
@@ -2060,11 +2047,11 @@ button {
 }
 .calcult-from-grid input:focus,
 .your-message-input input:focus {
-<<<<<<< HEAD
+
     outline: 2px solid #F7941D;
-=======
+
     outline: 2px solid var(--nyumba-gold);
->>>>>>> phase1-import
+
 }
 .input-mainteam {
     position: relative;
@@ -2085,11 +2072,8 @@ button {
 }
 .input-main {
     border-radius: 10px;
-<<<<<<< HEAD
     border: 2px solid var(--12, #F8FAFC);
-=======
     border: 2px solid var(--nyumba-bg, #F8FAFC);
->>>>>>> phase1-import
     background: var(--5, #FFF);
     padding: 12px 15px;
     width: 100%;
@@ -2112,11 +2096,8 @@ button {
     top: 15px;
     width: 100%;
     z-index: 5;
-<<<<<<< HEAD
     border: 1px solid #F7941D;
-=======
     border: 1px solid var(--nyumba-gold);
->>>>>>> phase1-import
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 .formDropDown-ul-list span {
@@ -2129,11 +2110,10 @@ button {
     padding: 10px 12px;
 }
 .formDropDown-ul-list li:hover {
-<<<<<<< HEAD
     background: #F7941D;
-=======
+
     background: var(--nyumba-gold);
->>>>>>> phase1-import
+
     transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
@@ -2159,11 +2139,9 @@ button {
 }
 /*-----------------------[ 11.Section Six CSS ]------------------------*/
 .section-six {
-<<<<<<< HEAD
     background: var(--12, #F8FAFC);
-=======
     background: var(--nyumba-bg, #F8FAFC);
->>>>>>> phase1-import
+
     padding: 200px 0 100px;
 }
 .how-to-work-bg {
@@ -2218,11 +2196,10 @@ button {
     top: 0;
     height: 0;
     width: 100%;
-<<<<<<< HEAD
     background-color: #F7941D;
-=======
+
     background-color: var(--nyumba-gold);
->>>>>>> phase1-import
+
     z-index: -1;
     transition: inherit;
     transition: all 0.3s ease;
@@ -2241,11 +2218,8 @@ button {
     filter: brightness(0) saturate(100%) invert(82%) sepia(100%) saturate(0%) hue-rotate(85deg) brightness(112%) contrast(101%);
 }
 .how-work-step-box .how-work-step-box-sub h3 {
-<<<<<<< HEAD
     color: var(--3, #000);
-=======
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
     text-align: center;
     font-size: 24px;
     font-weight: 600;
@@ -2270,11 +2244,8 @@ button {
     bottom: -100%;
     left: 0;
     right: 0;
-<<<<<<< HEAD
     background-color: rgba(0, 194, 255, 0.85);
-=======
     background-color: rgba(10, 61, 145, 0.85);
->>>>>>> phase1-import
     overflow: hidden;
     width: 100%;
     height: 0;
@@ -2306,11 +2277,10 @@ button {
 }
 .view-project-btn {
     background: #FFFFFF;
-<<<<<<< HEAD
     color: #F7941D;
-=======
+
     color: var(--nyumba-gold);
->>>>>>> phase1-import
+
 }
 .view-project-btn:hover {
     color: #FFF !important;
@@ -2332,11 +2302,11 @@ button {
 }
 .project-button-next:hover,
 .project-button-prev:hover {
-<<<<<<< HEAD
+
     background: #F7941D;
-=======
+
     background: var(--nyumba-gold);
->>>>>>> phase1-import
+
 }
 .project-button-next.swiper-button-next,
 .project-button-prev.swiper-button-prev {
@@ -2355,11 +2325,11 @@ button {
     padding: 100px 0;
 }
 .team-circle-main {
-<<<<<<< HEAD
+
     border: 2px solid #F7941D;
-=======
+
     border: 2px solid var(--nyumba-gold);
->>>>>>> phase1-import
+
     padding: 20px;
     border-radius: 50%;
     position: relative;
@@ -2372,11 +2342,11 @@ button {
     max-width: 260px;
     height: 260px;
     border-radius: 50%;
-<<<<<<< HEAD
+
     background: var(--12, #F8FAFC);
-=======
+
     background: var(--nyumba-bg, #F8FAFC);
->>>>>>> phase1-import
+
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -2391,11 +2361,9 @@ button {
     max-width: 64px;
     height: 64px;
     border-radius: 50%;
-<<<<<<< HEAD
     background: #F7941D;
-=======
     background: var(--nyumba-gold);
->>>>>>> phase1-import
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2406,11 +2374,11 @@ button {
     z-index: 2;
 }
 .team-circle-link h3 {
-<<<<<<< HEAD
+
     color: var(--3, #000);
-=======
+
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     text-align: center;
     font-size: 24px;
     font-weight: 600;
@@ -2420,17 +2388,17 @@ button {
     transition: all 0.3s ease-in-out;
 }
 .team-circle-link:hover h3 {
-<<<<<<< HEAD
+
     color: #F7941D;
 }
 .team-circle-link p {
     color: var(--4, #222);
-=======
+
     color: var(--nyumba-gold);
 }
 .team-circle-link p {
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     text-align: center;
     font-size: 16px;
     font-weight: 400;
@@ -2456,11 +2424,11 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
+
     background: #F7941D;
-=======
+
     background: var(--nyumba-gold);
->>>>>>> phase1-import
+
     border: 2px solid transparent;
     border-radius: 50%;
     transform: translateY(20px) scale(0.8);
@@ -2471,11 +2439,11 @@ button {
 }
 .social-icons li:hover {
     background: #FFF;
-<<<<<<< HEAD
+
     border: 2px solid #F7941D;
-=======
+
     border: 2px solid var(--nyumba-gold);
->>>>>>> phase1-import
+
 }
 .social-icons li:hover img {
     filter: brightness(0) saturate(100%) invert(80%) sepia(39%) saturate(7500%) hue-rotate(155deg) brightness(99%) contrast(105%);
@@ -2523,11 +2491,10 @@ button {
     object-fit: cover;
 }
 .testimonials-col-main {
-<<<<<<< HEAD
     background: var(--12, #F8FAFC);
-=======
+
     background: var(--nyumba-bg, #F8FAFC);
->>>>>>> phase1-import
+
     padding: 100px;
     width: 100%;
     overflow: hidden;
@@ -2546,11 +2513,11 @@ button {
     padding: 60px;
 }
 .cellent {
-<<<<<<< HEAD
+
     color: var(--4, #222);
-=======
+
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     font-size: 24px;
     font-weight: 400;
     line-height: 36px;
@@ -2563,11 +2530,11 @@ button {
     gap: 15px;
 }
 .client-details h3 {
-<<<<<<< HEAD
+
     color: var(--3, #000);
-=======
+
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     font-size: 18px;
     font-weight: 500;
     line-height: 24px;
@@ -2632,11 +2599,11 @@ button {
 }
 .blog-box-main {
     border-radius: 20px;
-<<<<<<< HEAD
+
     border: 2px solid var(--12, #F8FAFC);
-=======
+
     border: 2px solid var(--nyumba-bg, #F8FAFC);
->>>>>>> phase1-import
+
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     overflow: hidden;
@@ -2645,11 +2612,11 @@ button {
     flex-direction: column;
 }
 .blog-box-main:hover {
-<<<<<<< HEAD
+
     border-color: #F7941D;
-=======
+
     border-color: var(--nyumba-gold);
->>>>>>> phase1-import
+
     box-shadow: 0 15px 30px rgba(74, 108, 247, 0.1);
 }
 .blog-box-main::after {
@@ -2678,11 +2645,11 @@ button {
     border-radius: 20px 20px 0 0;
 }
 .blog-date {
-<<<<<<< HEAD
+
     color: var(--4, #222);
-=======
+
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     text-align: center;
     font-size: 16px;
     font-weight: 500;
@@ -2696,11 +2663,11 @@ button {
     transition: all 0.4s ease;
 }
 .blog-box-main:hover .blog-date {
-<<<<<<< HEAD
+
     color: #F7941D;
-=======
+
     color: var(--nyumba-gold);
->>>>>>> phase1-import
+
 }
 .blog-date::before,
 .blog-date::after {
@@ -2733,30 +2700,30 @@ button {
     padding: 30px;
 }
 .blog-containe-main h2 {
-<<<<<<< HEAD
+
     color: var(--3, #000);
-=======
+
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     font-size: 24px;
     font-weight: 500;
     line-height: 32px;
     transition: color 0.3s ease;
 }
 .blog-box-main:hover .blog-containe-main h2 {
-<<<<<<< HEAD
+
     color: #F7941D;
 }
 .blog-containe-main p {
     overflow: hidden;
     color: var(--4, #222);
-=======
+
     color: var(--nyumba-gold);
 }
 .blog-containe-main p {
     overflow: hidden;
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     text-overflow: ellipsis;
     font-size: 16px;
     font-weight: 400;
@@ -2786,11 +2753,10 @@ button {
     gap: 60px;
 }
 .call-support-text {
-<<<<<<< HEAD
+
     color: var(--16, #F7941D);
-=======
+
     color: var(--16, var(--nyumba-gold));
->>>>>>> phase1-import
     font-size: 18px;
     font-weight: 500;
     line-height: 24px;
@@ -2798,22 +2764,22 @@ button {
     margin-top: 30px;
 }
 .tel-num {
-<<<<<<< HEAD
+
     color: var(--3, #000);
-=======
+
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     font-size: 36px;
     font-weight: 400;
     line-height: 48px;
     transition: all 0.3s ease-in-out;
 }
 .tel-num:hover {
-<<<<<<< HEAD
+
     color: #F7941D;
-=======
+
     color: var(--nyumba-gold);
->>>>>>> phase1-import
+
 }
 .contac-form-main {
     border-radius: 20px;
@@ -2838,11 +2804,11 @@ button {
 }
 /*-----------------------[ 17.Footer CSS ]------------------------*/
 .subscribe-section {
-<<<<<<< HEAD
+
     background: #000;
-=======
+
     background: var(--nyumba-blue);
->>>>>>> phase1-import
+
     border-radius: 20px;
     padding: 60px;
     margin-top: -125px;
@@ -2877,11 +2843,11 @@ button {
     line-height: 24px;
 }
 .working-hours {
-<<<<<<< HEAD
+
     color: var(--3, #000);
-=======
+
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     font-size: 24px;
     font-weight: 600;
     line-height: 36px;
@@ -2896,11 +2862,11 @@ button {
     border-bottom: 2px solid #F8FAFC;
 }
 .timing-hrw p {
-<<<<<<< HEAD
+
     color: var(--4, #222);
-=======
+
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
@@ -2915,11 +2881,11 @@ button {
     gap: 30px;
 }
 .quicklinks-main ul li a {
-<<<<<<< HEAD
+
     color: var(--4, #222);
-=======
+
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -2927,11 +2893,11 @@ button {
     transition: all 0.4s ease-in-out;
 }
 .quicklinks-main ul li a:hover {
-<<<<<<< HEAD
+
     color: #F7941D;
-=======
+
     color: var(--nyumba-gold);
->>>>>>> phase1-import
+
 }
 .footer-img-group {
     display: flex;
@@ -2981,21 +2947,21 @@ button {
     gap: 20px;
     padding: 20px;
     border-radius: 30px;
-<<<<<<< HEAD
+
     background: var(--3, #000);
-=======
+
     background: var(--nyumba-blue);
->>>>>>> phase1-import
+
     margin-top: 60px;
     margin-bottom: 40px;
 }
 .media-logo-call-footer .call-detl {
     border-radius: 50px;
-<<<<<<< HEAD
+
     background: var(--14, #F7941D);
-=======
+
     background: var(--14, var(--nyumba-gold));
->>>>>>> phase1-import
+
     padding: 10px 50px 10px 10px;
 }
 .media-logo-call-footer .call-detl .img-main-call {
@@ -3020,11 +2986,11 @@ button {
     transition: all 0.3s ease-in-out;
 }
 .footer-med-icons:hover {
-<<<<<<< HEAD
+
     background: #F7941D;
-=======
+
     background: var(--nyumba-gold);
->>>>>>> phase1-import
+
 }
 .footer-med-icons img {
     width: 32px;
@@ -3038,22 +3004,21 @@ button {
 }
 .copyrights-main p,
 .copyrights-main a {
-<<<<<<< HEAD
     color: var(--4, #222);
-=======
+
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
     text-align: center;
 }
 .copyrights-main a:hover {
-<<<<<<< HEAD
+
     color: #F7941D;
-=======
+
     color: var(--nyumba-gold);
->>>>>>> phase1-import
+
 }
 .call-detl {
     display: flex;
@@ -3064,11 +3029,11 @@ button {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-<<<<<<< HEAD
+
     background: #F7941D;
-=======
+
     background: var(--nyumba-gold);
->>>>>>> phase1-import
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3097,11 +3062,11 @@ button.bottom-top-button {
     height: 50px;
     color: #FFF;
     font-size: 30px;
-<<<<<<< HEAD
+
     background: #F7941D;
-=======
+
     background: var(--nyumba-gold);
->>>>>>> phase1-import
+
 }
 /*-----------------------[ 19.About Page CSS ]------------------------*/
 .heroSection {
@@ -3144,22 +3109,22 @@ button.bottom-top-button {
     margin-bottom: 30px;
 }
 .rich {
-<<<<<<< HEAD
+
     color: var(--3, #000);
-=======
+
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     font-size: 24px;
     font-weight: 600;
     line-height: 32px;
     padding-bottom: 8px;
 }
 .clane {
-<<<<<<< HEAD
+
     color: var(--4, #222);
-=======
+
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -3190,11 +3155,10 @@ button.bottom-top-button {
     font-size: 18px;
     font-weight: 600;
     line-height: 20px;
-<<<<<<< HEAD
+
     color: #F7941D;
-=======
     color: var(--nyumba-gold);
->>>>>>> phase1-import
+
 }
 .team-meta li a,
 .team-meta li p {
@@ -3205,11 +3169,11 @@ button.bottom-top-button {
     transition: all .35s ease-in-out;
 }
 .team-meta li a:hover {
-<<<<<<< HEAD
+
     color: #F7941D;
-=======
+
     color: var(--nyumba-gold);
->>>>>>> phase1-import
+
 }
 .single-team-social {
     display: flex;
@@ -3235,11 +3199,11 @@ button.bottom-top-button {
     filter: brightness(0) saturate(100%) invert(65%) sepia(94%) saturate(3410%) hue-rotate(159deg) brightness(104%) contrast(104%);
 }
 .single-team-social a:hover {
-<<<<<<< HEAD
+
     background: #F7941D;
-=======
+
     background: var(--nyumba-gold);
->>>>>>> phase1-import
+
 }
 .single-team-social a:hover img {
     filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0%) hue-rotate(318deg) brightness(100%) contrast(105%);
@@ -3276,22 +3240,22 @@ button.bottom-top-button {
     position: relative;
 }
 .progress-title {
-<<<<<<< HEAD
+
     color: var(--3, #000);
-=======
+
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
+
     font-size: 18px;
     font-weight: 500;
     line-height: 30px;
 }
 .progress-number-wrapper,
 .progress-number-mark {
-<<<<<<< HEAD
+
     color: #F7941D;
-=======
+
     color: var(--nyumba-gold);
->>>>>>> phase1-import
+
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
@@ -3314,11 +3278,7 @@ button.bottom-top-button {
 .progress-content {
     height: 8px;
     border-radius: 10px;
-<<<<<<< HEAD
-    background-color: #F7941D;
-=======
     background-color: var(--nyumba-gold);
->>>>>>> phase1-import
     width: 0%;
 }
 /*-----------------------[ 21.Pricing Plan Page CSS ]------------------------*/
@@ -3340,11 +3300,7 @@ button.bottom-top-button {
     transition: 0.3s ease;
 }
 .pricing-card.enterprise {
-<<<<<<< HEAD
-    background-color: #F7941D;
-=======
     background-color: var(--nyumba-gold);
->>>>>>> phase1-import
     color: #fff;
 }
 .pricing-card h2 {
@@ -3363,11 +3319,7 @@ button.bottom-top-button {
 .price {
     font-size: 40px;
     font-weight: 700;
-<<<<<<< HEAD
-    color: #F7941D;
-=======
     color: var(--nyumba-gold);
->>>>>>> phase1-import
 }
 .enterprise .price {
     color: #fff;
@@ -3409,11 +3361,7 @@ button.bottom-top-button {
     position: absolute;
     left: 0;
     top: 0;
-<<<<<<< HEAD
-    color: #F7941D;
-=======
     color: var(--nyumba-gold);
->>>>>>> phase1-import
     font-size: 16px;
 }
 .enterprise .features li::before {
@@ -3445,11 +3393,7 @@ button.bottom-top-button {
     padding: 30px;
 }
 .testimonial-page .cellent {
-<<<<<<< HEAD
-    color: var(--4, #222);
-=======
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
@@ -3494,13 +3438,8 @@ button.bottom-top-button {
     margin-bottom: 15px;
 }
 .accordion-button:not(.collapsed) {
-<<<<<<< HEAD
-    color: #F7941D;
-    background-color: rgba(0, 194, 255, 0.1) !important;
-=======
     color: var(--nyumba-gold);
     background-color: rgba(10, 61, 145, 0.1) !important;
->>>>>>> phase1-import
 }
 #accordionExample.accordion {
     --bs-accordion-border-color: none;
@@ -3565,11 +3504,7 @@ button.bottom-top-button {
     color: #FFF;
     text-align: center;
     padding: 30px;
-<<<<<<< HEAD
-    background: #000000;
-=======
     background: var(--nyumba-blue);
->>>>>>> phase1-import
 }
 .roofing-services-list-main {
     padding: 30px;
@@ -3617,11 +3552,7 @@ button.bottom-top-button {
 }
 .service-list-arow-main:hover,
 .service-list-arow-main.active {
-<<<<<<< HEAD
-    background: #F7941D;
-=======
     background: var(--nyumba-gold);
->>>>>>> phase1-import
 }
 .service-list-arow-main:hover p,
 .service-list-arow-main.active p {
@@ -3673,11 +3604,7 @@ button.bottom-top-button {
 .brochure {
     width: 60px;
     height: 60px;
-<<<<<<< HEAD
-    background: #F7941D;
-=======
     background: var(--nyumba-gold);
->>>>>>> phase1-import
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3720,11 +3647,7 @@ button.bottom-top-button {
     left: 0;
     right: 0;
     bottom: 0;
-<<<<<<< HEAD
-    background-color: rgba(0, 194, 255, 0.85);
-=======
     background-color: rgba(10, 61, 145, 0.85);
->>>>>>> phase1-import
     opacity: 0;
     -webkit-transition: .5s;
     -o-transition: .5s;
@@ -3787,11 +3710,7 @@ button.bottom-top-button {
     margin-top: 50px;
 }
 .diamond-btn {
-<<<<<<< HEAD
-    background: #F7941D;
-=======
     background: var(--nyumba-gold);
->>>>>>> phase1-import
     width: 40px;
     height: 40px;
     display: flex;
@@ -3841,11 +3760,7 @@ button.bottom-top-button {
     line-height: 30px;
 }
 .project-info-main p:nth-child(2) {
-<<<<<<< HEAD
-    color: #F7941D;
-=======
     color: var(--nyumba-gold);
->>>>>>> phase1-import
     font-size: 20px;
 }
 .project-details-icon .footer-med-icons img {
@@ -3857,11 +3772,7 @@ button.bottom-top-button {
     gap: 10px;
 }
 .project-details-icon .footer-med-icons {
-<<<<<<< HEAD
-    background: #F7941D;
-=======
     background: var(--nyumba-gold);
->>>>>>> phase1-import
     width: 50px;
     height: 50px;
 }
@@ -3885,11 +3796,7 @@ button.bottom-top-button {
     outline: none;
     border: none;
     padding: 18px 15px;
-<<<<<<< HEAD
-    color: var(--4, #222);
-=======
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -3908,11 +3815,7 @@ button.bottom-top-button {
 .single-services-black-box {
     margin-bottom: 20px;
     margin-top: 40px;
-<<<<<<< HEAD
-    background: #000000;
-=======
     background: var(--nyumba-blue);
->>>>>>> phase1-import
     padding: 30px;
 }
 .single-services-black-box h3 {
@@ -3929,32 +3832,20 @@ button.bottom-top-button {
     margin-bottom: 20px;
 }
 .recent-post-text-main p {
-<<<<<<< HEAD
-    color: var(--4, #222);
-=======
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
 }
 .recent-post-text-main h2 {
-<<<<<<< HEAD
-    color: var(--4, #222);
-=======
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
     font-size: 18px;
     font-weight: 600;
     line-height: 27px;
     transition: all 0.3s ease-in-out;
 }
 .recent-post-main:hover h2 {
-<<<<<<< HEAD
-    color: #F7941D;
-=======
     color: var(--nyumba-gold);
->>>>>>> phase1-import
 }
 .adds-details-main {
     margin-top: 40px;
@@ -3990,11 +3881,7 @@ button.bottom-top-button {
     position: relative;
 }
 .qoute-box h2 {
-<<<<<<< HEAD
-    color: var(--3, #000);
-=======
     color: var(--nyumba-text, #1F2937);
->>>>>>> phase1-import
     font-size: 24px;
     font-weight: 500;
     line-height: 36px;
@@ -4006,11 +3893,7 @@ button.bottom-top-button {
     margin-top: 15px;
 }
 .line {
-<<<<<<< HEAD
-    border-top: 2px solid #F7941D;
-=======
     border-top: 2px solid var(--nyumba-gold);
->>>>>>> phase1-import
     width: 60px;
 }
 .jordon {
@@ -4040,9 +3923,6 @@ button.bottom-top-button {
     margin-bottom: 0;
     background: #F5F6F7;
 
-<<<<<<< HEAD
-}
-=======
 }
 /*-----------------------[ 31.Mobile Bottom Navigation CSS ]------------------------*/
 .mobile-bottom-nav {
@@ -4149,4 +4029,3 @@ button.bottom-top-button {
         text-align: center;
     }
 }
->>>>>>> phase1-import

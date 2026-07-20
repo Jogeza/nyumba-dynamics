@@ -47,14 +47,16 @@ const Footer = () => {
 
                             Subscribe Now
 
-                            <img 
-                                src={CrossArrowSvg} 
-                                alt="arrow" 
+                            <img
+                                src={CrossArrowSvg}
+                                alt="arrow"
                             />
 
                         </button>
 
+
                     </div>
+
 
                 </div>
 
@@ -90,6 +92,7 @@ const Footer = () => {
 
 
 
+
                         <div className="timing-hrw">
 
                             <p>
@@ -101,6 +104,7 @@ const Footer = () => {
                             </p>
 
                         </div>
+
 
 
 
@@ -118,6 +122,8 @@ const Footer = () => {
 
 
                     </div>
+
+
 
 
 
@@ -152,24 +158,25 @@ const Footer = () => {
 
 
                                 <li>
-                                    <Link to="/services/smart-home">
-                                        Smart Home Solutions
+                                    <Link to="/services/masonry">
+                                        Masonry Works
                                     </Link>
                                 </li>
 
 
                                 <li>
-                                    <Link to="/services/construction">
-                                        Construction & Renovation
+                                    <Link to="/services/carpentry">
+                                        Carpentry & Joinery
                                     </Link>
                                 </li>
 
 
                                 <li>
-                                    <Link to="/services/maintenance">
-                                        Property Maintenance
+                                    <Link to="/services/painting">
+                                        Painting & Finishing
                                     </Link>
                                 </li>
+
 
                             </ul>
 
@@ -239,6 +246,8 @@ const Footer = () => {
 
 
 
+
+
                     {/* Projects */}
 
                     <div className="col-xxl-4 col-xl-4 col-lg-4">
@@ -249,65 +258,61 @@ const Footer = () => {
                         </h2>
 
 
+
                         <div className="footer-img-group">
 
 
-<<<<<<< HEAD
-                            {[FooterImg1, FooterImg2, FooterImg3].map(
-                                (image,index)=>(
-=======
-                            <Link to="/properties" className="img-container">
->>>>>>> phase1-import
 
-                                <a 
-                                    href="#" 
-                                    className="img-container" 
-                                    key={index}
-                                >
+                            <Link 
+                                to="/projects" 
+                                className="img-container"
+                            >
+
+                                <img
+                                    className="footer-imgs"
+                                    src={FooterImg1}
+                                    alt="Nyumba Dynamics Project"
+                                />
+
+
+                                <div className="footer-img-overlay">
 
                                     <img
-                                        className="footer-imgs"
-                                        src={image}
-                                        alt="Nyumba Dynamics Project"
+                                        src={InstaSvg}
+                                        alt="project"
                                     />
 
+                                </div>
 
-<<<<<<< HEAD
-                                    <div className="footer-img-overlay">
 
-                                        <img
-                                            src={InstaSvg}
-                                            className="brand-instagram"
-                                            alt="instagram"
-                                        />
-
-                                    </div>
-=======
                             </Link>
->>>>>>> phase1-import
 
 
-                                </a>
 
-<<<<<<< HEAD
-                            ))}
-=======
-                            <Link to="/properties" className="img-container">
+
+
+
+                            <Link 
+                                to="/projects" 
+                                className="img-container"
+                            >
 
                                 <img
                                     className="footer-imgs"
                                     src={FooterImg2}
-                                    alt="property"
+                                    alt="Nyumba Dynamics Project"
                                 />
+
 
                                 <div className="footer-img-overlay">
 
                                     <img
                                         src={InstaSvg}
-                                        alt="instagram"
+                                        alt="project"
                                     />
 
                                 </div>
+
 
                             </Link>
 
@@ -315,12 +320,17 @@ const Footer = () => {
 
 
 
-                            <Link to="/properties" className="img-container">
+
+
+                            <Link 
+                                to="/projects" 
+                                className="img-container"
+                            >
 
                                 <img
                                     className="footer-imgs"
                                     src={FooterImg3}
-                                    alt="property"
+                                    alt="Nyumba Dynamics Project"
                                 />
 
 
@@ -328,7 +338,7 @@ const Footer = () => {
 
                                     <img
                                         src={InstaSvg}
-                                        alt="instagram"
+                                        alt="project"
                                     />
 
                                 </div>
@@ -336,13 +346,13 @@ const Footer = () => {
 
                             </Link>
 
->>>>>>> phase1-import
 
 
                         </div>
 
 
                     </div>
+
 
 
                 </div>
@@ -353,7 +363,10 @@ const Footer = () => {
 
 
 
+
+
                 {/* Bottom Footer */}
+
 
 
                 <div className="media-logo-call-footer fade_up show">
@@ -367,6 +380,7 @@ const Footer = () => {
                         />
 
                     </Link>
+
 
 
 
@@ -386,6 +400,8 @@ const Footer = () => {
 
 
 
+
+
                         <div>
 
                             <p>
@@ -397,7 +413,9 @@ const Footer = () => {
                                 +256 7513 53757
                             </a>
 
+
                             <span> / </span>
+
 
                             <a href="tel:+256761648679">
                                 +256 7616 48679
@@ -414,29 +432,18 @@ const Footer = () => {
 
 
 
+
+
                     <div className="footer-med-icons-main">
 
 
-<<<<<<< HEAD
-                        <a href="https://www.facebook.com" className="footer-med-icons">
-                            <img src={facebook} alt="facebook" />
-                        </a>
 
-
-                        <a href="https://x.com" className="footer-med-icons">
-                            <img src={twitter} alt="twitter" />
-                        </a>
-
-
-                        <a href="https://www.instagram.com" className="footer-med-icons">
-                            <img src={insta} alt="instagram" />
-                        </a>
-
-
-                        <a href="https://wa.me/256751353757" className="footer-med-icons">
-                            <img src={whatsapp} alt="whatsapp" />
-=======
-                        <a href="https://www.facebook.com/nyumbadynamics" target="_blank" rel="noopener noreferrer" className="footer-med-icons">
+                        <a
+                            href="https://www.facebook.com/nyumbadynamics"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="footer-med-icons"
+                        >
 
                             <img
                                 src={facebook}
@@ -447,7 +454,14 @@ const Footer = () => {
 
 
 
-                        <a href="https://twitter.com/nyumbadynamics" target="_blank" rel="noopener noreferrer" className="footer-med-icons">
+
+
+                        <a
+                            href="https://twitter.com/nyumbadynamics"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="footer-med-icons"
+                        >
 
                             <img
                                 src={twitter}
@@ -459,7 +473,14 @@ const Footer = () => {
 
 
 
-                        <a href="https://www.instagram.com/nyumbadynamics" target="_blank" rel="noopener noreferrer" className="footer-med-icons">
+
+
+                        <a
+                            href="https://www.instagram.com/nyumbadynamics"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="footer-med-icons"
+                        >
 
                             <img
                                 src={insta}
@@ -470,15 +491,24 @@ const Footer = () => {
 
 
 
-                        <a href="https://wa.me/256751353757" target="_blank" rel="noopener noreferrer" className="footer-med-icons">
+
+
+
+
+                        <a
+                            href="https://wa.me/256751353757"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="footer-med-icons"
+                        >
 
                             <img
                                 src={whatsapp}
                                 alt="whatsapp"
                             />
 
->>>>>>> phase1-import
                         </a>
+
 
 
                     </div>
@@ -491,12 +521,15 @@ const Footer = () => {
 
 
 
+
                 <div className="copyrights-main">
 
+
                     <p>
-                        Copyright © {new Date().getFullYear()} 
+                        Copyright © {new Date().getFullYear()}
                         Nyumba Dynamics. All Rights Reserved.
                     </p>
+
 
 
                     <p>
@@ -508,10 +541,12 @@ const Footer = () => {
 
 
 
+
             </div>
 
 
         </footer>
+
 
     );
 

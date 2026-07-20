@@ -4,13 +4,8 @@
         "img": "slider-img1.jpg",
         "svg": "services-svg1.svg",
         "title": "Electrical Services",
-<<<<<<< HEAD
         "desc": "Electrical wiring, lighting installation, repairs and maintenance — carried out safely by trained technicians.",
         "link": "/services/electrical"
-=======
-        "desc": "Electrical wiring, lighting installation, repairs and maintenance \u2014 carried out safely by trained technicians.",
-        "link": "/services"
->>>>>>> phase1-import
     },
     {
         "id": 2,
@@ -18,11 +13,7 @@
         "svg": "services-svg2.svg",
         "title": "Plumbing Services",
         "desc": "Pipe installation, plumbing repairs, drainage systems and water system maintenance for homes and businesses.",
-<<<<<<< HEAD
         "link": "/services/plumbing"
-=======
-        "link": "/services"
->>>>>>> phase1-import
     },
     {
         "id": 3,
@@ -30,11 +21,7 @@
         "svg": "services-svg3.svg",
         "title": "Masonry Works",
         "desc": "Bricklaying, concrete works, plastering and renovations handled by skilled, professionally managed teams.",
-<<<<<<< HEAD
         "link": "/services/masonry"
-=======
-        "link": "/services"
->>>>>>> phase1-import
     },
     {
         "id": 4,
@@ -42,11 +29,7 @@
         "svg": "services-svg4.svg",
         "title": "Carpentry & Joinery",
         "desc": "Furniture installation, cabinet works, door and window framing, and wood finishing built to last.",
-<<<<<<< HEAD
         "link": "/services/carpentry"
-=======
-        "link": "/services"
->>>>>>> phase1-import
     },
     {
         "id": 5,
@@ -54,11 +37,7 @@
         "svg": "services-svg5.svg",
         "title": "Welding & Fabrication",
         "desc": "Metal gates, security doors, structural fabrication and welding repairs for homes and enterprises.",
-<<<<<<< HEAD
         "link": "/services/welding"
-=======
-        "link": "/services"
->>>>>>> phase1-import
     },
     {
         "id": 6,
@@ -66,10 +45,22 @@
         "svg": "services-svg6.svg",
         "title": "Painting & Finishing",
         "desc": "Interior and exterior painting with decorative finishes that protect and refresh every space.",
-<<<<<<< HEAD
         "link": "/services/painting"
-=======
-        "link": "/services"
->>>>>>> phase1-import
+    },
+    {
+        "id": 7,
+        "img": "slider-img7.jpg",
+        "svg": "services-svg7.svg",
+        "title": "Smart Home Solutions",
+        "desc": "CCTV installation, smart lighting, automation, access control and security solutions for modern living.",
+        "link": "/services/smart-home"
+    },
+    {
+        "id": 8,
+        "img": "slider-img8.jpg",
+        "svg": "services-svg8.svg",
+        "title": "Property Maintenance",
+        "desc": "Reliable repair, inspection and maintenance services keeping homes and businesses operating smoothly.",
+        "link": "/services/maintenance"
     }
 ]
