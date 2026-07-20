@@ -50,19 +50,19 @@ const Header = () => {
                     link:"/services"
                 },
                 {
-                    label:"Property Development",
+                    label:"Construction & Repair",
                     link:"/services"
                 },
                 {
-                    label:"Real Estate Management",
+                    label:"Safety & Maintenance",
                     link:"/services"
                 },
                 {
-                    label:"Interior Design",
+                    label:"Smart Home Solutions",
                     link:"/services"
                 },
                 {
-                    label:"Construction Solutions",
+                    label:"Lifestyle Enhancements",
                     link:"/services"
                 }
             ]
@@ -70,18 +70,18 @@ const Header = () => {
 
 
         {
-            label:"Properties",
+            label:"Projects",
             children:[
                 {
-                    label:"Residential Properties",
+                    label:"Residential Projects",
                     link:"/properties"
                 },
                 {
-                    label:"Commercial Properties",
+                    label:"Commercial Projects",
                     link:"/properties"
                 },
                 {
-                    label:"Luxury Developments",
+                    label:"Smart Home Installations",
                     link:"/properties"
                 }
             ]
@@ -100,23 +100,8 @@ const Header = () => {
                     link:"/team"
                 },
                 {
-                    label:"Request Consultation",
+                    label:"Request a Quote",
                     link:"/consultation"
-                }
-            ]
-        },
-
-
-        {
-            label:"Projects",
-            children:[
-                {
-                    label:"Completed Projects",
-                    link:"/properties"
-                },
-                {
-                    label:"Upcoming Developments",
-                    link:"/properties"
                 }
             ]
         },
@@ -126,11 +111,11 @@ const Header = () => {
             label:"Insights",
             children:[
                 {
-                    label:"Real Estate News",
+                    label:"Home Maintenance Tips",
                     link:"/blog"
                 },
                 {
-                    label:"Property Guides",
+                    label:"Smart Living Guides",
                     link:"/blog"
                 }
             ]
@@ -177,7 +162,7 @@ const Header = () => {
 
                         <img
                             src={LogoSvg}
-                            alt="Nyumba Dynamics - Real Estate and Property Development"
+                            alt="Nyumba Dynamics - Home and Enterprise Maintenance Services"
                         />
 
                     </Link>
@@ -438,7 +423,7 @@ const Header = () => {
 
                                     <a href="tel:+256751353757">
 
-                                        +256 7513 537570
+                                        +256 7513 53757
 
                                     </a>
 
@@ -461,7 +446,7 @@ const Header = () => {
                             >
 
 
-                                Request Consultation
+                                Get Free Quote
 
 
 

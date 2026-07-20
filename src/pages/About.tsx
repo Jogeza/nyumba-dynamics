@@ -31,7 +31,7 @@ const About: React.FC = () => {
                     <h1 className="img-header-text fade_down">About Us</h1>
                     <div className="breadcrumb-group fade_up">
                         <Link to="/">HOME / </Link>
-                        <Link to="/About"> ABOUT US</Link>
+                        <Link to="/about"> ABOUT US</Link>
                     </div>
                 </div>
             </section>

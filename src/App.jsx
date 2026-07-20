@@ -28,6 +28,7 @@ import Header from "./component/Header.tsx";
 import ScrollTopPage from "./component/ScrollTopPage.tsx";
 import Preloader from "./component/Preloader.tsx";
 import ScrollToTopButton from "./component/ScrollToTopButton.tsx";
+import MobileBottomNav from "./component/MobileBottomNav.tsx";
 import SmoothScroll from "./hooks/SmoothScroll.ts";
 import ContactForm from "./component/ContactForm.tsx";
 
@@ -116,6 +117,8 @@ function App() {
       <ContactForm />
 
       <Footer />
+
+      <MobileBottomNav />
 
       <ScrollToTopButton />
 

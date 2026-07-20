@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
                     <h1 className="img-header-text fade_down">Contact Us</h1>
                     <div className="breadcrumb-group fade_up">
                         <Link to="/">HOME / </Link>
-                        <Link to="/Contact">Contact Us</Link>
+                        <Link to="/contact">Contact Us</Link>
                     </div>
                 </div>
             </section>

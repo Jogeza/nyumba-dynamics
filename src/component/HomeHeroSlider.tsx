@@ -30,14 +30,18 @@ const HomeHeroSlider: React.FC = () => {
                             <div className="container">
                                 <div className="row main-swiper-row">
                                     <div className="col-xxl-6 col-xl-6 col-lg-10 clearfix-space animate-slide">
-                                        <p className="needs-text">home and enterprise maintenance services</p>
-                                        <h1 className="lets-us-do">Hire The Right Professionals</h1>
+                                        <p className="needs-text">Hire The Right Professionals</p>
+                                        <h1 className="lets-us-do">Home and Enterprise Maintenance Services, Smart Homes, and Security Solutions Under One Roof</h1>
                                         <h2 className="residents">From electrical repairs and plumbing to CCTV installation, smart home
-                                            automation, interior design, cleaning and maintenance — Nyumba Dynamics delivers
-                                            trusted solutions for modern living, under one roof.</h2>
-                                        <Link to="/Services" className="btn-quote our-services-btn">Our Services
-                                            <img src={CrossArrow} alt="cross-arrow" />
-                                        </Link>
+                                            automation, interior design, cleaning and maintenance, Nyumba Dynamics delivers
+                                            trusted solutions for modern living.</h2>
+                                        <div className="hero-cta-group">
+                                            <Link to="/consultation" className="btn-quote our-services-btn">Request a Service
+                                                <img src={CrossArrow} alt="cross-arrow" />
+                                            </Link>
+                                            <Link to="/consultation" className="btn-quote-outline">Get Free Quote</Link>
+                                            <Link to="/contact" className="btn-quote-outline">Become a Service Provider</Link>
+                                        </div>
                                     </div>
                                     <div className="col-xxl-6 col-xl-6 col-lg-10 position-relative">
                                         <img className="home-img-clening " src={HomeImg1} alt="home-img1" />
@@ -66,7 +70,7 @@ const HomeHeroSlider: React.FC = () => {
                                         <h1 className="lets-us-do">Smart Living, Made Simple</h1>
                                         <h2 className="residents">CCTV systems, smart locks, smart lighting and home automation —
                                             professionally installed and maintained by Nyumba Dynamics.</h2>
-                                        <Link to="/Services" className="btn-quote our-services-btn">Our Services
+                                        <Link to="/services" className="btn-quote our-services-btn">Our Services
                                             <img src={CrossArrow} alt="cross-arrow" />
                                         </Link>
                                     </div>
@@ -100,7 +104,7 @@ const HomeHeroSlider: React.FC = () => {
                                         <h1 className="lets-us-do">Nyumba Dynamics</h1>
                                         <h2 className="residents">Electrical, plumbing, masonry, carpentry, welding and painting —
                                             delivered by trusted professionals across Kampala.</h2>
-                                        <Link to="/Services" className="btn-quote our-services-btn">Our Services
+                                        <Link to="/services" className="btn-quote our-services-btn">Our Services
                                             <img src={CrossArrow} alt="cross-arrow" />
                                         </Link>
                                     </div>

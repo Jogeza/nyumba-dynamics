@@ -255,7 +255,7 @@ const Footer = () => {
                         <div className="footer-img-group">
 
 
-                            <a href="#" className="img-container">
+                            <Link to="/properties" className="img-container">
 
                                 <img
                                     className="footer-imgs"
@@ -272,11 +272,11 @@ const Footer = () => {
 
                                 </div>
 
-                            </a>
+                            </Link>
 
 
 
-                            <a href="#" className="img-container">
+                            <Link to="/properties" className="img-container">
 
                                 <img
                                     className="footer-imgs"
@@ -293,13 +293,13 @@ const Footer = () => {
 
                                 </div>
 
-                            </a>
+                            </Link>
 
 
 
 
 
-                            <a href="#" className="img-container">
+                            <Link to="/properties" className="img-container">
 
                                 <img
                                     className="footer-imgs"
@@ -318,7 +318,7 @@ const Footer = () => {
                                 </div>
 
 
-                            </a>
+                            </Link>
 
 
 
@@ -391,7 +391,7 @@ const Footer = () => {
                     <div className="footer-med-icons-main">
 
 
-                        <a href="#" className="footer-med-icons">
+                        <a href="https://www.facebook.com/nyumbadynamics" target="_blank" rel="noopener noreferrer" className="footer-med-icons">
 
                             <img
                                 src={facebook}
@@ -402,7 +402,7 @@ const Footer = () => {
 
 
 
-                        <a href="#" className="footer-med-icons">
+                        <a href="https://twitter.com/nyumbadynamics" target="_blank" rel="noopener noreferrer" className="footer-med-icons">
 
                             <img
                                 src={twitter}
@@ -414,7 +414,7 @@ const Footer = () => {
 
 
 
-                        <a href="#" className="footer-med-icons">
+                        <a href="https://www.instagram.com/nyumbadynamics" target="_blank" rel="noopener noreferrer" className="footer-med-icons">
 
                             <img
                                 src={insta}
@@ -425,7 +425,7 @@ const Footer = () => {
 
 
 
-                        <a href="#" className="footer-med-icons">
+                        <a href="https://wa.me/256751353757" target="_blank" rel="noopener noreferrer" className="footer-med-icons">
 
                             <img
                                 src={whatsapp}

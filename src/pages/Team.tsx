@@ -13,7 +13,7 @@ const Team: React.FC = () => {
                     <h1 className="img-header-text fade_down">Our Team</h1>
                     <div className="breadcrumb-group fade_up">
                         <Link to="/">HOME / </Link>
-                        <Link to="/Team"> Team</Link>
+                        <Link to="/team"> Team</Link>
                     </div>
                 </div>
             </section>

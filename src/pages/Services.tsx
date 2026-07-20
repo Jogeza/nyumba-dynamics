@@ -55,7 +55,7 @@ const Services: React.FC = () => {
                     <h1 className="img-header-text fade_down">Our Services</h1>
                     <div className="breadcrumb-group fade_up">
                         <Link to="/">HOME / </Link>
-                        <Link to="/Services">SERVICES</Link>
+                        <Link to="/services">SERVICES</Link>
                     </div>
                 </div>
             </section>
