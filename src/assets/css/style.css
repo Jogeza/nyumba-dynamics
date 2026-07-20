@@ -14,13 +14,31 @@ Primary use:
 
 :root {
 
---nyumba-blue:#0B3D91;
---nyumba-gold:#C8A951;
+--nyumba-blue:#0A3D91;
+--nyumba-gold:#D4B483;
+--nyumba-bg:#F8FAFC;
+--nyumba-text:#1F2937;
 --nyumba-dark:#111111;
 --nyumba-light:#F7F5F0;
 
 }
 
+<<<<<<< HEAD
+=======
+/* Typography */
+body {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    color: var(--nyumba-text);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.btn-quote, .menu li button, .menu li a, .submenu li a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+>>>>>>> phase1-import
 
 /* Tablet */
 @media (max-width: 992px) {
@@ -161,6 +179,7 @@ button {
         height: 750px;
 
 }
+<<<<<<< HEAD
 /*-----------------------[ 4.Button CSS ]------------------------*/
 .btn-quote {
     color: var(--5, #FFF);
@@ -585,6 +604,8 @@ button {
         height: 35px;
     }
 }
+=======
+>>>>>>> phase1-import
 
     .lets-us-do {
         font-size: 55px;
@@ -750,9 +771,6 @@ button {
         transform: translateY(0);
     }
 
-
-    /* Sections */
-
     .section-two,
     .section-three,
     .section-four,
@@ -829,11 +847,694 @@ button {
         gap:30px;
     }
 
-
 }
 
+html {
+    scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+dl,
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+ul {
+    padding-left: 0;
+}
+ul li {
+    list-style: none;
+}
+button {
+    border: none;
+}
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-corner {
+    display: none;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--nyumba-gold);
+    background-clip: content-box;
+}
+::-webkit-scrollbar-track {
+    background-color: #171819;
+}
+/*-----------------------[ 2.Preloader CSS ]------------------------*/
+.page-loader {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #F5F6F7;
+    z-index: 1000;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.leap-frog {
+    --uib-size: 80px;
+    --uib-speed: 2s;
+    --uib-color: rgb(10, 61, 145);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--uib-size);
+    height: var(--uib-size);
+}
+.leap-frog__dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+}
+.leap-frog__dot::before {
+    content: '';
+    display: block;
+    height: calc(var(--uib-size) * 0.22);
+    width: calc(var(--uib-size) * 0.22);
+    border-radius: 50%;
+    background-color: var(--uib-color);
+    will-change: transform;
+}
+.leap-frog__dot:nth-child(1) {
+    animation: leapFrog var(--uib-speed) ease infinite;
+}
+.leap-frog__dot:nth-child(2) {
+    transform: translateX(calc(var(--uib-size) * 0.4));
+    animation: leapFrog var(--uib-speed) ease calc(var(--uib-speed) / -1.5) infinite;
+}
+.leap-frog__dot:nth-child(3) {
+    transform: translateX(calc(var(--uib-size) * 0.8)) rotate(0deg);
+    animation: leapFrog var(--uib-speed) ease calc(var(--uib-speed) / -3) infinite;
+}
+@keyframes leapFrog {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+/*-----------------------[ 4.Button CSS ]------------------------*/
+.btn-quote {
+    color: var(--5, #FFF);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    background: var(--nyumba-gold);
+    border-radius: 30px;
+    padding: 18px 30px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    z-index: 1;
+}
+.btn-quote::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    top: 0;
+    height: 0;
+    width: 100%;
+    background-color: #000;
+    z-index: -1;
+    transition: inherit;
+    transition: all 0.3s ease;
+}
+.btn-quote:hover::after {
+    height: 100%;
+    top: auto;
+    bottom: 0;
+}
+/*-----------------------[ 5.Main Header CSS ]------------------------*/
+.header {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    margin: 0 auto;
+    width: calc(100% - 60px);
+    padding: 10px 20px;
+    background-color: #FFF;
+    border-radius: 70px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 76px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.mobile-logo {
+    display: none;
+}
+.dsad {
+    display: none;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+}
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+}
+.menu li {
+    position: relative;
+}
+.menu li span {
+    width: 8px;
+    height: 8px;
+    background: var(--nyumba-gold);
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: -35px;
+}
+.menu li button,
+.menu li a {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    background: transparent;
+}
+.menu li:hover>a {
+    color: var(--nyumba-gold);
+    filter: brightness(0) saturate(100%) invert(67%) sepia(37%) saturate(7498%) hue-rotate(162deg) brightness(108%) contrast(103%);
+}
+.menu>li>button.active {
+    filter: brightness(0) saturate(100%) invert(67%) sepia(37%) saturate(7498%) hue-rotate(162deg) brightness(108%) contrast(103%);
+}
+.submenu li a.active,
+.menu li a.active {
+    color: var(--nyumba-gold) !important;
+}
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    padding: 10px 0;
+    border-radius: 0 0 15px 15px;
+    border-top: 2px solid var(--nyumba-gold);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: none;
+    min-width: 210px;
+}
+.submenu li a {
+    font-size: 16px;
+    color: #000;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+.dropdown:hover .submenu {
+    display: block;
+}
+.submenu li {
+    padding: 8px 20px;
+}
+.submenu li a:hover {
+    color: var(--nyumba-gold);
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.call {
+    display: flex;
+    align-items: center;
+    background: var(--nyumba-blue);
+    color: #FFF;
+    padding: 6px 30px 6px 6px;
+    border-radius: 40px;
+    gap: 10px;
+}
+.call .headphone-main {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.need-help-main p {
+    color: var(--5, #FFF);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.need-help-main a {
+    color: var(--5, #FFF);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+}
+/* Hamburger */
+.hamburger {
+    display: none;
+}
+.nav.open~.header-container .hamburger .menu-icon {
+    display: none;
+}
+.nav.open~.header-container .hamburger .close-icon {
+    display: inline;
+}
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 998;
+    display: none;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+/*-----------------------[ 6.1.Hero Section Slider CSS ]------------------------*/
+.hero-slider {
+    width: 100%;
+    height: 955px;
+}
+.main-swiper-slide {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.main-swiper-slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.60) 100%);
+    backdrop-filter: blur(4px);
+    z-index: 1;
+}
+#hero-slider-img1 {
+    background-image: url('../images/home/main-slider-img1.jpg');
+}
+#hero-slider-img2 {
+    background-image: url('../images/home/main-slider-img2.jpg');
+}
+#hero-slider-img3 {
+    background-image: url('../images/home/main-slider-img3.jpg');
+}
+.clearfix-space {
+    margin-top: 100px;
+}
+.slide-content {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.needs-text {
+    color: var(--5, #FFF);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.lets-us-do {
+    color: var(--5, #FFF);
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 100px;
+}
+.residents {
+    color: var(--5, #FFF);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    margin-top: 20px;
+    padding-left: 20px;
+    margin-bottom: 60px;
+    border-left: 10px solid var(--nyumba-gold);
+}
+.home-img-clening {
+    position: absolute;
+    top: 40px;
+}
+.video-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cutomer-img-main-text {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, rgba(10, 61, 145, 0.30) 0%, rgba(10, 61, 145, 0.15) 100%);
+    backdrop-filter: blur(6px);
+    padding: 8px 30px 8px 8px;
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+}
+.cutomer-img-main {
+    position: relative;
+}
+.cutomer-img-main img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+.cutomers-text-main h2 {
+    color: var(--5, #FFF);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+}
+.cutomers-text-main p::before {
+    content: url(../images/svg/white-star.svg);
+}
+.cutomers-text-main p {
+    color: var(--5, #FFF);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.cutome2 {
+    position: absolute;
+    left: 50px;
+    top: 0;
+}
+.cutome3 {
+    position: absolute;
+    left: 100px;
+    top: 0;
+}
+.animate-slide {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.swiper-slide-active .animate-slide {
+    opacity: 1;
+    transform: translateY(0);
+}
+/*-----------------------[ 6.2.Hero Section Solid CSS ]------------------------*/
+.main-swiper-solid-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #082F49;
+    backdrop-filter: blur(4px);
+    z-index: 1;
+}
+.bubble_area {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+    z-index: 3;
+    pointer-events: none;
+}
+.bubble_area div[class^=bubbles-] {
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    background: url(../images/home/bubble_1.png) no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+.bubbles-1 {
+    bottom: -5px;
+    left: 68%;
+    -webkit-animation: animate 10s infinite ease-in -6.57s;
+    animation: animate 10s infinite ease-in -6.57s;
+}
+.bubbles-2 {
+    bottom: -71px;
+    left: 97%;
+    -webkit-animation: animate 10s infinite ease-in -5.07s;
+    animation: animate 10s infinite ease-in -5.07s;
+}
+.bubbles-3 {
+    bottom: -71px;
+    left: 43%;
+    -webkit-animation: animate 10s infinite ease-in -6.73s;
+    animation: animate 10s infinite ease-in -6.73s;
+}
+.bubbles-4 {
+    bottom: -30px;
+    left: 82%;
+    -webkit-animation: animate 10s infinite ease-in -4.04s;
+    animation: animate 10s infinite ease-in -4.04s;
+}
+.bubbles-5 {
+    bottom: -73.4px;
+    left: 29%;
+    -webkit-animation: animate 10s infinite ease-in -3.11s;
+    animation: animate 10s infinite ease-in -3.11s;
+}
+.bubbles-6 {
+    bottom: -71px;
+    left: 41%;
+    -webkit-animation: animate 10s infinite ease-in -5.95s;
+    animation: animate 10s infinite ease-in -5.95s;
+}
+.bubbles-7 {
+    bottom: -79.4px;
+    left: 14%;
+    -webkit-animation: animate 10s infinite ease-in -3.68s;
+    animation: animate 10s infinite ease-in -3.68s;
+}
+.bubbles-8 {
+    bottom: -115.4px;
+    left: 90%;
+    -webkit-animation: animate 10s infinite ease-in -3.89s;
+    animation: animate 10s infinite ease-in -3.89s;
+}
+.bubbles-9 {
+    bottom: -44.6px;
+    left: 33%;
+    -webkit-animation: animate 10s infinite ease-in -1.09s;
+    animation: animate 10s infinite ease-in -1.09s;
+}
+.bubbles-10 {
+    bottom: -30px;
+    left: 59%;
+    -webkit-animation: animate 7s infinite ease-in -.96s;
+    animation: animate 7s infinite ease-in -.96s;
+}
+@keyframes animate {
+    0% {
+        transform: translate3d(-80%, 0, 0) rotate(70deg);
+        width: 35px;
+        height: 35px;
+    }
+}
 
-/* Mobile Phones */
+/*-----------------------[ 6.3.Hero Section Video CSS ]------------------------*/
+.main-swiper-video-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.60) 100%);
+    z-index: 1;
+}
+.video-swiper-row {
+    justify-content: center;
+    text-align: center;
+}
+.video-swiper-row .residents {
+    padding-left: 0;
+    border: none;
+}
+.video-swiper-row .cutomer-img-main-text {
+    position: unset;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+}
+/*-----------------------[ 7.Section Two CSS ]------------------------*/
+.section-two {
+    padding: 100px 0;
+}
+.cap-text {
+    color: var(--16, var(--nyumba-gold));
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.sec-text {
+    color: var(--nyumba-text, #1F2937);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64px;
+    padding-bottom: 30px;
+}
+.sec-sub-text {
+    color: var(--nyumba-text, #1F2937);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.about-grid-box-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid ##F8FAFC;
+}
+.about-box-main {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+.about-svg-main {
+    width: 100%;
+    max-width: 64px;
+    height: 64px;
+    background: var(--nyumba-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+.about-box-main:hover .about-svg-main {
+    background: var(--nyumba-gold);
+}
+.about-svg-main img {
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+.about-box-main:hover .about-svg-main img {
+    transform: rotateY(180deg);
+}
+.expeStaff {
+    color: var(--nyumba-text, #1F2937);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    padding-bottom: 10px;
+}
+.fessional {
+    color: var(--nyumba-text, #1F2937);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.about-sec-main {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    gap: 20px;
+}
+.about-sec-main .call {
+    background: transparent;
+    border: 2px solid var(--nyumba-gold);
+}
+.about-sec-main .call .headphone-main {
+    background: var(--nyumba-gold);
+}
+.about-sec-main .call .headphone-main img {
+    filter: brightness(0) saturate(100%) invert(82%) sepia(100%) saturate(0%) hue-rotate(85deg) brightness(112%) contrast(101%);
+}
+.about-sec-main .call .need-help-main p,
+.about-sec-main .call .need-help-main a {
+    color: #000;
+}
+.about-sec-main .call .need-help-main a:hover {
+    color: var(--nyumba-gold);
+}
+.sub-img-main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+.subtract-img {
+    max-width: 100%;
+    position: absolute;
+}
+.about-img1 {
+    max-width: 100%;
+}
+.about-img2 {
+    position: absolute;
+    top: -60px;
+    left: 130px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.20);
+    animation: mover 2s infinite alternate;
+}
+.about-img3 {
+    position: absolute;
+    bottom: -150px;
+    right: 100px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.20);
+    animation: mover 2s infinite alternate;
+}
+@keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
 
 @media (max-width:576px){
 
@@ -1131,19 +1832,16 @@ button {
 
 
 
-@media(max-width:576px){
-
-    .nyumba-logo img{
-        width:130px;
-    }
-
-
-    .nyumba-mobile-logo img{
-        width:120px;
-    }
-
+.nyumba-logo img {
+    width: 130px;
 }
 
+<<<<<<< HEAD
+=======
+.nyumba-mobile-logo img {
+    width: 120px;
+}
+>>>>>>> phase1-import
 
 }
 .services-svg-main img {
@@ -1159,7 +1857,11 @@ button {
     flex-grow: 1;
 }
 .services-name {
+<<<<<<< HEAD
     color: var(--3, #000);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     text-align: center;
     font-size: 24px;
     font-weight: 600;
@@ -1167,7 +1869,11 @@ button {
     padding-bottom: 10px;
 }
 .services-card-sub-text {
+<<<<<<< HEAD
     color: var(--4, #222);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     text-align: center;
     font-size: 16px;
     font-style: normal;
@@ -1182,7 +1888,11 @@ button {
     justify-content: center;
     gap: 8px;
     padding: 20px;
+<<<<<<< HEAD
     color: var(--16, #F7941D);
+=======
+    color: var(--16, var(--nyumba-gold));
+>>>>>>> phase1-import
     font-size: 18px;
     font-weight: 600;
     line-height: 24px;
@@ -1208,7 +1918,11 @@ button {
     top: 0;
     height: 0;
     width: 100%;
+<<<<<<< HEAD
     background-color: #F7941D;
+=======
+    background-color: var(--nyumba-gold);
+>>>>>>> phase1-import
     z-index: -1;
     transition: inherit;
 }
@@ -1229,14 +1943,22 @@ button {
     margin-top: 30px;
 }
 .check-box-main-sub h2 {
+<<<<<<< HEAD
     color: var(--3, #000);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 24px;
     font-weight: 600;
     line-height: 32px;
     padding-bottom: 5px;
 }
 .check-box-main-sub p {
+<<<<<<< HEAD
     color: var(--4, #222);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -1256,7 +1978,11 @@ button {
 .sadas {
     width: 360px;
     height: 100%;
+<<<<<<< HEAD
     border: 2px solid #F7941D;
+=======
+    border: 2px solid var(--nyumba-gold);
+>>>>>>> phase1-import
     border-radius: 180px;
     position: absolute;
     left: 130px;
@@ -1303,7 +2029,11 @@ button {
     gap: 30px;
 }
 .input-label-text {
+<<<<<<< HEAD
     color: var(--3, #000);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -1314,7 +2044,11 @@ button {
 .calcult-from-grid input,
 .your-message-input input {
     border-radius: 10px;
+<<<<<<< HEAD
     border: 2px solid var(--12, #F8FAFC);
+=======
+    border: 2px solid var(--nyumba-bg, #F8FAFC);
+>>>>>>> phase1-import
     background: var(--5, #FFF);
     padding: 12px 15px;
     width: 100%;
@@ -1326,7 +2060,11 @@ button {
 }
 .calcult-from-grid input:focus,
 .your-message-input input:focus {
+<<<<<<< HEAD
     outline: 2px solid #F7941D;
+=======
+    outline: 2px solid var(--nyumba-gold);
+>>>>>>> phase1-import
 }
 .input-mainteam {
     position: relative;
@@ -1347,7 +2085,11 @@ button {
 }
 .input-main {
     border-radius: 10px;
+<<<<<<< HEAD
     border: 2px solid var(--12, #F8FAFC);
+=======
+    border: 2px solid var(--nyumba-bg, #F8FAFC);
+>>>>>>> phase1-import
     background: var(--5, #FFF);
     padding: 12px 15px;
     width: 100%;
@@ -1370,7 +2112,11 @@ button {
     top: 15px;
     width: 100%;
     z-index: 5;
+<<<<<<< HEAD
     border: 1px solid #F7941D;
+=======
+    border: 1px solid var(--nyumba-gold);
+>>>>>>> phase1-import
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 .formDropDown-ul-list span {
@@ -1383,7 +2129,11 @@ button {
     padding: 10px 12px;
 }
 .formDropDown-ul-list li:hover {
+<<<<<<< HEAD
     background: #F7941D;
+=======
+    background: var(--nyumba-gold);
+>>>>>>> phase1-import
     transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
@@ -1409,7 +2159,11 @@ button {
 }
 /*-----------------------[ 11.Section Six CSS ]------------------------*/
 .section-six {
+<<<<<<< HEAD
     background: var(--12, #F8FAFC);
+=======
+    background: var(--nyumba-bg, #F8FAFC);
+>>>>>>> phase1-import
     padding: 200px 0 100px;
 }
 .how-to-work-bg {
@@ -1464,7 +2218,11 @@ button {
     top: 0;
     height: 0;
     width: 100%;
+<<<<<<< HEAD
     background-color: #F7941D;
+=======
+    background-color: var(--nyumba-gold);
+>>>>>>> phase1-import
     z-index: -1;
     transition: inherit;
     transition: all 0.3s ease;
@@ -1483,7 +2241,11 @@ button {
     filter: brightness(0) saturate(100%) invert(82%) sepia(100%) saturate(0%) hue-rotate(85deg) brightness(112%) contrast(101%);
 }
 .how-work-step-box .how-work-step-box-sub h3 {
+<<<<<<< HEAD
     color: var(--3, #000);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     text-align: center;
     font-size: 24px;
     font-weight: 600;
@@ -1508,7 +2270,11 @@ button {
     bottom: -100%;
     left: 0;
     right: 0;
+<<<<<<< HEAD
     background-color: rgba(0, 194, 255, 0.85);
+=======
+    background-color: rgba(10, 61, 145, 0.85);
+>>>>>>> phase1-import
     overflow: hidden;
     width: 100%;
     height: 0;
@@ -1540,7 +2306,11 @@ button {
 }
 .view-project-btn {
     background: #FFFFFF;
+<<<<<<< HEAD
     color: #F7941D;
+=======
+    color: var(--nyumba-gold);
+>>>>>>> phase1-import
 }
 .view-project-btn:hover {
     color: #FFF !important;
@@ -1562,7 +2332,11 @@ button {
 }
 .project-button-next:hover,
 .project-button-prev:hover {
+<<<<<<< HEAD
     background: #F7941D;
+=======
+    background: var(--nyumba-gold);
+>>>>>>> phase1-import
 }
 .project-button-next.swiper-button-next,
 .project-button-prev.swiper-button-prev {
@@ -1581,7 +2355,11 @@ button {
     padding: 100px 0;
 }
 .team-circle-main {
+<<<<<<< HEAD
     border: 2px solid #F7941D;
+=======
+    border: 2px solid var(--nyumba-gold);
+>>>>>>> phase1-import
     padding: 20px;
     border-radius: 50%;
     position: relative;
@@ -1594,7 +2372,11 @@ button {
     max-width: 260px;
     height: 260px;
     border-radius: 50%;
+<<<<<<< HEAD
     background: var(--12, #F8FAFC);
+=======
+    background: var(--nyumba-bg, #F8FAFC);
+>>>>>>> phase1-import
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -1609,7 +2391,11 @@ button {
     max-width: 64px;
     height: 64px;
     border-radius: 50%;
+<<<<<<< HEAD
     background: #F7941D;
+=======
+    background: var(--nyumba-gold);
+>>>>>>> phase1-import
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1620,7 +2406,11 @@ button {
     z-index: 2;
 }
 .team-circle-link h3 {
+<<<<<<< HEAD
     color: var(--3, #000);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     text-align: center;
     font-size: 24px;
     font-weight: 600;
@@ -1630,10 +2420,17 @@ button {
     transition: all 0.3s ease-in-out;
 }
 .team-circle-link:hover h3 {
+<<<<<<< HEAD
     color: #F7941D;
 }
 .team-circle-link p {
     color: var(--4, #222);
+=======
+    color: var(--nyumba-gold);
+}
+.team-circle-link p {
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     text-align: center;
     font-size: 16px;
     font-weight: 400;
@@ -1659,7 +2456,11 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
     background: #F7941D;
+=======
+    background: var(--nyumba-gold);
+>>>>>>> phase1-import
     border: 2px solid transparent;
     border-radius: 50%;
     transform: translateY(20px) scale(0.8);
@@ -1670,7 +2471,11 @@ button {
 }
 .social-icons li:hover {
     background: #FFF;
+<<<<<<< HEAD
     border: 2px solid #F7941D;
+=======
+    border: 2px solid var(--nyumba-gold);
+>>>>>>> phase1-import
 }
 .social-icons li:hover img {
     filter: brightness(0) saturate(100%) invert(80%) sepia(39%) saturate(7500%) hue-rotate(155deg) brightness(99%) contrast(105%);
@@ -1718,7 +2523,11 @@ button {
     object-fit: cover;
 }
 .testimonials-col-main {
+<<<<<<< HEAD
     background: var(--12, #F8FAFC);
+=======
+    background: var(--nyumba-bg, #F8FAFC);
+>>>>>>> phase1-import
     padding: 100px;
     width: 100%;
     overflow: hidden;
@@ -1737,7 +2546,11 @@ button {
     padding: 60px;
 }
 .cellent {
+<<<<<<< HEAD
     color: var(--4, #222);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 24px;
     font-weight: 400;
     line-height: 36px;
@@ -1750,7 +2563,11 @@ button {
     gap: 15px;
 }
 .client-details h3 {
+<<<<<<< HEAD
     color: var(--3, #000);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 18px;
     font-weight: 500;
     line-height: 24px;
@@ -1815,7 +2632,11 @@ button {
 }
 .blog-box-main {
     border-radius: 20px;
+<<<<<<< HEAD
     border: 2px solid var(--12, #F8FAFC);
+=======
+    border: 2px solid var(--nyumba-bg, #F8FAFC);
+>>>>>>> phase1-import
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     overflow: hidden;
@@ -1824,7 +2645,11 @@ button {
     flex-direction: column;
 }
 .blog-box-main:hover {
+<<<<<<< HEAD
     border-color: #F7941D;
+=======
+    border-color: var(--nyumba-gold);
+>>>>>>> phase1-import
     box-shadow: 0 15px 30px rgba(74, 108, 247, 0.1);
 }
 .blog-box-main::after {
@@ -1853,7 +2678,11 @@ button {
     border-radius: 20px 20px 0 0;
 }
 .blog-date {
+<<<<<<< HEAD
     color: var(--4, #222);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     text-align: center;
     font-size: 16px;
     font-weight: 500;
@@ -1867,7 +2696,11 @@ button {
     transition: all 0.4s ease;
 }
 .blog-box-main:hover .blog-date {
+<<<<<<< HEAD
     color: #F7941D;
+=======
+    color: var(--nyumba-gold);
+>>>>>>> phase1-import
 }
 .blog-date::before,
 .blog-date::after {
@@ -1900,18 +2733,30 @@ button {
     padding: 30px;
 }
 .blog-containe-main h2 {
+<<<<<<< HEAD
     color: var(--3, #000);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 24px;
     font-weight: 500;
     line-height: 32px;
     transition: color 0.3s ease;
 }
 .blog-box-main:hover .blog-containe-main h2 {
+<<<<<<< HEAD
     color: #F7941D;
 }
 .blog-containe-main p {
     overflow: hidden;
     color: var(--4, #222);
+=======
+    color: var(--nyumba-gold);
+}
+.blog-containe-main p {
+    overflow: hidden;
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     text-overflow: ellipsis;
     font-size: 16px;
     font-weight: 400;
@@ -1941,7 +2786,11 @@ button {
     gap: 60px;
 }
 .call-support-text {
+<<<<<<< HEAD
     color: var(--16, #F7941D);
+=======
+    color: var(--16, var(--nyumba-gold));
+>>>>>>> phase1-import
     font-size: 18px;
     font-weight: 500;
     line-height: 24px;
@@ -1949,14 +2798,22 @@ button {
     margin-top: 30px;
 }
 .tel-num {
+<<<<<<< HEAD
     color: var(--3, #000);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 36px;
     font-weight: 400;
     line-height: 48px;
     transition: all 0.3s ease-in-out;
 }
 .tel-num:hover {
+<<<<<<< HEAD
     color: #F7941D;
+=======
+    color: var(--nyumba-gold);
+>>>>>>> phase1-import
 }
 .contac-form-main {
     border-radius: 20px;
@@ -1981,7 +2838,11 @@ button {
 }
 /*-----------------------[ 17.Footer CSS ]------------------------*/
 .subscribe-section {
+<<<<<<< HEAD
     background: #000;
+=======
+    background: var(--nyumba-blue);
+>>>>>>> phase1-import
     border-radius: 20px;
     padding: 60px;
     margin-top: -125px;
@@ -2016,7 +2877,11 @@ button {
     line-height: 24px;
 }
 .working-hours {
+<<<<<<< HEAD
     color: var(--3, #000);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 24px;
     font-weight: 600;
     line-height: 36px;
@@ -2031,7 +2896,11 @@ button {
     border-bottom: 2px solid #F8FAFC;
 }
 .timing-hrw p {
+<<<<<<< HEAD
     color: var(--4, #222);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
@@ -2046,7 +2915,11 @@ button {
     gap: 30px;
 }
 .quicklinks-main ul li a {
+<<<<<<< HEAD
     color: var(--4, #222);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -2054,7 +2927,11 @@ button {
     transition: all 0.4s ease-in-out;
 }
 .quicklinks-main ul li a:hover {
+<<<<<<< HEAD
     color: #F7941D;
+=======
+    color: var(--nyumba-gold);
+>>>>>>> phase1-import
 }
 .footer-img-group {
     display: flex;
@@ -2104,13 +2981,21 @@ button {
     gap: 20px;
     padding: 20px;
     border-radius: 30px;
+<<<<<<< HEAD
     background: var(--3, #000);
+=======
+    background: var(--nyumba-blue);
+>>>>>>> phase1-import
     margin-top: 60px;
     margin-bottom: 40px;
 }
 .media-logo-call-footer .call-detl {
     border-radius: 50px;
+<<<<<<< HEAD
     background: var(--14, #F7941D);
+=======
+    background: var(--14, var(--nyumba-gold));
+>>>>>>> phase1-import
     padding: 10px 50px 10px 10px;
 }
 .media-logo-call-footer .call-detl .img-main-call {
@@ -2135,7 +3020,11 @@ button {
     transition: all 0.3s ease-in-out;
 }
 .footer-med-icons:hover {
+<<<<<<< HEAD
     background: #F7941D;
+=======
+    background: var(--nyumba-gold);
+>>>>>>> phase1-import
 }
 .footer-med-icons img {
     width: 32px;
@@ -2149,14 +3038,22 @@ button {
 }
 .copyrights-main p,
 .copyrights-main a {
+<<<<<<< HEAD
     color: var(--4, #222);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
     text-align: center;
 }
 .copyrights-main a:hover {
+<<<<<<< HEAD
     color: #F7941D;
+=======
+    color: var(--nyumba-gold);
+>>>>>>> phase1-import
 }
 .call-detl {
     display: flex;
@@ -2167,7 +3064,11 @@ button {
     width: 80px;
     height: 80px;
     border-radius: 50%;
+<<<<<<< HEAD
     background: #F7941D;
+=======
+    background: var(--nyumba-gold);
+>>>>>>> phase1-import
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2196,7 +3097,11 @@ button.bottom-top-button {
     height: 50px;
     color: #FFF;
     font-size: 30px;
+<<<<<<< HEAD
     background: #F7941D;
+=======
+    background: var(--nyumba-gold);
+>>>>>>> phase1-import
 }
 /*-----------------------[ 19.About Page CSS ]------------------------*/
 .heroSection {
@@ -2239,14 +3144,22 @@ button.bottom-top-button {
     margin-bottom: 30px;
 }
 .rich {
+<<<<<<< HEAD
     color: var(--3, #000);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 24px;
     font-weight: 600;
     line-height: 32px;
     padding-bottom: 8px;
 }
 .clane {
+<<<<<<< HEAD
     color: var(--4, #222);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -2277,7 +3190,11 @@ button.bottom-top-button {
     font-size: 18px;
     font-weight: 600;
     line-height: 20px;
+<<<<<<< HEAD
     color: #F7941D;
+=======
+    color: var(--nyumba-gold);
+>>>>>>> phase1-import
 }
 .team-meta li a,
 .team-meta li p {
@@ -2288,7 +3205,11 @@ button.bottom-top-button {
     transition: all .35s ease-in-out;
 }
 .team-meta li a:hover {
+<<<<<<< HEAD
     color: #F7941D;
+=======
+    color: var(--nyumba-gold);
+>>>>>>> phase1-import
 }
 .single-team-social {
     display: flex;
@@ -2314,7 +3235,11 @@ button.bottom-top-button {
     filter: brightness(0) saturate(100%) invert(65%) sepia(94%) saturate(3410%) hue-rotate(159deg) brightness(104%) contrast(104%);
 }
 .single-team-social a:hover {
+<<<<<<< HEAD
     background: #F7941D;
+=======
+    background: var(--nyumba-gold);
+>>>>>>> phase1-import
 }
 .single-team-social a:hover img {
     filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0%) hue-rotate(318deg) brightness(100%) contrast(105%);
@@ -2351,14 +3276,22 @@ button.bottom-top-button {
     position: relative;
 }
 .progress-title {
+<<<<<<< HEAD
     color: var(--3, #000);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 18px;
     font-weight: 500;
     line-height: 30px;
 }
 .progress-number-wrapper,
 .progress-number-mark {
+<<<<<<< HEAD
     color: #F7941D;
+=======
+    color: var(--nyumba-gold);
+>>>>>>> phase1-import
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
@@ -2381,7 +3314,11 @@ button.bottom-top-button {
 .progress-content {
     height: 8px;
     border-radius: 10px;
+<<<<<<< HEAD
     background-color: #F7941D;
+=======
+    background-color: var(--nyumba-gold);
+>>>>>>> phase1-import
     width: 0%;
 }
 /*-----------------------[ 21.Pricing Plan Page CSS ]------------------------*/
@@ -2403,7 +3340,11 @@ button.bottom-top-button {
     transition: 0.3s ease;
 }
 .pricing-card.enterprise {
+<<<<<<< HEAD
     background-color: #F7941D;
+=======
+    background-color: var(--nyumba-gold);
+>>>>>>> phase1-import
     color: #fff;
 }
 .pricing-card h2 {
@@ -2422,7 +3363,11 @@ button.bottom-top-button {
 .price {
     font-size: 40px;
     font-weight: 700;
+<<<<<<< HEAD
     color: #F7941D;
+=======
+    color: var(--nyumba-gold);
+>>>>>>> phase1-import
 }
 .enterprise .price {
     color: #fff;
@@ -2464,7 +3409,11 @@ button.bottom-top-button {
     position: absolute;
     left: 0;
     top: 0;
+<<<<<<< HEAD
     color: #F7941D;
+=======
+    color: var(--nyumba-gold);
+>>>>>>> phase1-import
     font-size: 16px;
 }
 .enterprise .features li::before {
@@ -2496,7 +3445,11 @@ button.bottom-top-button {
     padding: 30px;
 }
 .testimonial-page .cellent {
+<<<<<<< HEAD
     color: var(--4, #222);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
@@ -2541,8 +3494,13 @@ button.bottom-top-button {
     margin-bottom: 15px;
 }
 .accordion-button:not(.collapsed) {
+<<<<<<< HEAD
     color: #F7941D;
     background-color: rgba(0, 194, 255, 0.1) !important;
+=======
+    color: var(--nyumba-gold);
+    background-color: rgba(10, 61, 145, 0.1) !important;
+>>>>>>> phase1-import
 }
 #accordionExample.accordion {
     --bs-accordion-border-color: none;
@@ -2607,7 +3565,11 @@ button.bottom-top-button {
     color: #FFF;
     text-align: center;
     padding: 30px;
+<<<<<<< HEAD
     background: #000000;
+=======
+    background: var(--nyumba-blue);
+>>>>>>> phase1-import
 }
 .roofing-services-list-main {
     padding: 30px;
@@ -2655,7 +3617,11 @@ button.bottom-top-button {
 }
 .service-list-arow-main:hover,
 .service-list-arow-main.active {
+<<<<<<< HEAD
     background: #F7941D;
+=======
+    background: var(--nyumba-gold);
+>>>>>>> phase1-import
 }
 .service-list-arow-main:hover p,
 .service-list-arow-main.active p {
@@ -2707,7 +3673,11 @@ button.bottom-top-button {
 .brochure {
     width: 60px;
     height: 60px;
+<<<<<<< HEAD
     background: #F7941D;
+=======
+    background: var(--nyumba-gold);
+>>>>>>> phase1-import
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2750,7 +3720,11 @@ button.bottom-top-button {
     left: 0;
     right: 0;
     bottom: 0;
+<<<<<<< HEAD
     background-color: rgba(0, 194, 255, 0.85);
+=======
+    background-color: rgba(10, 61, 145, 0.85);
+>>>>>>> phase1-import
     opacity: 0;
     -webkit-transition: .5s;
     -o-transition: .5s;
@@ -2813,7 +3787,11 @@ button.bottom-top-button {
     margin-top: 50px;
 }
 .diamond-btn {
+<<<<<<< HEAD
     background: #F7941D;
+=======
+    background: var(--nyumba-gold);
+>>>>>>> phase1-import
     width: 40px;
     height: 40px;
     display: flex;
@@ -2863,7 +3841,11 @@ button.bottom-top-button {
     line-height: 30px;
 }
 .project-info-main p:nth-child(2) {
+<<<<<<< HEAD
     color: #F7941D;
+=======
+    color: var(--nyumba-gold);
+>>>>>>> phase1-import
     font-size: 20px;
 }
 .project-details-icon .footer-med-icons img {
@@ -2875,7 +3857,11 @@ button.bottom-top-button {
     gap: 10px;
 }
 .project-details-icon .footer-med-icons {
+<<<<<<< HEAD
     background: #F7941D;
+=======
+    background: var(--nyumba-gold);
+>>>>>>> phase1-import
     width: 50px;
     height: 50px;
 }
@@ -2899,7 +3885,11 @@ button.bottom-top-button {
     outline: none;
     border: none;
     padding: 18px 15px;
+<<<<<<< HEAD
     color: var(--4, #222);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -2918,7 +3908,11 @@ button.bottom-top-button {
 .single-services-black-box {
     margin-bottom: 20px;
     margin-top: 40px;
+<<<<<<< HEAD
     background: #000000;
+=======
+    background: var(--nyumba-blue);
+>>>>>>> phase1-import
     padding: 30px;
 }
 .single-services-black-box h3 {
@@ -2935,20 +3929,32 @@ button.bottom-top-button {
     margin-bottom: 20px;
 }
 .recent-post-text-main p {
+<<<<<<< HEAD
     color: var(--4, #222);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
 }
 .recent-post-text-main h2 {
+<<<<<<< HEAD
     color: var(--4, #222);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 18px;
     font-weight: 600;
     line-height: 27px;
     transition: all 0.3s ease-in-out;
 }
 .recent-post-main:hover h2 {
+<<<<<<< HEAD
     color: #F7941D;
+=======
+    color: var(--nyumba-gold);
+>>>>>>> phase1-import
 }
 .adds-details-main {
     margin-top: 40px;
@@ -2984,7 +3990,11 @@ button.bottom-top-button {
     position: relative;
 }
 .qoute-box h2 {
+<<<<<<< HEAD
     color: var(--3, #000);
+=======
+    color: var(--nyumba-text, #1F2937);
+>>>>>>> phase1-import
     font-size: 24px;
     font-weight: 500;
     line-height: 36px;
@@ -2996,7 +4006,11 @@ button.bottom-top-button {
     margin-top: 15px;
 }
 .line {
+<<<<<<< HEAD
     border-top: 2px solid #F7941D;
+=======
+    border-top: 2px solid var(--nyumba-gold);
+>>>>>>> phase1-import
     width: 60px;
 }
 .jordon {
@@ -3026,4 +4040,113 @@ button.bottom-top-button {
     margin-bottom: 0;
     background: #F5F6F7;
 
+<<<<<<< HEAD
 }
+=======
+}
+/*-----------------------[ 31.Mobile Bottom Navigation CSS ]------------------------*/
+.mobile-bottom-nav {
+    display: none;
+}
+@media (max-width: 768px) {
+    .mobile-bottom-nav {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 997;
+        background: #FFF;
+        box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.12);
+        padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
+    }
+    .mobile-bottom-nav-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        padding: 6px 2px;
+        color: var(--nyumba-text, #1F2937);
+        text-align: center;
+        border-radius: 12px;
+        transition: color 0.2s ease, background 0.2s ease;
+    }
+    .mobile-bottom-nav-icon {
+        width: 22px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mobile-bottom-nav-icon svg {
+        width: 100%;
+        height: 100%;
+    }
+    .mobile-bottom-nav-icon img {
+        width: 20px;
+        height: 20px;
+    }
+    .mobile-bottom-nav-label {
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 14px;
+    }
+    .mobile-bottom-nav-item.active {
+        color: var(--nyumba-blue);
+        background: rgba(10, 61, 145, 0.08);
+    }
+    .mobile-bottom-nav-whatsapp {
+        color: #25D366;
+    }
+    body {
+        padding-bottom: 66px;
+    }
+    button.bottom-top-button {
+        bottom: 76px;
+    }
+    .contact-form-section,
+    .subscribe-section {
+        margin-bottom: 20px;
+    }
+}
+/*-----------------------[ 32.Hero CTA Group CSS ]------------------------*/
+.hero-cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+}
+.btn-quote-outline {
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    padding: 16px 28px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+.btn-quote-outline:hover {
+    background: #FFF;
+    color: var(--nyumba-blue);
+    border-color: #FFF;
+}
+@media (max-width: 576px) {
+    .hero-cta-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+    .hero-cta-group .btn-quote,
+    .hero-cta-group .btn-quote-outline {
+        text-align: center;
+    }
+}
+>>>>>>> phase1-import

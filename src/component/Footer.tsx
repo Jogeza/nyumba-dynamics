@@ -252,8 +252,12 @@ const Footer = () => {
                         <div className="footer-img-group">
 
 
+<<<<<<< HEAD
                             {[FooterImg1, FooterImg2, FooterImg3].map(
                                 (image,index)=>(
+=======
+                            <Link to="/properties" className="img-container">
+>>>>>>> phase1-import
 
                                 <a 
                                     href="#" 
@@ -268,6 +272,7 @@ const Footer = () => {
                                     />
 
 
+<<<<<<< HEAD
                                     <div className="footer-img-overlay">
 
                                         <img
@@ -277,11 +282,61 @@ const Footer = () => {
                                         />
 
                                     </div>
+=======
+                            </Link>
+>>>>>>> phase1-import
 
 
                                 </a>
 
+<<<<<<< HEAD
                             ))}
+=======
+                            <Link to="/properties" className="img-container">
+
+                                <img
+                                    className="footer-imgs"
+                                    src={FooterImg2}
+                                    alt="property"
+                                />
+
+                                <div className="footer-img-overlay">
+
+                                    <img
+                                        src={InstaSvg}
+                                        alt="instagram"
+                                    />
+
+                                </div>
+
+                            </Link>
+
+
+
+
+
+                            <Link to="/properties" className="img-container">
+
+                                <img
+                                    className="footer-imgs"
+                                    src={FooterImg3}
+                                    alt="property"
+                                />
+
+
+                                <div className="footer-img-overlay">
+
+                                    <img
+                                        src={InstaSvg}
+                                        alt="instagram"
+                                    />
+
+                                </div>
+
+
+                            </Link>
+
+>>>>>>> phase1-import
 
 
                         </div>
@@ -362,6 +417,7 @@ const Footer = () => {
                     <div className="footer-med-icons-main">
 
 
+<<<<<<< HEAD
                         <a href="https://www.facebook.com" className="footer-med-icons">
                             <img src={facebook} alt="facebook" />
                         </a>
@@ -379,6 +435,49 @@ const Footer = () => {
 
                         <a href="https://wa.me/256751353757" className="footer-med-icons">
                             <img src={whatsapp} alt="whatsapp" />
+=======
+                        <a href="https://www.facebook.com/nyumbadynamics" target="_blank" rel="noopener noreferrer" className="footer-med-icons">
+
+                            <img
+                                src={facebook}
+                                alt="facebook"
+                            />
+
+                        </a>
+
+
+
+                        <a href="https://twitter.com/nyumbadynamics" target="_blank" rel="noopener noreferrer" className="footer-med-icons">
+
+                            <img
+                                src={twitter}
+                                alt="twitter"
+                            />
+
+                        </a>
+
+
+
+
+                        <a href="https://www.instagram.com/nyumbadynamics" target="_blank" rel="noopener noreferrer" className="footer-med-icons">
+
+                            <img
+                                src={insta}
+                                alt="instagram"
+                            />
+
+                        </a>
+
+
+
+                        <a href="https://wa.me/256751353757" target="_blank" rel="noopener noreferrer" className="footer-med-icons">
+
+                            <img
+                                src={whatsapp}
+                                alt="whatsapp"
+                            />
+
+>>>>>>> phase1-import
                         </a>
 
 

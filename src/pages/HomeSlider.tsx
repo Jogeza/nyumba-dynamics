@@ -88,7 +88,7 @@ const HomeSlider: React.FC = () => {
                                 </div>
                             </div>
                             <div className="about-sec-main">
-                                <Link to="/About" className="btn-quote our-services-btn">About Us
+                                <Link to="/about" className="btn-quote our-services-btn">About Us
                                     <img src={CrossArrow} alt="cross-arrow" />
                                 </Link>
                                 <div className="call">

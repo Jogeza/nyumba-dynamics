@@ -81,6 +81,25 @@ const Header = () => {
 
 
         {
+            label:"Projects",
+            children:[
+                {
+                    label:"Residential Projects",
+                    link:"/projects"
+                },
+                {
+                    label:"Commercial Projects",
+                    link:"/projects"
+                },
+                {
+                    label:"Smart Home Installations",
+                    link:"/projects"
+                }
+            ]
+        },
+
+
+        {
             label:"Company",
             children:[
                 {
@@ -92,7 +111,7 @@ const Header = () => {
                     link:"/team"
                 },
                 {
-                    label:"Request Consultation",
+                    label:"Request a Quote",
                     link:"/consultation"
                 }
             ]
@@ -157,16 +176,18 @@ const Header = () => {
                         className="logo nyumba-logo"
                     >
 
-                     <img
-                         src={LogoSvg}
-                     alt="Nyumba Dynamics Logo"
-                     style={{
-                       width:"180px",
-                          height:"auto",
-                         display:"block"
-                       }}
-                    />
+                        <img
+                            src={LogoSvg}
+                            alt="Nyumba Dynamics Logo"
+                            style={{
+                                width:"180px",
+                                height:"auto",
+                                display:"block"
+                            }}
+                        />
+
                     </Link>
+
 
 
                     {/* MOBILE BUTTON */}
@@ -196,14 +217,9 @@ const Header = () => {
                         }
 
                     </div>
-
-
-
-
-                    <nav
+                                        <nav
                         className={`nav ${menuOpen ? "open" : ""}`}
                     >
-
 
 
                         <div className="for-mobile-menu position-relative">
@@ -216,10 +232,12 @@ const Header = () => {
 
                                 <img
                                     src={LogoSvg}
-                                    alt="nyumba dynamics logo"
+                                    alt="Nyumba Dynamics Logo"
                                 />
 
                             </Link>
+
+
 
                             <ul className="menu">
 
@@ -248,10 +266,12 @@ const Header = () => {
 
                                                 {item.label}
 
+
                                                 <img
                                                     src={DropdownArrow}
                                                     alt="dropdown"
                                                 />
+
 
                                                 <span className="dots-circle"></span>
 
@@ -269,16 +289,20 @@ const Header = () => {
                                                 }`}
                                             >
 
+
                                                 {
                                                     item.children.map((sub,i)=>(
 
-                                                        <li key={i}>
+                                                        <li
+                                                            key={i}
+                                                        >
 
                                                             <Link
                                                                 to={sub.link}
                                                                 onClick={() =>
                                                                     setMenuOpen(false)
                                                                 }
+
                                                                 className={
                                                                     location.pathname === sub.link
                                                                     ? "active"
@@ -290,10 +314,12 @@ const Header = () => {
 
                                                             </Link>
 
+
                                                         </li>
 
                                                     ))
                                                 }
+
 
                                             </ul>
 
@@ -302,6 +328,7 @@ const Header = () => {
 
                                     ))
                                 }
+
 
 
 
@@ -331,8 +358,8 @@ const Header = () => {
 
 
 
-
                         {/* RIGHT SIDE */}
+
 
                         <div className="nav-actions">
 
@@ -342,24 +369,31 @@ const Header = () => {
 
                                 <div className="headphone-main">
 
+
                                     <img
                                         src={headphoneIcon}
                                         alt="Contact Nyumba Dynamics"
                                     />
 
+
                                 </div>
 
 
 
+
                                 <div className="need-help-main">
+
 
                                     <p>
                                         Talk To An Expert
                                     </p>
 
 
+
                                     <a href="tel:+256751353757">
+
                                         +256 7513 53757
+
                                     </a>
 
 
@@ -372,6 +406,7 @@ const Header = () => {
 
 
 
+
                             <Link
                                 to="/consultation"
                                 className="btn-quote get-quote-btn"
@@ -379,12 +414,15 @@ const Header = () => {
 
                                 Request Consultation
 
+
                                 <img
                                     src={CrossArrow}
                                     alt="Arrow"
                                 />
 
+
                             </Link>
+
 
 
                         </div>
