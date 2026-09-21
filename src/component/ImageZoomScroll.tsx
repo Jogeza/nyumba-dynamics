@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import PersonTakingCare from "../assets/images/expand-img/person-taking-care.jpg";
+import { siteImages } from "../data/siteImages.ts";
 
 // Register ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -35,9 +35,9 @@ const ImageZoomScroll: React.FC = () => {
             <div className="expand-img-main">
                 <img
                     ref={imageRef}
-                    src={PersonTakingCare}
+                    src={siteImages.fabrication}
                     className="zoom-image"
-                    alt="zoom"
+                    alt="Nyumba Dynamics fabricator welding a metal frame on site"
                     style={{ transformOrigin: "center center" }}
                 />
             </div>

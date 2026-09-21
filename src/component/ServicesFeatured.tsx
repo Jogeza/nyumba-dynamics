@@ -9,6 +9,7 @@ import img3 from "../assets/images/services/slider-img3.jpg";
 import img4 from "../assets/images/services/slider-img4.jpg";
 import img5 from "../assets/images/services/slider-img5.jpg";
 import img6 from "../assets/images/services/slider-img6.jpg";
+import { serviceImages, serviceAlt } from '../data/siteImages.ts';
 
 import svg1 from "../assets/images/svg/services-svg1.svg";
 import svg2 from "../assets/images/svg/services-svg2.svg";
@@ -84,8 +85,11 @@ function ServicesFeatured() {
                     <SwiperSlide key={item.id} className="swiper-slide cleaning-card">
                         <div className="cleaning-card-img-main">
                             <img
-                                src={serviceImageMap[item.img]}
-                                alt={item.title}
+                                src={serviceImages[item.slug] || serviceImageMap[item.img]}
+                                alt={serviceAlt[item.slug] || item.title}
+                                loading="lazy"
+                                width="1280"
+                                height="853"
                             />
                         </div>
 

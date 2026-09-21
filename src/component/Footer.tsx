@@ -2,9 +2,7 @@ import { Link } from "react-router-dom";
 
 import CrossArrowSvg from "../assets/images/svg/cross-arrow.svg";
 
-import FooterImg1 from "../assets/images/footer/footer-img1.jpg";
-import FooterImg2 from "../assets/images/footer/footer-img2.jpg";
-import FooterImg3 from "../assets/images/footer/footer-img3.jpg";
+import { siteImages } from '../data/siteImages.ts';
 
 import InstaSvg from "../assets/images/svg/insta.svg";
 import WhiteLogoSvg from "../assets/images/svg/white-logo.svg";
@@ -14,6 +12,10 @@ import facebook from "../assets/images/svg/facebook.svg";
 import twitter from "../assets/images/svg/twitter.svg";
 import insta from "../assets/images/svg/insta.svg";
 import whatsapp from "../assets/images/svg/whatsapp.svg";
+
+const FooterImg1 = siteImages.electrical;
+const FooterImg2 = siteImages.welding;
+const FooterImg3 = siteImages.pool;
 
 
 const Footer = () => {
@@ -254,7 +256,7 @@ const Footer = () => {
 
 
                         <h2 className="working-hours">
-                            Featured Projects
+                            Service Showcase
                         </h2>
 
 
@@ -266,7 +268,7 @@ const Footer = () => {
                                 <img
                                     className="footer-imgs"
                                     src={FooterImg1}
-                                    alt="Nyumba Dynamics project"
+                                    alt="Nyumba Dynamics exterior lighting capability"
                                 />
 
                                 <div className="footer-img-overlay">
@@ -287,7 +289,7 @@ const Footer = () => {
                                 <img
                                     className="footer-imgs"
                                     src={FooterImg2}
-                                    alt="Nyumba Dynamics project"
+                                    alt="Nyumba Dynamics welding and fabrication capability"
                                 />
 
                                 <div className="footer-img-overlay">
@@ -310,7 +312,7 @@ const Footer = () => {
                                 <img
                                     className="footer-imgs"
                                     src={FooterImg3}
-                                    alt="Nyumba Dynamics project"
+                                    alt="Nyumba Dynamics swimming-pool maintenance capability"
                                 />
 
 
@@ -380,8 +382,8 @@ const Footer = () => {
                             </p>
 
 
-                            <a href="tel:+256751353757">
-                                +256 7513 53757
+                            <a href="tel:+256761648679">
+                                +256 7616 48679
                             </a>
 
 
@@ -431,7 +433,7 @@ const Footer = () => {
 
 
 
-                        <a href="https://wa.me/256751353757" target="_blank" rel="noopener noreferrer" className="footer-med-icons">
+                        <a href="https://wa.me/256761648679" target="_blank" rel="noopener noreferrer" className="footer-med-icons">
 
                             <img
                                 src={whatsapp}

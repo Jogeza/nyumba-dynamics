@@ -9,12 +9,8 @@ import PageSEO from '../component/PageSEO.tsx';
 
 const CATEGORIES = [
     "All",
-    "Residential Projects",
-    "Commercial Projects",
-    "Smart Home Installations",
-    "CCTV Installations",
-    "Interior Design",
-    "Renovations",
+    "Electrical & Lighting", "Plumbing", "Welding & Fabrication", "Lifestyle Maintenance",
+    "Landscaping", "Locks & Security", "Cleaning", "Maintenance",
 ];
 
 const Project1: React.FC = () => {
@@ -59,16 +55,16 @@ const Project1: React.FC = () => {
     return (
         <>
             <PageSEO
-                title="Our Projects | Property Services Uganda"
-                description="Completed residential, commercial, smart home and CCTV installation projects by Nyumba Dynamics across Kampala, Uganda."
+                title="Service Showcase | Nyumba Dynamics Uganda"
+                description="See Nyumba Dynamics technicians delivering practical maintenance, plumbing, fabrication, landscaping and property-care services."
             />
             {/* <!-- ====================================== About Hero Section ===================================== --> */}
             <section className="heroSection">
                 <div className="container">
-                    <h1 className="img-header-text fade_down">Our Projects</h1>
+                    <h1 className="img-header-text fade_down">Service Showcase</h1>
                     <div className="breadcrumb-group fade_up">
                         <Link to="/">HOME / </Link>
-                        <Link to="/properties"> Projects</Link>
+                        <Link to="/properties"> Showcase</Link>
                     </div>
                 </div>
             </section>
@@ -77,9 +73,8 @@ const Project1: React.FC = () => {
                 <div className="container">
                     <p className="cap-text fade_up">OUR WORK</p>
                     <div className="section-main-text-flex">
-                        <h2 className="sec-text pb-0 fade_up">Recent Projects Across Kampala</h2>
-                        <p className="sec-sub-text ornare fade_up">A look at completed construction, security, and
-                            smart home work for homes and businesses across the city.</p>
+                        <h2 className="sec-text pb-0 fade_up">See Our Team At Work</h2>
+                        <p className="sec-sub-text ornare fade_up">Authentic Nyumba Dynamics field imagery showing the capabilities and care we bring to property service work.</p>
                     </div>
 
                     <div className="project-category-filters" style={{ marginTop: 40 }}>
@@ -111,7 +106,7 @@ const Project1: React.FC = () => {
                                         <p>{item.description}</p>
                                     </div>
                                     <Link to={item.link} className="btn-quote view-project-btn">
-                                        View Project
+                                        View Capability
                                         <img src={CrossArrow} alt="cross-arrow" />
                                     </Link>
                                 </div>

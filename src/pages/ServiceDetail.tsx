@@ -6,6 +6,7 @@ import CrossArrow from '../assets/images/svg/cross-arrow.svg';
 import CheckTransparent from '../assets/images/svg/check-transparent.svg';
 import WhatsappSvg from '../assets/images/svg/whatsapp.svg';
 import PageSEO from '../component/PageSEO.tsx';
+import { serviceImages, serviceAlt } from '../data/siteImages.ts';
 
 const ServiceDetail: React.FC = () => {
 
@@ -33,7 +34,7 @@ const ServiceDetail: React.FC = () => {
             {/* Hero */}
             <section
                 className="heroSection"
-                style={{ backgroundImage: `linear-gradient(90deg, rgba(0,0,0,0.88) 27.86%, rgba(0,0,0,0.00) 100%), url(${serviceImageMap[service.img]})` }}
+                style={{ backgroundImage: `linear-gradient(90deg, rgba(0,0,0,0.88) 22%, rgba(0,0,0,0.20) 100%), url(${serviceImages[service.slug] || serviceImageMap[service.img]})` }}
             >
                 <div className="container">
                     <h1 className="img-header-text fade_down">{service.title}</h1>
@@ -50,6 +51,8 @@ const ServiceDetail: React.FC = () => {
                 <div className="container">
                     <div className="row all-services-row">
                         <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12">
+
+                            <img className="service-detail-feature" src={serviceImages[service.slug] || serviceImageMap[service.img]} alt={serviceAlt[service.slug] || service.title} width="1280" height="853" />
 
                             <div className="service-detail-icon">
                                 <img src={serviceSvgMap[service.svg]} alt={service.title} />
@@ -88,7 +91,7 @@ const ServiceDetail: React.FC = () => {
                                     <img src={CrossArrow} alt="cross-arrow" />
                                 </Link>
                                 <a
-                                    href={`https://wa.me/256751353757?text=${encodeURIComponent(`Hi Nyumba Dynamics, I'd like a quote for ${service.title}.`)}`}
+                                    href={`https://wa.me/256761648679?text=${encodeURIComponent(`Hi Nyumba Dynamics, I'd like a quote for ${service.title}.`)}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="btn-quote btn-whatsapp"

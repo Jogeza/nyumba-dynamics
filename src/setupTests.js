@@ -8,6 +8,24 @@ import '@testing-library/jest-dom';
 // environment does not provide globally (they exist in Node's `util` module).
 import { TextEncoder, TextDecoder } from 'util';
 
+// GSAP ships ScrollTrigger as ESM. Jest in react-scripts runs CommonJS, so
+// mock only the animation boundary; production animation imports stay intact.
+jest.mock('gsap', () => ({
+  gsap: {
+    registerPlugin: () => undefined,
+    to: () => ({
+      kill: jest.fn(),
+      scrollTrigger: { kill: jest.fn() },
+    }),
+  },
+}));
+jest.mock('gsap/ScrollTrigger', () => ({ ScrollTrigger: {} }));
+
+Object.defineProperty(window, 'scrollTo', {
+  configurable: true,
+  value: jest.fn(),
+});
+
 if (typeof global.TextEncoder === 'undefined') {
   global.TextEncoder = TextEncoder;
 }

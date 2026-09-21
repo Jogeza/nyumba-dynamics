@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
                 <div className="container">
                     <div className="media-logo-call-footer" style={{ marginTop: 0 }}>
                         <a
-                            href="https://wa.me/256751353757"
+                            href="https://wa.me/256761648679"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="call-detl"

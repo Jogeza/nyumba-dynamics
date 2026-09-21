@@ -6,9 +6,7 @@ import AboutSvg1 from '../assets/images/svg/about-svg1.svg';
 import AboutSvg2 from '../assets/images/svg/about-svg2.svg';
 import AboutSvg3 from '../assets/images/svg/about-svg3.svg';
 import AboutSvg4 from '../assets/images/svg/about-svg4.svg';
-import AboutImg1 from '../assets/images/about/about-img1.jpg';
-import AboutImg2 from '../assets/images/about/about-img2.jpg';
-import AboutImg3 from '../assets/images/about/about-img3.jpg';
+import { siteImages } from '../data/siteImages.ts';
 import Subtract from '../assets/images/about/Subtract.png'
 import CheckTransparent from '../assets/images/svg/check-transparent.svg';
 import HowWorkBg from '../assets/images/about/how-to-work-bg.png';
@@ -19,6 +17,10 @@ import HowWorkArrow from '../assets/images/svg/how-to-work-arrow.svg';
 import TeamSection from '../component/TeamSection.tsx';
 import Testimonials from '../component/Testimonials.tsx';
 import PageSEO from '../component/PageSEO.tsx';
+
+const AboutImg1 = siteImages.landscaping;
+const AboutImg2 = siteImages.plumbing;
+const AboutImg3 = siteImages.welding;
 
 
 const About: React.FC = () => {
@@ -140,7 +142,7 @@ const About: React.FC = () => {
                                     </div>
                                     <div className="need-help-main">
                                         <p>Need Help Now?</p>
-                                        <a href="tel:+256751353757">+256 7513 53757</a>
+                                        <a href="tel:+256761648679">+256 7616 48679</a>
                                     </div>
                                 </div>
                             </div>
@@ -149,7 +151,7 @@ const About: React.FC = () => {
                             <div className="sub-img-main">
                                 <img className="about-img1" src={AboutImg1} alt="Nyumba Dynamics team on site" />
                                 <img className="subtract-img" src={Subtract} alt="" />
-                                <img className="about-img2" src={AboutImg2} alt="Completed Nyumba Dynamics project" />
+                                <img className="about-img2" src={AboutImg2} alt="Nyumba Dynamics plumber completing a bathroom fitting" />
                                 <img className="about-img3" src={AboutImg3} alt="Nyumba Dynamics craftsmanship detail" />
                             </div>
                         </div>

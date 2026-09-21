@@ -91,7 +91,7 @@ const MobileBottomNav = () => {
             }
 
             <a
-                href="https://wa.me/256751353757"
+                href="https://wa.me/256761648679"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mobile-bottom-nav-item mobile-bottom-nav-whatsapp"

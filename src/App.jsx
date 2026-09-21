@@ -34,6 +34,7 @@ import ScrollToTopButton from "./component/ScrollToTopButton.tsx";
 import MobileBottomNav from "./component/MobileBottomNav.tsx";
 import SmoothScroll from "./hooks/SmoothScroll.ts";
 import ContactForm from "./component/ContactForm.tsx";
+import WhatsAppFloat from "./component/WhatsAppFloat";
 
 
 function App() {
@@ -128,6 +129,7 @@ function App() {
 
       </Routes>
 
+    <WhatsAppFloat />
 
       <ContactForm />
 
@@ -137,7 +139,9 @@ function App() {
 
       <ScrollToTopButton />
 
+
     </BrowserRouter>
+
   );
 }
 
