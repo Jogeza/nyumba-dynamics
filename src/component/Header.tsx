@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import LogoSvg from "../assets/images/svg/logo.svg";
@@ -19,8 +19,16 @@ const Header = () => {
 
     const [menuOpen, setMenuOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState<number | null>(null);
+    const [scrolled, setScrolled] = useState(false);
 
     const location = useLocation();
+
+    useEffect(() => {
+        const updateHeader = () => setScrolled(window.scrollY > 24);
+        updateHeader();
+        window.addEventListener('scroll', updateHeader, { passive: true });
+        return () => window.removeEventListener('scroll', updateHeader);
+    }, []);
 
 
     const toggleDropdown = (index:number) => {
@@ -145,7 +153,7 @@ const Header = () => {
 
 
             <header 
-                className="header"
+                className={`header ${scrolled ? "header--scrolled" : ""}`}
                 id="top-navbar"
             >
 

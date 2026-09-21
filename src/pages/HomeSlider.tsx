@@ -2,11 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import CrossArrow from '../assets/images/svg/cross-arrow.svg';
 import headphoneIcon from '../assets/images/svg/headphone-icon.svg'
-import PremiumHero from '../component/PremiumHero.tsx';
 import ServiceCategories from '../component/ServiceCategories.tsx';
+import SearchHero from '../component/SearchHero.tsx';
+import V2ServiceCards from '../component/V2ServiceCards.tsx';
 import PageSEO from '../component/PageSEO.tsx';
-import ProjectSlider from '../component/ProjectSlider.tsx';
-import ImageZoomScroll from '../component/ImageZoomScroll.tsx';
 import { siteImages } from '../data/siteImages.ts';
 
 const trustStats = [
@@ -18,19 +17,14 @@ const trustStats = [
 
 const HomeSlider: React.FC = () => {
     return (
-        <>
+        <main className="v2-home">
             <PageSEO
                 title="Handyman & Smart Home Services Uganda"
                 description="Home Maintenance Services (HEMS) in Kampala, Uganda — electrical, plumbing, CCTV installation, smart home automation, cleaning and more. Hire the right professionals."
             />
 
             {/* 1. Hero */}
-            <section className="hero-slider-section">
-                <PremiumHero />
-            </section>
-
-            {/* Premium image reveal */}
-            <ImageZoomScroll />
+            <SearchHero />
 
             {/* 2. Service Categories */}
             <section className="section-two">
@@ -45,6 +39,8 @@ const HomeSlider: React.FC = () => {
                 </div>
             </section>
 
+            <V2ServiceCards />
+
             {/* 3. Why Choose Nyumba Dynamics — short, number-led, no icon grid */}
             <section className="section-four why-choose-stats">
                 <div className="container">
@@ -58,23 +54,6 @@ const HomeSlider: React.FC = () => {
                             </div>
                         ))}
                     </div>
-                </div>
-            </section>
-
-            {/* 4. Service Showcase */}
-            <section className="section-seven">
-                <div className="container">
-                    <p className="cap-text fade_up">our work</p>
-                    <div className="section-main-text-flex">
-                        <h2 className="sec-text pb-0 fade_up">Nyumba At Work</h2>
-                        <p className="sec-sub-text ornare fade_up">A truthful look at the practical skills, care and branded team behind our property services.</p>
-                    </div>
-                </div>
-                <ProjectSlider />
-                <div className="container" style={{ textAlign: 'center', marginTop: 20 }}>
-                    <Link to="/properties" className="btn-quote-outline-dark">
-                        View Full Showcase
-                    </Link>
                 </div>
             </section>
 
@@ -173,7 +152,7 @@ const HomeSlider: React.FC = () => {
                 </div>
             </section>
             {/* 9. Footer renders globally via App.jsx */}
-        </>
+        </main>
     )
 }
 

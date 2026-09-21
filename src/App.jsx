@@ -7,6 +7,7 @@ import "./assets/css/bootstrap.min.css";
 import "./assets/css/swiper.min.css";
 import "./assets/css/style.css";
 import "./assets/css/media_query.css";
+import "./assets/css/v2-home.css";
 
 
 // Pages
@@ -34,13 +35,15 @@ import ScrollToTopButton from "./component/ScrollToTopButton.tsx";
 import MobileBottomNav from "./component/MobileBottomNav.tsx";
 import SmoothScroll from "./hooks/SmoothScroll.ts";
 import ContactForm from "./component/ContactForm.tsx";
+import { useLocation } from "react-router-dom";
 import WhatsAppFloat from "./component/WhatsAppFloat";
 
 
-function App() {
+function AppContent() {
+  const location = useLocation();
+  const initialService = new URLSearchParams(location.search).get('service') || undefined;
   return (
-    <BrowserRouter>
-
+    <>
       <SmoothScroll />
 
       <ScrollTopPage />
@@ -131,7 +134,7 @@ function App() {
 
     <WhatsAppFloat />
 
-      <ContactForm />
+      <ContactForm initialService={initialService} />
 
       <Footer />
 
@@ -140,9 +143,13 @@ function App() {
       <ScrollToTopButton />
 
 
-    </BrowserRouter>
+    </>
 
   );
+}
+
+function App() {
+  return <BrowserRouter><AppContent /></BrowserRouter>;
 }
 
 

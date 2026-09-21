@@ -17,6 +17,11 @@ jest.mock('gsap', () => ({
       kill: jest.fn(),
       scrollTrigger: { kill: jest.fn() },
     }),
+    from: () => ({ kill: jest.fn() }),
+    context: (callback) => {
+      callback();
+      return { revert: jest.fn() };
+    },
   },
 }));
 jest.mock('gsap/ScrollTrigger', () => ({ ScrollTrigger: {} }));

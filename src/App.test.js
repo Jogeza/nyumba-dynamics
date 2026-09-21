@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 
 // Carousel/animation libraries aren't relevant to a routing/render smoke test
@@ -39,9 +39,20 @@ const newServiceRoutes = [
 
 test('renders the Nyumba Dynamics homepage', () => {
   renderAt();
-  expect(screen.getByRole('heading', { name: /Professional Care For Every Part Of Your Property/i })).toBeInTheDocument();
-  const taglineMatches = screen.getAllByText(/Hire The Right Professionals/i);
-  expect(taglineMatches.length).toBeGreaterThan(0);
+  expect(screen.getByRole('heading', { name: /What do you need done on your property/i })).toBeInTheDocument();
+});
+
+test('renders an accessible service search', () => {
+  renderAt();
+  expect(screen.getByRole('textbox', { name: /Search property engineering/i })).toBeInTheDocument();
+});
+
+test('popular service chips open a pre-filled consultation', () => {
+  renderAt();
+  fireEvent.click(screen.getByRole('button', { name: 'Electrical' }));
+  expect(window.location.pathname).toBe('/consultation');
+  expect(window.location.search).toBe('?service=electrical-services');
+  expect(screen.getAllByText('Electrical Services').length).toBeGreaterThan(0);
 });
 
 test('renders all four service categories', () => {
@@ -75,7 +86,7 @@ test('renders the four-step service process without placeholder testimonials', (
 
 test('homepage includes consultation and WhatsApp calls to action', () => {
   renderAt();
-  expect(screen.getByRole('link', { name: /Request A Service/i })).toHaveAttribute('href', '/consultation');
+  expect(screen.getByRole('link', { name: /Request a Free Quote/i })).toHaveAttribute('href', '/consultation');
   expect(screen.getAllByRole('link', { name: /WhatsApp/i }).some((link) => link.href.startsWith('https://wa.me/'))).toBe(true);
 });
 

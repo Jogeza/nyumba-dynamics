@@ -6,17 +6,31 @@ import servicesData from "../data/servicesData.json";
 
 interface ServiceOption {
     title: string;
+    slug: string;
 }
 
 const REQUEST_TYPES = ["Customer Service Request", "Become a Partner", "Become a Vendor"];
+const SERVICE_OPTIONS: string[] = (servicesData as ServiceOption[]).map((service) => service.title);
 
-const ContactForm: React.FC = () => {
+const resolveService = (value?: string) => {
+    if (!value) return SERVICE_OPTIONS[0];
+    const match = (servicesData as ServiceOption[]).find(
+        (service) => service.slug === value || service.title.toLowerCase() === value.toLowerCase()
+    );
+    return match?.title || value;
+};
+
+interface ContactFormProps {
+    initialService?: string;
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
     const location = useLocation();
 
-    const serviceOptions: string[] = (servicesData as ServiceOption[]).map((s) => s.title);
+    const serviceOptions = SERVICE_OPTIONS;
 
     const [requestType, setRequestType] = useState<string>(REQUEST_TYPES[0]);
-    const [serviceNeeded, setServiceNeeded] = useState<string>(serviceOptions[0]);
+    const [serviceNeeded, setServiceNeeded] = useState<string>(() => resolveService(initialService));
     const [openDropdown, setOpenDropdown] = useState<"type" | "service" | null>(null);
 
     const [formValues, setFormValues] = useState({
@@ -46,6 +60,10 @@ const ContactForm: React.FC = () => {
         document.addEventListener("click", handleClickOutside);
         return () => document.removeEventListener("click", handleClickOutside);
     }, []);
+
+    useEffect(() => {
+        setServiceNeeded(resolveService(initialService));
+    }, [initialService]);
 
     const handleChange = (field: keyof typeof formValues) => (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormValues((prev) => ({ ...prev, [field]: e.target.value }));
@@ -86,7 +104,7 @@ const ContactForm: React.FC = () => {
     return (
         <>
             {(
-                <section className="contact-form-section">
+                <section className="contact-form-section" id="consultation-form">
                     <div className="container">
                         <div className="row form-sec-row">
 

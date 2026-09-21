@@ -5,8 +5,11 @@ import HowWorkSvg1 from '../assets/images/svg/how-to-work-svg1.svg';
 import HowWorkSvg2 from '../assets/images/svg/how-to-work-svg2.svg';
 import HowWorkSvg3 from '../assets/images/svg/how-to-work-svg3.svg';
 import HowWorkArrow from '../assets/images/svg/how-to-work-arrow.svg';
+import { useLocation } from 'react-router-dom';
 
 const GetQuote: React.FC = () => {
+    const location = useLocation();
+    const requestedService = new URLSearchParams(location.search).get('service');
     return (
         <>
             {/* <!-- ====================================== Hero Section ===================================== --> */}
@@ -31,6 +34,19 @@ const GetQuote: React.FC = () => {
                         Fill in the form below with what you need — our team reviews it and gets back to you with
                         a clear quote, usually the same day.
                     </p>
+                    {requestedService && (
+                        <p className="quote-service-context">
+                            Your request for <strong>{requestedService.replace(/-/g, ' ')}</strong> is ready below.
+                        </p>
+                    )}
+                    <a
+                        href={`https://wa.me/256761648679?text=${encodeURIComponent(`Hello Nyumba Dynamics, I would like a quote${requestedService ? ` for ${requestedService.replace(/-/g, ' ')}` : ''}.`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-quote btn-whatsapp quote-whatsapp-cta"
+                    >
+                        Request via WhatsApp
+                    </a>
                     <div className="how-work-step-box">
                         <div className="how-work-step-box-sub fade_up">
                             <div className="how-to-work-circle">

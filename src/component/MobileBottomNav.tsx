@@ -3,11 +3,7 @@ import whatsapp from "../assets/images/svg/whatsapp.svg";
 
 // App-style bottom navigation for mobile only (see media_query.css for the
 // breakpoint that shows/hides this bar). Priority order follows the brief:
-// Request Service, WhatsApp, Services, Projects, Smart Home Solutions.
-//
-// "Projects" doesn't have its own dedicated route yet (that's Phase 5 work,
-// tracked separately) so it points at the closest existing page for now:
-// /properties.
+// Home, Services, Request, Smart Home Solutions, WhatsApp.
 
 const MobileBottomNav = () => {
 
@@ -17,13 +13,12 @@ const MobileBottomNav = () => {
 
     const navItems = [
         {
-            key: "request",
-            label: "Request",
-            to: "/consultation",
+            key: "home",
+            label: "Home",
+            to: "/",
             icon: (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M9 11l3 3L22 4" />
-                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                    <path d="M3 11l9-8 9 8" /><path d="M5 10v10h14V10" /><path d="M9 20v-6h6v6" />
                 </svg>
             )
         },
@@ -38,15 +33,13 @@ const MobileBottomNav = () => {
             )
         },
         {
-            key: "projects",
-            label: "Projects",
-            to: "/properties",
+            key: "request",
+            label: "Request",
+            to: "/consultation",
             icon: (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="3" y="3" width="7" height="7" rx="1" />
-                    <rect x="14" y="3" width="7" height="7" rx="1" />
-                    <rect x="3" y="14" width="7" height="7" rx="1" />
-                    <rect x="14" y="14" width="7" height="7" rx="1" />
+                    <path d="M9 11l3 3L22 4" />
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
                 </svg>
             )
         },
@@ -75,6 +68,7 @@ const MobileBottomNav = () => {
                         key={item.key}
                         to={item.to}
                         className={`mobile-bottom-nav-item ${isActive(item.to) ? "active" : ""}`}
+                        aria-current={isActive(item.to) ? "page" : undefined}
                     >
 
                         <span className="mobile-bottom-nav-icon">
