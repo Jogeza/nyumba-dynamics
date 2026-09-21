@@ -7,10 +7,11 @@ import SearchHero from '../component/SearchHero.tsx';
 import V2ServiceCards from '../component/V2ServiceCards.tsx';
 import PageSEO from '../component/PageSEO.tsx';
 import { siteImages } from '../data/siteImages.ts';
+import servicesData from '../data/servicesData.json';
 
 const trustStats = [
-    { stat: '14+', label: 'Services, One Team' },
-    { stat: '100%', label: 'Vetted & Trained Technicians' },
+    { stat: String(servicesData.length), label: 'Services, One Team' },
+    { stat: 'Matched', label: 'Teams Selected For Each Job' },
     { stat: 'Kampala', label: 'Wide Coverage' },
     { stat: 'Free', label: 'No-Obligation Quotes' },
 ];
@@ -68,7 +69,7 @@ const HomeSlider: React.FC = () => {
                             <p className="cap-text fade_up">smart living, uganda</p>
                             <h2 className="sec-text fade_up">Your Home, Connected And Under Control</h2>
                             <p className="sec-sub-text fade_up">Smart locks, CCTV, lighting, and remote monitoring —
-                                installed, connected, and running from a single app.</p>
+                                installed, connected, and configured with straightforward controls.</p>
                             <Link to="/smart-home" className="btn-quote">
                                 Explore Smart Home Solutions
                                 <img src={CrossArrow} alt="cross-arrow" />
@@ -106,8 +107,8 @@ const HomeSlider: React.FC = () => {
                         <div className="col-xxl-6 col-xl-6 col-lg-6 position-relative">
                             <div className="about-editorial-grid">
                                 <img className="about-editorial-main" src={siteImages.landscaping} alt="Nyumba Dynamics landscaper maintaining a garden" loading="lazy" />
-                                <img src={siteImages.plumbing} alt="Nyumba Dynamics plumber completing a bathroom repair" loading="lazy" />
-                                <img src={siteImages.welding} alt="Nyumba Dynamics welder fabricating a metal frame" loading="lazy" />
+                                <img src={siteImages.cleaning2} alt="Nyumba Dynamics cleaner caring for an exterior surface" loading="lazy" />
+                                <img src={siteImages.safety1} alt="Nyumba Dynamics technician checking a property fitting" loading="lazy" />
                             </div>
                         </div>
                     </div>

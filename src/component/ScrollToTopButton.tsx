@@ -24,6 +24,7 @@ const ScrollToTopButton: React.FC = () => {
         <button
             className={`bottom-top-button ${visible ? "show" : ""}`}
             onClick={scrollToTop}
+            aria-label="Back to top"
         >
             ↑
         </button>

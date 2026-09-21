@@ -13,7 +13,7 @@ import twitter from "../assets/images/svg/twitter.svg";
 import insta from "../assets/images/svg/insta.svg";
 import whatsapp from "../assets/images/svg/whatsapp.svg";
 
-const FooterImg1 = siteImages.electrical;
+const FooterImg1 = siteImages.cctv1;
 const FooterImg2 = siteImages.welding;
 const FooterImg3 = siteImages.pool;
 
@@ -46,7 +46,7 @@ const Footer = () => {
 
                         <input
                             type="text"
-                            placeholder="Enter your email or phone number"
+                            placeholder="Email or phone"
                         />
 
 
@@ -268,7 +268,7 @@ const Footer = () => {
                                 <img
                                     className="footer-imgs"
                                     src={FooterImg1}
-                                    alt="Nyumba Dynamics exterior lighting capability"
+                                    alt="Nyumba Dynamics property-service field capability"
                                 />
 
                                 <div className="footer-img-overlay">
@@ -459,8 +459,7 @@ const Footer = () => {
 
                     <p>
 
-                        Copyright © {new Date().getFullYear()} 
-                        Nyumba Dynamics. All Rights Reserved.
+                        {`Copyright © ${new Date().getFullYear()} Nyumba Dynamics. All Rights Reserved.`}
 
                     </p>
 

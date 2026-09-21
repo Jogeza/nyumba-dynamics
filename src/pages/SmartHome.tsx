@@ -51,7 +51,7 @@ const SmartHome: React.FC = () => {
                             <h2 className="sec-text fade_up">Your Home, Connected And Under Control</h2>
                             <p className="sec-sub-text fade_up">
                                 Nyumba Dynamics designs and installs complete smart home systems — locks, cameras,
-                                lighting, and monitoring that work together from a single app. Whether you're
+                                lighting, and monitoring configured around simple, compatible controls. Whether you're
                                 securing a family home or a commercial property, we build a system around how you
                                 actually live and work, not a one-size-fits-all package.
                             </p>
