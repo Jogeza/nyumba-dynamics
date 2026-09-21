@@ -2,17 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import CrossArrow from '../assets/images/svg/cross-arrow.svg';
 import headphoneIcon from '../assets/images/svg/headphone-icon.svg'
-import AboutImg1 from '../assets/images/about/about-img1.jpg';
-import AboutImg2 from '../assets/images/about/about-img2.jpg';
-import AboutImg3 from '../assets/images/about/about-img3.jpg';
-import Subtract from '../assets/images/about/Subtract.png'
-import SmartHomeImg from '../assets/images/services/slider-img3.jpg';
-import HomeHeroSlider from '../component/HomeHeroSlider.tsx';
+import PremiumHero from '../component/PremiumHero.tsx';
 import ServiceCategories from '../component/ServiceCategories.tsx';
 import PageSEO from '../component/PageSEO.tsx';
 import ProjectSlider from '../component/ProjectSlider.tsx';
-import Testimonials from '../component/Testimonials.tsx';
 import ImageZoomScroll from '../component/ImageZoomScroll.tsx';
+import { siteImages } from '../data/siteImages.ts';
 
 const trustStats = [
     { stat: '14+', label: 'Services, One Team' },
@@ -31,7 +26,7 @@ const HomeSlider: React.FC = () => {
 
             {/* 1. Hero */}
             <section className="hero-slider-section">
-                <HomeHeroSlider />
+                <PremiumHero />
             </section>
 
             {/* Premium image reveal */}
@@ -66,20 +61,19 @@ const HomeSlider: React.FC = () => {
                 </div>
             </section>
 
-            {/* 4. Featured Projects */}
+            {/* 4. Service Showcase */}
             <section className="section-seven">
                 <div className="container">
                     <p className="cap-text fade_up">our work</p>
                     <div className="section-main-text-flex">
-                        <h2 className="sec-text pb-0 fade_up">Recent Projects Across Kampala</h2>
-                        <p className="sec-sub-text ornare fade_up">A look at completed construction, security, and
-                            smart home work for homes and businesses across the city.</p>
+                        <h2 className="sec-text pb-0 fade_up">Nyumba At Work</h2>
+                        <p className="sec-sub-text ornare fade_up">A truthful look at the practical skills, care and branded team behind our property services.</p>
                     </div>
                 </div>
                 <ProjectSlider />
                 <div className="container" style={{ textAlign: 'center', marginTop: 20 }}>
                     <Link to="/properties" className="btn-quote-outline-dark">
-                        View All Projects
+                        View Full Showcase
                     </Link>
                 </div>
             </section>
@@ -89,7 +83,7 @@ const HomeSlider: React.FC = () => {
                 <div className="container">
                     <div className="row" style={{ alignItems: 'center' }}>
                         <div className="col-xxl-6 col-xl-6 col-lg-6">
-                            <img src={SmartHomeImg} alt="Smart home installation in Kampala" style={{ width: '100%', borderRadius: 20 }} />
+                            <img className="editorial-feature-image" src={siteImages.electrical} alt="Nyumba Dynamics technician installing connected exterior lighting" width="1280" height="853" loading="lazy" />
                         </div>
                         <div className="col-xxl-6 col-xl-6 col-lg-6">
                             <p className="cap-text fade_up">smart living, uganda</p>
@@ -125,26 +119,33 @@ const HomeSlider: React.FC = () => {
                                     </div>
                                     <div className="need-help-main">
                                         <p>Need Help Now?</p>
-                                        <a href="tel:+256751353757">+256 7513 53757</a>
+                                        <a href="tel:+256761648679">+256 7616 48679</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-xxl-6 col-xl-6 col-lg-6 position-relative">
-                            <div className="sub-img-main">
-                                <img className="about-img1" src={AboutImg1} alt="Nyumba Dynamics team at work" />
-                                <img className="subtract-img" src={Subtract} alt="" />
-                                <img className="about-img2" src={AboutImg2} alt="Completed Nyumba Dynamics project" />
-                                <img className="about-img3" src={AboutImg3} alt="Nyumba Dynamics craftsmanship detail" />
+                            <div className="about-editorial-grid">
+                                <img className="about-editorial-main" src={siteImages.landscaping} alt="Nyumba Dynamics landscaper maintaining a garden" loading="lazy" />
+                                <img src={siteImages.plumbing} alt="Nyumba Dynamics plumber completing a bathroom repair" loading="lazy" />
+                                <img src={siteImages.welding} alt="Nyumba Dynamics welder fabricating a metal frame" loading="lazy" />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* 7. Testimonials */}
-            <section className="section-nine pt-0">
-                <Testimonials />
+            <section className="section-nine pt-0 trust-process-section">
+                <div className="container">
+                    <p className="cap-text fade_up">what you can expect</p>
+                    <h2 className="sec-text pb-0 fade_up">Clear From First Call To Final Check</h2>
+                    <div className="trust-process-grid">
+                        <div><span>01</span><h3>Tell Us What You Need</h3><p>Share the job by phone, WhatsApp or the request form.</p></div>
+                        <div><span>02</span><h3>Review The Scope</h3><p>We assess the work and explain the practical next step.</p></div>
+                        <div><span>03</span><h3>Get A Clear Quote</h3><p>Agree the work and cost before the team gets started.</p></div>
+                        <div><span>04</span><h3>Final Quality Check</h3><p>We review the completed work with you before handover.</p></div>
+                    </div>
+                </div>
             </section>
 
             {/* 8. Contact CTA */}
@@ -161,7 +162,7 @@ const HomeSlider: React.FC = () => {
                             <img src={CrossArrow} alt="cross-arrow" />
                         </Link>
                         <a
-                            href="https://wa.me/256751353757"
+                            href="https://wa.me/256761648679"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-quote-outline"

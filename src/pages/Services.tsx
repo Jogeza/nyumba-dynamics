@@ -5,6 +5,7 @@ import servicesData from "../data/servicesData.json";
 import categoriesData from "../data/serviceCategories.json";
 import { serviceImageMap, serviceSvgMap, ServiceItem } from '../component/ServicesFeatured.tsx';
 import PageSEO from '../component/PageSEO.tsx';
+import { serviceImages, serviceAlt } from '../data/siteImages.ts';
 
 interface Category {
     slug: string;
@@ -62,8 +63,11 @@ const Services: React.FC = () => {
                                         <div className="cleaning-card">
                                             <div className="cleaning-card-img-main">
                                                 <img
-                                                    src={serviceImageMap[item.img]}
-                                                    alt={item.title}
+                                                    src={serviceImages[item.slug] || serviceImageMap[item.img]}
+                                                    alt={serviceAlt[item.slug] || item.title}
+                                                    loading="lazy"
+                                                    width="1280"
+                                                    height="853"
                                                 />
                                             </div>
                                             <div className="services-svg-main">

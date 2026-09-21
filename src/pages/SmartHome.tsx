@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CrossArrow from '../assets/images/svg/cross-arrow.svg';
-import img1 from '../assets/images/services/slider-img1.jpg';
-import img3 from '../assets/images/services/slider-img3.jpg';
+import { siteImages } from '../data/siteImages.ts';
 import svg1 from '../assets/images/svg/services-svg1.svg';
 import svg2 from '../assets/images/svg/services-svg2.svg';
 import svg3 from '../assets/images/svg/services-svg3.svg';
@@ -11,6 +10,9 @@ import svg5 from '../assets/images/svg/services-svg5.svg';
 import svg6 from '../assets/images/svg/services-svg6.svg';
 import HowWorkBg from '../assets/images/about/how-to-work-bg.png';
 import PageSEO from '../component/PageSEO.tsx';
+
+const img1 = siteImages.electrical;
+const img3 = siteImages.locksmith;
 
 const smartHomeFeatures = [
     { title: 'Smart Locks', desc: 'Keyless entry, remote locking, and guest access codes — no more lost keys.', icon: svg1 },
@@ -108,7 +110,7 @@ const SmartHome: React.FC = () => {
                             <img src={CrossArrow} alt="cross-arrow" />
                         </Link>
                         <a
-                            href="https://wa.me/256751353757?text=Hi%20Nyumba%20Dynamics%2C%20I%27d%20like%20to%20ask%20about%20smart%20home%20solutions."
+                            href="https://wa.me/256761648679?text=Hi%20Nyumba%20Dynamics%2C%20I%27d%20like%20to%20ask%20about%20smart%20home%20solutions."
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-quote btn-whatsapp"

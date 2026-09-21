@@ -99,7 +99,7 @@ const ContactForm: React.FC = () => {
                                 </p>
 
                                 <p className="call-support-text">Call Us</p>
-                                <a href="tel:+256751353757" className="tel-num">+256 7513 53757</a>
+                                <a href="tel:+256761648679" className="tel-num">+256 7616 48679</a>
 
                                 <div className="adres-main-home fade_up">
                                     <div>
@@ -125,7 +125,7 @@ const ContactForm: React.FC = () => {
                                             directly on WhatsApp for a faster response.
                                         </p>
                                         <a
-                                            href="https://wa.me/256751353757"
+                                            href="https://wa.me/256761648679"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="btn-quote btn-whatsapp"

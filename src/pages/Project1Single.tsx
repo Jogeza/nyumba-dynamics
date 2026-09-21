@@ -32,7 +32,7 @@ const Project1Single: React.FC = () => {
                     <h1 className="img-header-text fade_down">{project.title}</h1>
                     <div className="breadcrumb-group fade_up">
                         <Link to="/">HOME / </Link>
-                        <Link to="/properties">PROJECTS / </Link>
+                        <Link to="/properties">SHOWCASE / </Link>
                         <Link to={project.link}> {project.category.toUpperCase()}</Link>
                     </div>
                 </div>
@@ -46,9 +46,8 @@ const Project1Single: React.FC = () => {
                             <p className="cap-text fade_up" style={{ marginTop: 30 }}>{project.category}</p>
                             <p className="fusce pb-2">{project.description}</p>
                             <p className="fusce mt-0">
-                                This {project.category.toLowerCase()} project was completed by our team, coordinated
-                                from initial site assessment through to final handover. As with every job, the client
-                                received a written quote up front, a clear timeline, and a walkthrough before sign-off.
+                                This image illustrates our {project.category.toLowerCase()} capabilities and the
+                                practical, site-focused approach our technicians bring to property service work.
                             </p>
 
                             <div className="diamond-nextbtn-head">
@@ -68,21 +67,21 @@ const Project1Single: React.FC = () => {
                         </div>
                         <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-8 all-service-col">
                             <div className="send-inquiry-form">
-                                <h2 className="project-info-text">Project Info</h2>
+                                <h2 className="project-info-text">Capability Info</h2>
                                 <div className="project-info-main pt-0">
                                     <p>Category :</p>
                                     <p>{project.category}</p>
                                 </div>
                                 <div className="project-info-main">
-                                    <p>Location :</p>
-                                    <p>Kampala, Uganda</p>
+                                    <p>Service Area :</p>
+                                    <p>Kampala</p>
                                 </div>
                                 <div className="project-info-main">
-                                    <p>Delivered By :</p>
+                                    <p>Service Team :</p>
                                     <p>Nyumba Dynamics</p>
                                 </div>
                                 <Link to="/consultation" className="btn-quote" style={{ marginTop: 20, display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-                                    Start A Similar Project
+                                    Request This Service
                                     <img src={CrossArrow} alt="cross-arrow" />
                                 </Link>
                                 <div className="footer-med-icons-main project-details-icon">
@@ -95,7 +94,7 @@ const Project1Single: React.FC = () => {
                                     <a href="https://www.instagram.com/nyumbadynamics" target="_blank" rel="noopener noreferrer" className="footer-med-icons">
                                         <img src={InstaSvg} alt="insta" />
                                     </a>
-                                    <a href="https://wa.me/256751353757" target="_blank" rel="noopener noreferrer" className="footer-med-icons">
+                                    <a href="https://wa.me/256761648679" target="_blank" rel="noopener noreferrer" className="footer-med-icons">
                                         <img src={WhatsappSvg} alt="whatsapp" />
                                     </a>
                                 </div>

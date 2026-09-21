@@ -13,7 +13,7 @@
         "icon": "about-svg2.svg",
         "description": "Baby proofing, locksmith services, appliance repair, air conditioning, preventive maintenance and security systems, so nothing catches you off guard.",
         "included": ["Baby Proofing", "Locksmith", "Appliance Repair", "Air Conditioning", "Preventive Maintenance", "Security Systems"],
-        "serviceSlugs": ["security-systems", "air-conditioning"]
+        "serviceSlugs": ["baby-proofing", "locksmith", "appliance-repair", "air-conditioning", "preventive-maintenance", "safety-proofing", "security-systems"]
     },
     {
         "slug": "smart-home-solutions",
@@ -29,6 +29,6 @@
         "icon": "about-svg4.svg",
         "description": "Landscaping, interior design, cleaning and pest control — the finishing touches that make a property feel like home.",
         "included": ["Landscaping", "Interior Design", "Cleaning", "Pest Control"],
-        "serviceSlugs": ["landscaping", "interior-design", "cleaning", "pest-control"]
+        "serviceSlugs": ["landscaping", "interior-design", "cleaning", "pest-control", "swimming-pool-maintenance", "roof-tile-cleaning"]
     }
 ]
