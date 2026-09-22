@@ -2061,12 +2061,19 @@ button {
 }
 .footer-img-group {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     gap: 15px;
 }
+.footer-img-group .img-container {
+    flex: 1 1 0;
+    min-width: 0;
+}
 .footer-img-group .footer-imgs {
     width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
 }
 .img-container {
     position: relative;

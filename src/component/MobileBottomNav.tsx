@@ -16,8 +16,10 @@ const MobileBottomNav = () => {
             label: "Home",
             to: "/",
             icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M3 11l9-8 9 8" /><path d="M5 10v10h14V10" /><path d="M9 20v-6h6v6" />
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M3.5 10.8 12 3.75l8.5 7.05" />
+                    <path d="M5.75 9.45v10.3h12.5V9.45" />
+                    <path d="M9.25 19.75v-5.5h5.5v5.5" />
                 </svg>
             )
         },
@@ -26,8 +28,9 @@ const MobileBottomNav = () => {
             label: "Services",
             to: "/services",
             icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M14.7 6.3a4 4 0 1 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2z" />
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M14.1 6.2a4.15 4.15 0 0 0-5.25 5.25l-5.6 5.6a2.1 2.1 0 0 0 2.97 2.97l5.6-5.6a4.15 4.15 0 0 0 5.25-5.25l-2.2 2.2-2.25-.6-.6-2.25 2.08-2.32Z" />
+                    <path d="m5.1 18.15.02.02" />
                 </svg>
             )
         },
@@ -36,9 +39,10 @@ const MobileBottomNav = () => {
             label: "Request",
             to: "/consultation",
             icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M9 11l3 3L22 4" />
-                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <rect x="4" y="3.75" width="16" height="16.5" rx="2.5" />
+                    <path d="M8 8.25h8M8 12h3.25" />
+                    <path d="m13.5 15.6 1.55 1.55L18.5 13.7" />
                 </svg>
             )
         },
@@ -47,10 +51,11 @@ const MobileBottomNav = () => {
             label: "Smart Home",
             to: "/smart-home",
             icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M3 11l9-8 9 8" />
-                    <path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10" />
-                    <circle cx="12" cy="14" r="1.2" fill="currentColor" stroke="none" />
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M3.5 10.75 12 3.7l8.5 7.05" />
+                    <path d="M5.75 9.4v10.35h12.5V9.4" />
+                    <path d="M8.6 13.05a4.8 4.8 0 0 1 6.8 0M10.4 14.95a2.25 2.25 0 0 1 3.2 0" />
+                    <circle cx="12" cy="17.15" r=".65" fill="currentColor" stroke="none" />
                 </svg>
             )
         }
