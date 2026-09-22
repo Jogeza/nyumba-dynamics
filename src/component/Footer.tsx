@@ -27,44 +27,12 @@ const Footer = () => {
             <div className="container">
 
 
-                {/* Newsletter */}
-
-                <div className="subscribe-section">
-
+                <div className="subscribe-section footer-intro">
                     <div>
-                        <h2 className="sec-text updat pb-0">
-                            Stay Updated With Nyumba Dynamics
-                        </h2>
-                        <p className="brand-statement">
-                            <strong>Hire the right pros.</strong> Construction, safety, smart-home and lifestyle
-                            services for homes and businesses across Kampala.
-                        </p>
+                        <h2 className="sec-text updat pb-0">Property care, coordinated properly.</h2>
+                        <p className="brand-statement"><strong>Hire the right pros.</strong> Construction, safety, smart-home and lifestyle services for homes and businesses across Kampala.</p>
                     </div>
-
-
-                    <div className="subscribe-input-main">
-
-                        <input
-                            type="text"
-                            placeholder="Email or phone"
-                        />
-
-
-                        <button className="btn-quote">
-
-                            Subscribe Now
-
-                            <img
-                                src={CrossArrowSvg}
-                                alt="arrow"
-                            />
-
-                        </button>
-
-
-                    </div>
-
-
+                    <Link to="/consultation" className="btn-quote">Request a service <img src={CrossArrowSvg} alt="" /></Link>
                 </div>
 
 
@@ -458,9 +426,7 @@ const Footer = () => {
 
 
 
-                    <p>
-                        Privacy Policy | Terms & Conditions
-                    </p>
+                    <p className="footer-legal-links"><Link to="/privacy">Privacy Policy</Link><span aria-hidden="true">|</span><Link to="/terms">Terms &amp; Conditions</Link></p>
 
 
                 </div>

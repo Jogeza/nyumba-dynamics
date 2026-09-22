@@ -68,3 +68,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Website enquiry delivery
+
+The enquiry form posts to the Vercel function at `api/enquiry.js`, which sends
+validated enquiries through Resend. Configure these environment variables in
+Vercel before promoting a deployment to production:
+
+- `RESEND_API_KEY` (required)
+- `ENQUIRY_TO_EMAIL` (optional; defaults to `info@nyumbadynamics.com`)
+- `ENQUIRY_FROM_EMAIL` (optional; defaults to `Nyumba Dynamics Website <website@nyumbadynamics.com>`)
+
+The sender domain must be verified in Resend. After configuration, submit one
+test enquiry on the production form and confirm receipt and Reply-To behavior.

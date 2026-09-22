@@ -23,6 +23,8 @@ import InsightDetail from "./pages/InsightDetail.tsx";
 import Contact from "./pages/Contact.tsx";
 import GetQuote from "./pages/GetQuote.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
+import Terms from "./pages/Terms.tsx";
 
 
 // Components
@@ -120,6 +122,9 @@ function AppContent() {
           path="/consultation" 
           element={<GetQuote />} 
         />
+
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<Terms />} />
 
 
         {/* 404 */}

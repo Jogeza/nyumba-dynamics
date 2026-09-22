@@ -6,3 +6,4 @@ build/
 .vercel
 screenshots/
 .env*
+!.env.example

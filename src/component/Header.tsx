@@ -182,9 +182,13 @@ const Header = () => {
 
 
 
-                    <div
+                    <button
+                        type="button"
                         className="hamburger"
                         onClick={() => setMenuOpen(!menuOpen)}
+                        aria-expanded={menuOpen}
+                        aria-controls="primary-navigation"
+                        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
                     >
 
 
@@ -195,7 +199,7 @@ const Header = () => {
                             <img
                                 src={menu2}
                                 className="menu-icon"
-                                alt="Open menu"
+                                alt=""
                             />
 
                         }
@@ -209,13 +213,13 @@ const Header = () => {
                             <img
                                 src={CloseIcon}
                                 className="close-icon"
-                                alt="Close menu"
+                                alt=""
                             />
 
                         }
 
 
-                    </div>
+                    </button>
 
 
 
@@ -224,7 +228,9 @@ const Header = () => {
 
 
                     <nav
+                        id="primary-navigation"
                         className={`nav ${menuOpen ? "open" : ""}`}
+                        aria-label="Primary navigation"
                     >
 
 
@@ -278,6 +284,7 @@ const Header = () => {
 
 
                                         <button
+                                            type="button"
                                             className={
                                                 `dropdown-btn ${
                                                     isParentActive(item.children)
@@ -289,6 +296,7 @@ const Header = () => {
                                             onClick={() =>
                                                 toggleDropdown(index)
                                             }
+                                            aria-expanded={openDropdown === index}
                                         >
 
 
@@ -298,7 +306,7 @@ const Header = () => {
 
                                             <img
                                                 src={DropdownArrow}
-                                                alt="Dropdown arrow"
+                                                alt=""
                                             />
 
 

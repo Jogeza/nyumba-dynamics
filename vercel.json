@@ -1,0 +1,22 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+      },
+      "continue": true
+    },
+    { "handle": "filesystem" },
+    { "src": "^/(?:about|services|smart-home|properties|blog|contact|consultation|privacy|terms)/?$", "dest": "/index.html" },
+    { "src": "^/services/[^/]+/?$", "dest": "/index.html" },
+    { "src": "^/property/[1-8]/?$", "dest": "/index.html" },
+    { "src": "^/blog/[^/]+/?$", "dest": "/index.html" },
+    { "src": "/.*", "dest": "/404.html", "status": 404 }
+  ]
+}

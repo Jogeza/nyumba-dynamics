@@ -29,9 +29,9 @@ import safety1       from '../assets/images/to use/IMG_20260920_083915_512.jpg.j
 import lifestyle1    from '../assets/images/to use/IMG_20260920_083926_907.jpg.jpeg';
 import field1        from '../assets/images/to use/IMG_20260920_083915_457.jpg.jpeg';
 import field2        from '../assets/images/to use/IMG_20260920_083951_523.jpg.jpeg';
-import roofTileCleaning from '../assets/images/services/roof-tile-cleaning-v2.png';
-import smartHomeCctv from '../assets/images/generated/smart-home-cctv-kampala.png';
-import smartLockInstallation from '../assets/images/generated/smart-lock-installation-kampala.png';
+import roofTileCleaning from '../assets/images/services/roof-tile-cleaning-v2.webp';
+import smartHomeCctv from '../assets/images/generated/smart-home-cctv-kampala.webp';
+import smartLockInstallation from '../assets/images/generated/smart-lock-installation-kampala.webp';
 
 export const siteImages = {
     // v1 originals

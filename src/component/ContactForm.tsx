@@ -43,6 +43,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
     const [submitting, setSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
+    const [website, setWebsite] = useState("");
 
     useEffect(() => {
         setServiceNeeded(resolveService(initialService));
@@ -57,7 +58,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
         setFieldErrors((prev) => ({ ...prev, [field]: '' }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setError(null);
         const nextErrors: Record<string, string> = {};
@@ -72,18 +73,20 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
         }
         setSubmitting(true);
 
-        // NOTE: no backend is wired up yet. This mailto: is a working
-        // placeholder so the form is functional today — swap for a real
-        // API/CRM submission (e.g. a serverless form endpoint) when ready.
-        const subject = encodeURIComponent(`${requestType}: ${serviceNeeded}`);
-        const body = encodeURIComponent(
-            `Name: ${formValues.name}\nEmail: ${formValues.email}\nPhone: ${formValues.phone}\n` +
-            `Location: ${formValues.location}\nRequest type: ${requestType}\nService needed: ${serviceNeeded}\n\n` +
-            `Message:\n${formValues.message}`
-        );
-        window.location.href = `mailto:info@nyumbadynamics.com?subject=${subject}&body=${body}`;
-        setSubmitting(false);
-        setSubmitted(true);
+        try {
+            const response = await fetch('/api/enquiry', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ ...formValues, requestType, serviceNeeded, website }),
+            });
+            const result = await response.json().catch(() => ({}));
+            if (!response.ok) throw new Error(result.error || 'Your request could not be sent.');
+            setSubmitted(true);
+        } catch (submissionError) {
+            setError(submissionError instanceof Error ? submissionError.message : 'Your request could not be sent.');
+        } finally {
+            setSubmitting(false);
+        }
     };
 
     return (
@@ -113,9 +116,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
                                     <div className="contac-form-main zoom_in" style={{ textAlign: 'center' }}>
                                         <h3 className="rich">Thanks — we've got your request.</h3>
                                         <p className="clane" style={{ marginTop: 10 }}>
-                                            Your email app should have opened with the details filled in. Send it
-                                            across and our team will follow up shortly. You can also reach us
-                                            directly on WhatsApp for a faster response.
+                                            Your request has been delivered to our team. We will follow up during
+                                            office hours. You can also reach us directly on WhatsApp for a faster response.
                                         </p>
                                         <a
                                             href="https://wa.me/256761648679"
@@ -133,57 +135,74 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
                                         <div className="calcult-from-grid contac-form">
 
                                             <div>
-                                                <h3 className="input-label-text">I am a...*</h3>
-                                                <select className="input-main" value={requestType} onChange={(e) => setRequestType(e.target.value)}>{REQUEST_TYPES.map((item) => <option key={item}>{item}</option>)}</select>
+                                                <label className="input-label-text" htmlFor="request-type">I am a...*</label>
+                                                <select id="request-type" name="requestType" className="input-main" value={requestType} onChange={(e) => setRequestType(e.target.value)} required>{REQUEST_TYPES.map((item) => <option key={item}>{item}</option>)}</select>
                                             </div>
 
                                             <div>
-                                                <h3 className="input-label-text">service required*</h3>
-                                                <select className="input-main" value={serviceNeeded} onChange={(e) => setServiceNeeded(e.target.value)}>{serviceOptions.map((item) => <option key={item}>{item}</option>)}</select>
+                                                <label className="input-label-text" htmlFor="service-needed">Service required*</label>
+                                                <select id="service-needed" name="serviceNeeded" className="input-main" value={serviceNeeded} onChange={(e) => setServiceNeeded(e.target.value)} required>{serviceOptions.map((item) => <option key={item}>{item}</option>)}</select>
                                             </div>
 
                                             <div>
-                                                <h3 className="input-label-text">Full Name*</h3>
+                                                <label className="input-label-text" htmlFor="enquiry-name">Full name*</label>
                                                 <input
+                                                    id="enquiry-name"
+                                                    name="name"
                                                     type="text"
                                                     placeholder="Enter your full name"
-                                                    autoComplete="off"
+                                                    autoComplete="name"
+                                                    required
+                                                    aria-invalid={Boolean(fieldErrors.name)}
+                                                    aria-describedby={fieldErrors.name ? "enquiry-name-error" : undefined}
                                                     value={formValues.name}
                                                     onChange={handleChange("name")}
                                                 />
-                                                {fieldErrors.name && <small className="field-error">{fieldErrors.name}</small>}
+                                                {fieldErrors.name && <small id="enquiry-name-error" className="field-error">{fieldErrors.name}</small>}
                                             </div>
 
                                             <div>
-                                                <h3 className="input-label-text">email address*</h3>
+                                                <label className="input-label-text" htmlFor="enquiry-email">Email address*</label>
                                                 <input
+                                                    id="enquiry-email"
+                                                    name="email"
                                                     type="email"
                                                     placeholder="Enter your email"
-                                                    autoComplete="off"
+                                                    autoComplete="email"
+                                                    required
+                                                    aria-invalid={Boolean(fieldErrors.email)}
+                                                    aria-describedby={fieldErrors.email ? "enquiry-email-error" : undefined}
                                                     value={formValues.email}
                                                     onChange={handleChange("email")}
                                                 />
-                                                {fieldErrors.email && <small className="field-error">{fieldErrors.email}</small>}
+                                                {fieldErrors.email && <small id="enquiry-email-error" className="field-error">{fieldErrors.email}</small>}
                                             </div>
 
                                             <div>
-                                                <h3 className="input-label-text">phone number*</h3>
+                                                <label className="input-label-text" htmlFor="enquiry-phone">Phone number*</label>
                                                 <input
-                                                    type="text"
+                                                    id="enquiry-phone"
+                                                    name="phone"
+                                                    type="tel"
                                                     placeholder="Enter phone number"
-                                                    autoComplete="off"
+                                                    autoComplete="tel"
+                                                    required
+                                                    aria-invalid={Boolean(fieldErrors.phone)}
+                                                    aria-describedby={fieldErrors.phone ? "enquiry-phone-error" : undefined}
                                                     value={formValues.phone}
                                                     onChange={handleChange("phone")}
                                                 />
-                                                {fieldErrors.phone && <small className="field-error">{fieldErrors.phone}</small>}
+                                                {fieldErrors.phone && <small id="enquiry-phone-error" className="field-error">{fieldErrors.phone}</small>}
                                             </div>
 
                                             <div>
-                                                <h3 className="input-label-text">location*</h3>
+                                                <label className="input-label-text" htmlFor="enquiry-location">Location</label>
                                                 <input
+                                                    id="enquiry-location"
+                                                    name="location"
                                                     type="text"
                                                     placeholder="e.g. Ntinda, Kampala"
-                                                    autoComplete="off"
+                                                    autoComplete="address-level2"
                                                     value={formValues.location}
                                                     onChange={handleChange("location")}
                                                 />
@@ -191,24 +210,33 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
                                         </div>
 
                                         <div className="your-message-input">
-                                            <h3 className="input-label-text">your message</h3>
+                                            <label className="input-label-text" htmlFor="enquiry-message">Your message*</label>
                                             <textarea
+                                                id="enquiry-message"
+                                                name="message"
                                                 rows={4}
                                                 placeholder="Tell us a bit about the job"
-                                                autoComplete="off"
+                                                required
+                                                aria-invalid={Boolean(fieldErrors.message)}
+                                                aria-describedby={fieldErrors.message ? "enquiry-message-error" : undefined}
                                                 value={formValues.message}
                                                 onChange={handleChange("message")}
                                             />
-                                            {fieldErrors.message && <small className="field-error">{fieldErrors.message}</small>}
+                                            {fieldErrors.message && <small id="enquiry-message-error" className="field-error">{fieldErrors.message}</small>}
+                                        </div>
+
+                                        <div className="website-field" aria-hidden="true">
+                                            <label htmlFor="website">Website</label>
+                                            <input id="website" name="website" tabIndex={-1} autoComplete="off" value={website} onChange={(e) => setWebsite(e.target.value)} />
                                         </div>
 
                                         {error && (
-                                            <p className="fessional" style={{ color: '#c0392b', marginTop: 12 }}>{error}</p>
+                                            <p className="fessional" role="alert" style={{ color: '#c0392b', marginTop: 12 }}>{error}</p>
                                         )}
 
                                         <div className="get-cost-estimate send-main-btn">
                                             <button className="btn-quote" type="submit" disabled={submitting}>
-                                                {submitting ? 'Opening…' : 'Open email request'}
+                                                {submitting ? 'Sending…' : 'Send request'}
                                                 <img src={CrossArrow} alt="cross-arrow" />
                                             </button>
                                         </div>
