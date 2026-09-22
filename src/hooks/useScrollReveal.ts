@@ -43,6 +43,9 @@ const useScrollReveal = () => {
                 }));
                 gsap.utils.toArray<HTMLElement>(REVEAL_SELECTOR).forEach((element) => {
                     if (element.closest('.v2-hero')) return;
+                    // Cards get their own tween below; a second gsap.from on the same
+                    // element would capture the first tween's zeroed opacity as its end value.
+                    if (element.matches(CARD_SELECTOR)) return;
                     gsap.from(element, { y: 20, opacity: 0, duration: .6, ease: 'power3.out',
                         scrollTrigger: { trigger: element, start: 'top 85%', once: true } });
                 });
