@@ -1,23 +1,37 @@
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 export default function SmoothScrollToTop() {
-    const { pathname, search } = useLocation();
+    const { pathname, search, key } = useLocation();
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         const previousRestoration = window.history.scrollRestoration;
         window.history.scrollRestoration = "manual";
 
-        // Reset before the new route paints. A second reset on the next frame
-        // prevents late-loading route content from restoring the old position.
-        window.scrollTo(0, 0);
-        const frame = window.requestAnimationFrame(() => window.scrollTo(0, 0));
+        return () => {
+            window.history.scrollRestoration = previousRestoration;
+        };
+    }, []);
+
+    useLayoutEffect(() => {
+        const resetPosition = () => {
+            window.scrollTo(0, 0);
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        };
+
+        resetPosition();
+        let secondFrame = 0;
+        const frame = window.requestAnimationFrame(() => {
+            resetPosition();
+            secondFrame = window.requestAnimationFrame(resetPosition);
+        });
 
         return () => {
             window.cancelAnimationFrame(frame);
-            window.history.scrollRestoration = previousRestoration;
+            if (secondFrame) window.cancelAnimationFrame(secondFrame);
         };
-    }, [pathname, search]);
+    }, [pathname, search, key]);
 
     return null;
 }

@@ -59,7 +59,7 @@ const Services: React.FC = () => {
                                     <div
                                         className="col-xxl-4 col-xl-4 col-lg-4 col-md-6" key={item.id}
                                     >
-                                        <Link to={`/consultation?service=${encodeURIComponent(item.slug)}#consultation-form`} className="cleaning-card service-request-card">
+                                        <Link to={`/consultation?service=${encodeURIComponent(item.slug)}`} className="cleaning-card service-request-card">
                                             <div className="card-containe">
                                                 <div className="services-svg-main" aria-hidden="true">
                                                     <ServiceLineIcon slug={item.slug} />

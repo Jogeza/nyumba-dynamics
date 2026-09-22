@@ -40,7 +40,7 @@ export const V2ServiceCards: React.FC<V2ServiceCardsProps> = ({
                 <div className="v2-service-cards-grid">
                     {displayedServices.map((service) => {
                         return (
-                            <Link key={service.slug} to={`/consultation?service=${encodeURIComponent(service.slug)}#consultation-form`} className="v2-service-card">
+                            <Link key={service.slug} to={`/consultation?service=${encodeURIComponent(service.slug)}`} className="v2-service-card">
                                 <div className="v2-service-card-body">
                                     <div className="v2-service-card-chip"><ServiceLineIcon slug={service.slug} /></div>
                                     <h3 className="v2-service-card-title">{service.title}</h3>

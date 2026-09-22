@@ -40,6 +40,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
         message: "",
     });
     const [submitted, setSubmitted] = useState(false);
+    const [deliveryMode, setDeliveryMode] = useState<'api' | 'email'>('api');
     const [submitting, setSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
@@ -73,6 +74,18 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
         }
         setSubmitting(true);
 
+        const openEmailFallback = () => {
+            const subject = encodeURIComponent(`${requestType}: ${serviceNeeded}`);
+            const body = encodeURIComponent(
+                `Name: ${formValues.name}\nEmail: ${formValues.email}\nPhone: ${formValues.phone}\n` +
+                `Location: ${formValues.location}\nRequest type: ${requestType}\nService needed: ${serviceNeeded}\n\n` +
+                `Message:\n${formValues.message}`
+            );
+            setDeliveryMode('email');
+            setSubmitted(true);
+            window.location.href = `mailto:info@nyumbadynamics.com?subject=${subject}&body=${body}`;
+        };
+
         try {
             const response = await fetch('/api/enquiry', {
                 method: 'POST',
@@ -80,7 +93,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
                 body: JSON.stringify({ ...formValues, requestType, serviceNeeded, website }),
             });
             const result = await response.json().catch(() => ({}));
+            if (response.status === 503) {
+                openEmailFallback();
+                return;
+            }
             if (!response.ok) throw new Error(result.error || 'Your request could not be sent.');
+            setDeliveryMode('api');
             setSubmitted(true);
         } catch (submissionError) {
             setError(submissionError instanceof Error ? submissionError.message : 'Your request could not be sent.');
@@ -114,10 +132,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
                             <div className="col-xxl-6 col-xl-6 col-lg-7">
                                 {submitted ? (
                                     <div className="contac-form-main zoom_in" style={{ textAlign: 'center' }}>
-                                        <h3 className="rich">Thanks — we've got your request.</h3>
+                                        <h3 className="rich">{deliveryMode === 'api' ? "Thanks — we've got your request." : 'Your request is ready to email.'}</h3>
                                         <p className="clane" style={{ marginTop: 10 }}>
-                                            Your request has been delivered to our team. We will follow up during
-                                            office hours. You can also reach us directly on WhatsApp for a faster response.
+                                            {deliveryMode === 'api'
+                                                ? 'Your request has been delivered to our team. We will follow up during office hours.'
+                                                : 'Your email app should have opened with the request filled in. Please send that email to complete your request.'}
+                                            {' '}You can also reach us directly on WhatsApp for a faster response.
                                         </p>
                                         <a
                                             href="https://wa.me/256761648679"

@@ -65,7 +65,7 @@ export const SearchHero: React.FC = () => {
     }, []);
 
     const handleSelectService = (serviceId: string) => {
-        navigate(`/consultation?service=${encodeURIComponent(serviceId)}#consultation-form`);
+        navigate(`/consultation?service=${encodeURIComponent(serviceId)}`);
     };
 
     const handleSearchSubmit = (e: React.FormEvent) => {
@@ -73,7 +73,7 @@ export const SearchHero: React.FC = () => {
         if (suggestions.length > 0) {
             handleSelectService(suggestions[0].id);
         } else if (query.trim()) {
-            navigate(`/consultation?service=${encodeURIComponent(query.trim())}#consultation-form`);
+            navigate(`/consultation?service=${encodeURIComponent(query.trim())}`);
         }
     };
 
