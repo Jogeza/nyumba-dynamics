@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import BlogSec1 from '../component/BlogSec1.tsx';
+import PageSEO from '../component/PageSEO.tsx';
 
 const OurBlog: React.FC = () => {
     return (
         <>
+            <PageSEO title="Property Care Insights Uganda" description="Practical Nyumba Dynamics guidance for electrical, plumbing, security, cleaning, landscaping and pool care in Kampala." />
             {/* <!-- ====================================== About Hero Section ===================================== --> */}
             <section className="heroSection">
                 <div className="container">

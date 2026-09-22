@@ -18,13 +18,19 @@ jest.mock('gsap', () => ({
       scrollTrigger: { kill: jest.fn() },
     }),
     from: () => ({ kill: jest.fn() }),
+    set: jest.fn(),
+    killTweensOf: jest.fn(),
+    utils: { toArray: (selector) => Array.from(global.document.querySelectorAll(selector)) },
+    matchMedia: () => ({ add: (_query, callback) => callback(), revert: jest.fn() }),
     context: (callback) => {
       callback();
       return { revert: jest.fn() };
     },
   },
 }));
-jest.mock('gsap/ScrollTrigger', () => ({ ScrollTrigger: {} }));
+jest.mock('gsap/ScrollTrigger', () => ({ ScrollTrigger: {
+  create: jest.fn(), refresh: jest.fn(), kill: jest.fn(), getAll: () => [],
+} }));
 
 Object.defineProperty(window, 'scrollTo', {
   configurable: true,

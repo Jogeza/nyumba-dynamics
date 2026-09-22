@@ -1,27 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import blogImg1 from "../assets/images/blog/blog-img1.jpg";
-import blogImg2 from "../assets/images/blog/blog-img2.jpg";
-import blogImg3 from "../assets/images/blog/blog-img3.jpg";
-import blogImg4 from "../assets/images/blog/blog-img4.jpg";
-import blogImg5 from "../assets/images/blog/blog-img5.jpg";
-import blogImg6 from "../assets/images/blog/blog-img6.jpg";
+import { siteImages } from "../data/siteImages.ts";
 import blogData from "../data/blogData.json";
 
 /* ---------------- Image Map ---------------- */
 const blogImages: Record<string, string> = {
-    "blog-img1.jpg": blogImg1,
-    "blog-img2.jpg": blogImg2,
-    "blog-img3.jpg": blogImg3,
-    "blog-img4.jpg": blogImg4,
-    "blog-img5.jpg": blogImg5,
-    "blog-img6.jpg": blogImg6,
+    "electrical": siteImages.electrical,
+    "plumbing": siteImages.plumbing2,
+    "cctv": siteImages.cctv1,
+    "pool": siteImages.pool,
+    "landscaping": siteImages.landscaping,
+    "cleaning": siteImages.cleaning2,
 };
 
 /* ---------------- Types ---------------- */
 interface BlogItem {
     id: number;
-    image: keyof typeof blogImages;
+    image: string;
     date: string;
     title: string;
     desc: string;
@@ -48,8 +43,9 @@ const BlogSec1: React.FC<BlogSec1Props> = ({ limit }) => {
                     <Link to={blog.link} className="blog-box-main zoom_in">
                         <div className="blog-img-main">
                             <img
-                                src={blogImages[blog.image]}
+                                src={blogImages[blog.image] || siteImages.maintenance}
                                 alt={blog.title}
+                                loading="lazy"
                             />
                             <h3 className="blog-date">{blog.date}</h3>
                         </div>

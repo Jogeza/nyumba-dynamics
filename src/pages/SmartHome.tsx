@@ -2,25 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CrossArrow from '../assets/images/svg/cross-arrow.svg';
 import { siteImages } from '../data/siteImages.ts';
-import svg1 from '../assets/images/svg/services-svg1.svg';
-import svg2 from '../assets/images/svg/services-svg2.svg';
-import svg3 from '../assets/images/svg/services-svg3.svg';
-import svg4 from '../assets/images/svg/services-svg4.svg';
-import svg5 from '../assets/images/svg/services-svg5.svg';
-import svg6 from '../assets/images/svg/services-svg6.svg';
-import HowWorkBg from '../assets/images/about/how-to-work-bg.png';
 import PageSEO from '../component/PageSEO.tsx';
+import ServiceLineIcon from '../component/ServiceLineIcon.tsx';
 
-const img1 = siteImages.electrical;
-const img3 = siteImages.locksmith;
+const img1 = siteImages.smartHomeCctv;
+const img3 = siteImages.smartLockInstallation;
 
 const smartHomeFeatures = [
-    { title: 'Smart Locks', desc: 'Keyless entry, remote locking, and guest access codes — no more lost keys.', icon: svg1 },
-    { title: 'CCTV Cameras', desc: 'HD coverage with night vision and footage you can review from your phone.', icon: svg2 },
-    { title: 'Motion Sensors', desc: 'Instant alerts the moment something moves where it shouldn\'t.', icon: svg3 },
-    { title: 'Smart Lighting', desc: 'Schedule, dim, and control every light from one app or your voice.', icon: svg4 },
-    { title: 'Video Doorbells', desc: 'See and speak to visitors at your gate before you ever open it.', icon: svg5 },
-    { title: 'Remote Monitoring', desc: 'Check in on your property from anywhere, any time, in real time.', icon: svg6 },
+    { title: 'Smart Locks', desc: 'Keyless entry and remote access controls.', slug: 'locksmith' },
+    { title: 'CCTV Cameras', desc: 'Camera coverage you can review remotely.', slug: 'cctv-installation' },
+    { title: 'Motion Sensors', desc: 'Alerts when movement is detected.', slug: 'security-systems' },
+    { title: 'Smart Lighting', desc: 'Schedule and control connected lighting.', slug: 'electrical-services' },
+    { title: 'Video Doorbells', desc: 'See and speak to visitors before opening.', slug: 'cctv-installation' },
+    { title: 'Remote Monitoring', desc: 'Check your property while away.', slug: 'smart-homes' },
 ];
 
 const SmartHome: React.FC = () => {
@@ -43,17 +37,14 @@ const SmartHome: React.FC = () => {
                 </div>
             </section>
 
-            <section className="section-two">
+            <section className="section-two smart-home-intro">
                 <div className="container">
                     <div className="row">
                         <div className="col-xxl-6 col-xl-6 col-lg-6">
-                            <p className="cap-text fade_up">smart living, uganda</p>
-                            <h2 className="sec-text fade_up">Your Home, Connected And Under Control</h2>
+                            <p className="cap-text fade_up">smart living in Kampala</p>
+                            <h2 className="sec-text fade_up">Connected controls for your property</h2>
                             <p className="sec-sub-text fade_up">
-                                Nyumba Dynamics designs and installs complete smart home systems — locks, cameras,
-                                lighting, and monitoring configured around simple, compatible controls. Whether you're
-                                securing a family home or a commercial property, we build a system around how you
-                                actually live and work, not a one-size-fits-all package.
+                                We plan, install and connect smart locks, cameras, lighting and monitoring around the way you use your property.
                             </p>
                             <div className="hero-cta-group" style={{ marginTop: 30 }}>
                                 <Link to="/consultation" className="btn-quote">
@@ -63,7 +54,7 @@ const SmartHome: React.FC = () => {
                             </div>
                         </div>
                         <div className="col-xxl-6 col-xl-6 col-lg-6">
-                            <img src={img3} alt="Smart home installation" style={{ width: '100%', borderRadius: 20 }} />
+                            <img className="smart-home-intro-image" src={img3} alt="Technician installing and testing a smart door lock at a Kampala home" />
                         </div>
                     </div>
                 </div>
@@ -73,38 +64,29 @@ const SmartHome: React.FC = () => {
                 <div className="container">
                     <p className="cap-text fade_up">the technology</p>
                     <div className="section-main-text-flex">
-                        <h2 className="sec-text pb-0 fade_up">Everything Your Smart Home Needs</h2>
-                        <p className="sec-sub-text ornare fade_up">Installed, configured, and connected by our team —
-                            with training so you're comfortable running it day one.</p>
+                        <h2 className="sec-text pb-0 fade_up">Smart-home features</h2>
+                        <p className="sec-sub-text ornare fade_up">Choose the controls that fit your property.</p>
                     </div>
-                    <div className="row services-page-row" style={{ marginTop: 30 }}>
+                    <div className="smart-capability-grid">
                         {smartHomeFeatures.map((feature) => (
-                            <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6" key={feature.title}>
-                                <div className="cleaning-card">
-                                    <div className="services-svg-main" style={{ marginTop: 30 }}>
-                                        <img src={feature.icon} alt={feature.title} />
-                                    </div>
-                                    <div className="card-containe">
-                                        <h3 className="services-name">{feature.title}</h3>
-                                        <p className="services-card-sub-text">{feature.desc}</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <article className="smart-capability-card" key={feature.title}>
+                                <div className="smart-capability-icon"><ServiceLineIcon slug={feature.slug} /></div>
+                                <div><h3>{feature.title}</h3><p>{feature.desc}</p></div>
+                                <Link to={`/consultation?service=${feature.slug}`} aria-label={`Request ${feature.title}`}>Request <span aria-hidden="true">→</span></Link>
+                            </article>
                         ))}
                     </div>
                 </div>
             </section>
 
-            <section className="section-six" style={{ position: 'relative' }}>
-                <div className="container position-relative">
-                    <img className="how-to-work-bg" src={HowWorkBg} alt="" />
-                    <p className="cap-text cost-cal position-relative fade_up">Get Started</p>
-                    <h2 className="sec-text mazing position-relative fade_up">Ready For A Smarter Home?</h2>
-                    <p className="sec-sub-text scetur position-relative fade_up">
-                        Tell us about your property and what you'd like automated or secured — we'll recommend
-                        a system and a straightforward quote.
-                    </p>
-                    <div className="hero-cta-group position-relative" style={{ justifyContent: 'center', marginTop: 30 }}>
+            <section className="smart-home-cta" id="smart-home-consultation">
+                <img className="smart-home-cta-image" src={img1} alt="" />
+                <div className="smart-home-cta-shade" />
+                <div className="container smart-home-cta-content">
+                    <p className="cap-text fade_up">Get started</p>
+                    <h2 className="sec-text fade_up">Plan a system that fits your property</h2>
+                    <p className="fade_up">Tell us what you want to automate, monitor or secure. We will recommend a practical setup and explain how it works before installation.</p>
+                    <div className="hero-cta-group" style={{ marginTop: 30 }}>
                         <Link to="/consultation" className="btn-quote">
                             Request a Consultation
                             <img src={CrossArrow} alt="cross-arrow" />

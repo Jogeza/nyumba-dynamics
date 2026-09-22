@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import DropdownArrow from "../assets/images/svg/dropdown-arrow.svg";
 import CrossArrow from "../assets/images/svg/cross-arrow.svg";
 import servicesData from "../data/servicesData.json";
 
@@ -9,7 +8,7 @@ interface ServiceOption {
     slug: string;
 }
 
-const REQUEST_TYPES = ["Customer Service Request", "Become a Partner", "Become a Vendor"];
+const REQUEST_TYPES = ["Service request", "Partner", "Vendor"];
 const SERVICE_OPTIONS: string[] = (servicesData as ServiceOption[]).map((service) => service.title);
 
 const resolveService = (value?: string) => {
@@ -29,9 +28,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
 
     const serviceOptions = SERVICE_OPTIONS;
 
-    const [requestType, setRequestType] = useState<string>(REQUEST_TYPES[0]);
+    const requestedType = new URLSearchParams(location.search).get('type');
+    const [requestType, setRequestType] = useState<string>(requestedType === 'partner' ? 'Partner' : REQUEST_TYPES[0]);
     const [serviceNeeded, setServiceNeeded] = useState<string>(() => resolveService(initialService));
-    const [openDropdown, setOpenDropdown] = useState<"type" | "service" | null>(null);
 
     const [formValues, setFormValues] = useState({
         name: "",
@@ -40,49 +39,38 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
         location: "",
         message: "",
     });
-    const [images, setImages] = useState<File[]>([]);
     const [submitted, setSubmitted] = useState(false);
+    const [submitting, setSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
-
-    const dropdownRef1 = useRef<HTMLDivElement | null>(null);
-    const dropdownRef2 = useRef<HTMLDivElement | null>(null);
-
-    useEffect(() => {
-        const handleClickOutside = (e: MouseEvent) => {
-            if (
-                dropdownRef1.current && !dropdownRef1.current.contains(e.target as Node) &&
-                dropdownRef2.current && !dropdownRef2.current.contains(e.target as Node)
-            ) {
-                setOpenDropdown(null);
-            }
-        };
-
-        document.addEventListener("click", handleClickOutside);
-        return () => document.removeEventListener("click", handleClickOutside);
-    }, []);
+    const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
 
     useEffect(() => {
         setServiceNeeded(resolveService(initialService));
     }, [initialService]);
 
-    const handleChange = (field: keyof typeof formValues) => (e: React.ChangeEvent<HTMLInputElement>) => {
-        setFormValues((prev) => ({ ...prev, [field]: e.target.value }));
-    };
+    useEffect(() => {
+        if (new URLSearchParams(location.search).get('type') === 'partner') setRequestType('Partner');
+    }, [location.search]);
 
-    const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (e.target.files) {
-            setImages(Array.from(e.target.files).slice(0, 5));
-        }
+    const handleChange = (field: keyof typeof formValues) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormValues((prev) => ({ ...prev, [field]: e.target.value }));
+        setFieldErrors((prev) => ({ ...prev, [field]: '' }));
     };
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setError(null);
-
-        if (!formValues.name || !formValues.phone || !formValues.email) {
-            setError("Please fill in your name, phone, and email so we can get back to you.");
+        const nextErrors: Record<string, string> = {};
+        if (!formValues.name.trim()) nextErrors.name = 'Enter your name.';
+        if (!formValues.phone.trim()) nextErrors.phone = 'Enter your phone number.';
+        if (!/^\S+@\S+\.\S+$/.test(formValues.email)) nextErrors.email = 'Enter a valid email address.';
+        if (!formValues.message.trim()) nextErrors.message = 'Tell us briefly about the job.';
+        setFieldErrors(nextErrors);
+        if (Object.keys(nextErrors).length) {
+            setError("Please check the highlighted fields.");
             return;
         }
+        setSubmitting(true);
 
         // NOTE: no backend is wired up yet. This mailto: is a working
         // placeholder so the form is functional today — swap for a real
@@ -91,13 +79,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
         const body = encodeURIComponent(
             `Name: ${formValues.name}\nEmail: ${formValues.email}\nPhone: ${formValues.phone}\n` +
             `Location: ${formValues.location}\nRequest type: ${requestType}\nService needed: ${serviceNeeded}\n\n` +
-            `Message:\n${formValues.message}\n\n` +
-            (images.length > 0
-                ? `(${images.length} image${images.length > 1 ? "s" : ""} attached in the form — please re-attach to this email)`
-                : "")
+            `Message:\n${formValues.message}`
         );
         window.location.href = `mailto:info@nyumbadynamics.com?subject=${subject}&body=${body}`;
-
+        setSubmitting(false);
         setSubmitted(true);
     };
 
@@ -110,27 +95,17 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
 
                             <div className="col-xxl-6 col-xl-6 col-lg-5">
                                 <p className="cap-text fade_up">contact nyumba dynamics</p>
-                                <h2 className="sec-text get-toch fade_up">Get In Touch With Us</h2>
+                                <h2 className="sec-text get-toch fade_up">Contact us</h2>
                                 <p className="sec-sub-text fade_up">
-                                    Request a service, ask for a quotation, or register as a partner or vendor —
-                                    our team responds fast, every day of the week.
+                                    Request a service or ask about working with us. We reply during office hours.
                                 </p>
-
-                                <p className="call-support-text">Call Us</p>
-                                <a href="tel:+256761648679" className="tel-num">+256 7616 48679</a>
-
-                                <div className="adres-main-home fade_up">
-                                    <div>
-                                        <p className="call-support-text">Our Address</p>
-                                        <p className="tel-num addees">Opposite St. Francis Primary School, Ntinda, Kampala, Uganda</p>
-                                    </div>
-                                    <div>
-                                        <p className="call-support-text">Our Mail Address</p>
-                                        <a href="mailto:info@nyumbadynamics.com" className="tel-num addees">
-                                            info@nyumbadynamics.com
-                                        </a>
-                                    </div>
+                                <div className="contact-card-grid fade_up">
+                                    <a className="contact-compact-card" href="tel:+256761648679"><span className="contact-icon-chip">☎</span><span><strong>Call</strong><b>+256 7616 48679</b></span></a>
+                                    <a className="contact-compact-card" href="https://wa.me/256761648679"><span className="contact-icon-chip">◉</span><span><strong>WhatsApp</strong><small>Start a conversation</small></span></a>
+                                    <a className="contact-compact-card" href="mailto:info@nyumbadynamics.com"><span className="contact-icon-chip">✉</span><span><strong>Email</strong><small>info@nyumbadynamics.com</small></span></a>
+                                    <div className="contact-compact-card"><span className="contact-icon-chip">⌖</span><span><strong>Visit</strong><small>Opposite St. Francis Primary School, Ntinda, Kampala</small></span></div>
                                 </div>
+                                <div className="office-hours"><strong>Office hours</strong><p>Mon to Fri: 8:00 to 5:00</p><p>Sat: 9:00 to 2:00</p><p>Sunday: Closed</p></div>
                             </div>
 
                             <div className="col-xxl-6 col-xl-6 col-lg-7">
@@ -159,74 +134,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
 
                                             <div>
                                                 <h3 className="input-label-text">I am a...*</h3>
-                                                <div className="input-main" ref={dropdownRef1}>
-                                                    <div className="wrapper">
-                                                        <div
-                                                            className="formDropDown"
-                                                            onClick={() => setOpenDropdown(openDropdown === "type" ? null : "type")}
-                                                        >
-                                                            {requestType}
-                                                            <img
-                                                                className={`arrow-icon-form ${openDropdown === "type" ? "up" : ""}`}
-                                                                src={DropdownArrow}
-                                                                alt="arrow"
-                                                            />
-                                                        </div>
-                                                        {openDropdown === "type" && (
-                                                            <div className="position-relative">
-                                                                <ul className="formDropDown-ul-list">
-                                                                    {REQUEST_TYPES.map((item) => (
-                                                                        <li
-                                                                            key={item}
-                                                                            onClick={() => {
-                                                                                setRequestType(item);
-                                                                                setOpenDropdown(null);
-                                                                            }}
-                                                                        >
-                                                                            <span>{item}</span>
-                                                                        </li>
-                                                                    ))}
-                                                                </ul>
-                                                            </div>
-                                                        )}
-                                                    </div>
-                                                </div>
+                                                <select className="input-main" value={requestType} onChange={(e) => setRequestType(e.target.value)}>{REQUEST_TYPES.map((item) => <option key={item}>{item}</option>)}</select>
                                             </div>
 
                                             <div>
                                                 <h3 className="input-label-text">service required*</h3>
-                                                <div className="input-main" ref={dropdownRef2}>
-                                                    <div className="wrapper">
-                                                        <div
-                                                            className="formDropDown"
-                                                            onClick={() => setOpenDropdown(openDropdown === "service" ? null : "service")}
-                                                        >
-                                                            {serviceNeeded}
-                                                            <img
-                                                                className={`arrow-icon-form ${openDropdown === "service" ? "up" : ""}`}
-                                                                src={DropdownArrow}
-                                                                alt="arrow"
-                                                            />
-                                                        </div>
-                                                        {openDropdown === "service" && (
-                                                            <div className="position-relative">
-                                                                <ul className="formDropDown-ul-list" style={{ maxHeight: 240, overflowY: 'auto' }}>
-                                                                    {serviceOptions.map((item) => (
-                                                                        <li
-                                                                            key={item}
-                                                                            onClick={() => {
-                                                                                setServiceNeeded(item);
-                                                                                setOpenDropdown(null);
-                                                                            }}
-                                                                        >
-                                                                            <span>{item}</span>
-                                                                        </li>
-                                                                    ))}
-                                                                </ul>
-                                                            </div>
-                                                        )}
-                                                    </div>
-                                                </div>
+                                                <select className="input-main" value={serviceNeeded} onChange={(e) => setServiceNeeded(e.target.value)}>{serviceOptions.map((item) => <option key={item}>{item}</option>)}</select>
                                             </div>
 
                                             <div>
@@ -238,6 +151,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
                                                     value={formValues.name}
                                                     onChange={handleChange("name")}
                                                 />
+                                                {fieldErrors.name && <small className="field-error">{fieldErrors.name}</small>}
                                             </div>
 
                                             <div>
@@ -249,6 +163,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
                                                     value={formValues.email}
                                                     onChange={handleChange("email")}
                                                 />
+                                                {fieldErrors.email && <small className="field-error">{fieldErrors.email}</small>}
                                             </div>
 
                                             <div>
@@ -260,6 +175,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
                                                     value={formValues.phone}
                                                     onChange={handleChange("phone")}
                                                 />
+                                                {fieldErrors.phone && <small className="field-error">{fieldErrors.phone}</small>}
                                             </div>
 
                                             <div>
@@ -276,28 +192,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
 
                                         <div className="your-message-input">
                                             <h3 className="input-label-text">your message</h3>
-                                            <input
-                                                type="text"
+                                            <textarea
+                                                rows={4}
                                                 placeholder="Tell us a bit about the job"
                                                 autoComplete="off"
                                                 value={formValues.message}
                                                 onChange={handleChange("message")}
                                             />
-                                        </div>
-
-                                        <div className="your-message-input">
-                                            <h3 className="input-label-text">upload project images (optional)</h3>
-                                            <input
-                                                type="file"
-                                                accept="image/*"
-                                                multiple
-                                                onChange={handleImageChange}
-                                            />
-                                            {images.length > 0 && (
-                                                <p className="fessional" style={{ marginTop: 8 }}>
-                                                    {images.length} image{images.length > 1 ? "s" : ""} selected
-                                                </p>
-                                            )}
+                                            {fieldErrors.message && <small className="field-error">{fieldErrors.message}</small>}
                                         </div>
 
                                         {error && (
@@ -305,8 +207,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialService }) => {
                                         )}
 
                                         <div className="get-cost-estimate send-main-btn">
-                                            <button className="btn-quote" type="submit">
-                                                Send Request
+                                            <button className="btn-quote" type="submit" disabled={submitting}>
+                                                {submitting ? 'Opening…' : 'Open email request'}
                                                 <img src={CrossArrow} alt="cross-arrow" />
                                             </button>
                                         </div>

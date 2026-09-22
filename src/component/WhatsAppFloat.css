@@ -16,15 +16,44 @@
   z-index: 9999;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   transition: transform 0.3s ease;
+  isolation: isolate;
+}
+
+.whatsapp-float::before,
+.whatsapp-float::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(37, 211, 102, .45);
+  border-radius: inherit;
+  z-index: -1;
+  animation: whatsapp-ripple 2.4s ease-out infinite;
+}
+
+.whatsapp-float::after { animation-delay: 1.2s; }
+
+@keyframes whatsapp-ripple {
+  from { transform: scale(1); opacity: .45; }
+  to { transform: scale(1.7); opacity: 0; }
 }
 
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
 
-/* The fixed bottom nav already exposes a WhatsApp tab below 768px; the float would cover it. */
 @media (max-width: 768px) {
   .whatsapp-float {
-    display: none;
+    bottom: calc(64px + 16px + env(safe-area-inset-bottom, 0px));
+    right: 16px;
+    width: 54px;
+    height: 54px;
+    z-index: 1001;
   }
+
+  .mobile-bottom-nav-whatsapp { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float::before,
+  .whatsapp-float::after { animation: none; }
 }

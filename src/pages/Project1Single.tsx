@@ -9,6 +9,7 @@ import TwitterSvg from '../assets/images/svg/twitter.svg';
 import InstaSvg from '../assets/images/svg/insta.svg';
 import WhatsappSvg from '../assets/images/svg/whatsapp.svg';
 import CrossArrow from '../assets/images/svg/cross-arrow.svg';
+import PageSEO from '../component/PageSEO.tsx';
 
 const Project1Single: React.FC = () => {
 
@@ -26,6 +27,7 @@ const Project1Single: React.FC = () => {
 
     return (
         <>
+            <PageSEO title={`${project.title} | Service Showcase`} description={project.description} />
             {/* <!-- ====================================== Project Hero Section ===================================== --> */}
             <section className="heroSection">
                 <div className="container">
@@ -45,10 +47,7 @@ const Project1Single: React.FC = () => {
                             <img className="layers-img1 zoom_in" src={projectImages[project.image]} alt={project.title} />
                             <p className="cap-text fade_up" style={{ marginTop: 30 }}>{project.category}</p>
                             <p className="fusce pb-2">{project.description}</p>
-                            <p className="fusce mt-0">
-                                This image illustrates our {project.category.toLowerCase()} capabilities and the
-                                practical, site-focused approach our technicians bring to property service work.
-                            </p>
+                            <p className="fusce mt-0">For this type of work, we confirm the scope, access and materials before scheduling. The assigned professional checks the completed work with you before handover.</p>
 
                             <div className="diamond-nextbtn-head">
                                 <div className="diamond-next-btn">

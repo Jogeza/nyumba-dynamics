@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useLayoutEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import servicesData from '../data/servicesData.json';
 import { siteImages } from '../data/siteImages.ts';
@@ -23,15 +23,15 @@ export const SearchHero: React.FC = () => {
     const wrapperRef = useRef<HTMLDivElement>(null);
     const heroRef = useRef<HTMLElement>(null);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const context = gsap.context(() => {
-            gsap.from('.v2-hero-tagline, .v2-hero-heading, .v2-hero-search-wrap, .v2-hero-chips', {
-                opacity: 0,
-                y: 24,
-                duration: 0.7,
-                stagger: 0.1,
-                ease: 'power2.out',
+            const media = gsap.matchMedia();
+            media.add('(prefers-reduced-motion: no-preference)', () => {
+                gsap.from('.v2-hero-tagline, .v2-hero-heading, .v2-hero-search-wrap, .v2-hero-chips', {
+                    opacity: 0, y: 20, duration: 0.6, stagger: 0.1, ease: 'power3.out',
+                });
             });
+            return () => media.revert();
         }, heroRef);
 
         return () => context.revert();
@@ -88,7 +88,7 @@ export const SearchHero: React.FC = () => {
             <div className="v2-hero-overlay" />
             <div className="container">
                 <div className="v2-hero-inner">
-                    <p className="v2-hero-tagline">Kampala Property & Facility Engineering</p>
+                    <p className="v2-hero-tagline">Hire the right pros.</p>
                     <h1 className="v2-hero-heading">What do you need done on your property?</h1>
 
                     <div className="v2-hero-search-wrap" ref={wrapperRef}>
@@ -110,7 +110,7 @@ export const SearchHero: React.FC = () => {
                             <input
                                 type="text"
                                 className="v2-search-input"
-                                placeholder="Try 'electrical repair', 'smart home', 'preventive maintenance'..."
+                                placeholder="Try electrical, plumbing or smart home..."
                                 value={query}
                                 onChange={(e) => setQuery(e.target.value)}
                                 aria-label="Search property engineering and maintenance services"

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import servicesData from '../data/servicesData.json';
-import { serviceImageMap, serviceSvgMap, ServiceItem } from '../component/ServicesFeatured.tsx';
+import { serviceImageMap, ServiceItem } from '../component/ServicesFeatured.tsx';
 import CrossArrow from '../assets/images/svg/cross-arrow.svg';
-import CheckTransparent from '../assets/images/svg/check-transparent.svg';
 import WhatsappSvg from '../assets/images/svg/whatsapp.svg';
 import PageSEO from '../component/PageSEO.tsx';
 import { serviceImages, serviceAlt } from '../data/siteImages.ts';
+import ServiceLineIcon from '../component/ServiceLineIcon.tsx';
 
 const ServiceDetail: React.FC = () => {
 
@@ -55,35 +55,34 @@ const ServiceDetail: React.FC = () => {
                             <img className="service-detail-feature" src={serviceImages[service.slug] || serviceImageMap[service.img]} alt={serviceAlt[service.slug] || service.title} width="1280" height="853" />
 
                             <div className="service-detail-icon">
-                                <img src={serviceSvgMap[service.svg]} alt={service.title} />
+                                <ServiceLineIcon slug={service.slug} />
                             </div>
 
                             <p className="cap-text fade_up">what's included</p>
                             <p className="sec-sub-text fade_up" style={{ marginBottom: 30 }}>{service.description}</p>
 
-                            <h3 className="ourServicesPrcoes">Why Choose Nyumba Dynamics</h3>
-                            <div className="about-grid-box-main" style={{ borderTop: 'none', paddingTop: 0 }}>
+                            <h2 className="service-detail-heading">Why choose Nyumba Dynamics</h2>
+                            <div className="service-benefit-grid">
                                 {service.benefits.map((benefit) => (
-                                    <div className="about-box-main" key={benefit}>
-                                        <div className="about-svg-main service-detail-check">
-                                            <img src={CheckTransparent} alt="check" />
-                                        </div>
-                                        <p className="fessional">{benefit}</p>
+                                    <div className="service-benefit-item" key={benefit}>
+                                        <span className="service-benefit-check" aria-hidden="true">✓</span>
+                                        <p>{benefit}</p>
                                     </div>
                                 ))}
                             </div>
 
-                            <h3 className="ourServicesPrcoes">Our Process</h3>
-                            <div className="how-work-step-box" style={{ gridTemplateColumns: 'repeat(4, 1fr)', gap: 20 }}>
-                                {service.process.map((step, index) => (
-                                    <div className="how-work-step-box-sub" key={step}>
-                                        <div className="how-to-work-circle process-step-circle">
-                                            <span className="process-step-number">{index + 1}</span>
-                                        </div>
-                                        <p className="fessional">{step}</p>
-                                    </div>
-                                ))}
+                            <div className="service-process-heading">
+                                <p className="cap-text">How the service works</p>
+                                <h2 className="service-detail-heading">A clear path from assessment to handover.</h2>
                             </div>
+                            <ol className="service-process-grid">
+                                {service.process.map((step, index) => (
+                                    <li key={step}>
+                                        <span>{String(index + 1).padStart(2, '0')}</span>
+                                        <p>{step}</p>
+                                    </li>
+                                ))}
+                            </ol>
 
                             <div className="d-flex flex-wrap" style={{ gap: 16, marginTop: 40 }}>
                                 <Link to="/consultation" className="btn-quote">

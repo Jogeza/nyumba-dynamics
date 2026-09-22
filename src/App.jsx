@@ -13,13 +13,13 @@ import "./assets/css/v2-home.css";
 // Pages
 import HomeSlider from "./pages/HomeSlider.tsx";
 import About from "./pages/About.tsx";
-import Team from "./pages/Team.tsx";
 import Services from "./pages/Services.tsx";
 import ServiceDetail from "./pages/ServiceDetail.tsx";
 import SmartHome from "./pages/SmartHome.tsx";
 import Project1 from "./pages/Project1.tsx";
 import Project1Single from "./pages/Project1Single.tsx";
 import OurBlog from "./pages/OurBlog.tsx";
+import InsightDetail from "./pages/InsightDetail.tsx";
 import Contact from "./pages/Contact.tsx";
 import GetQuote from "./pages/GetQuote.tsx";
 import NotFound from "./pages/NotFound.tsx";
@@ -70,12 +70,6 @@ function AppContent() {
           element={<About />} 
         />
 
-        <Route 
-          path="/team" 
-          element={<Team />} 
-        />
-
-
         {/* Services */}
         <Route 
           path="/services" 
@@ -109,6 +103,10 @@ function AppContent() {
         <Route 
           path="/blog" 
           element={<OurBlog />} 
+        />
+        <Route
+          path="/blog/:slug"
+          element={<InsightDetail />}
         />
 
 

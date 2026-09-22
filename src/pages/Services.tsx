@@ -1,11 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import CrossArrow from '../assets/images/svg/cross-arrow.svg';
 import servicesData from "../data/servicesData.json";
 import categoriesData from "../data/serviceCategories.json";
-import { serviceImageMap, serviceSvgMap, ServiceItem } from '../component/ServicesFeatured.tsx';
+import { ServiceItem } from '../component/ServicesFeatured.tsx';
+import ServiceLineIcon from '../component/ServiceLineIcon.tsx';
 import PageSEO from '../component/PageSEO.tsx';
-import { serviceImages, serviceAlt } from '../data/siteImages.ts';
 
 interface Category {
     slug: string;
@@ -60,30 +59,16 @@ const Services: React.FC = () => {
                                     <div
                                         className="col-xxl-4 col-xl-4 col-lg-4 col-md-6" key={item.id}
                                     >
-                                        <div className="cleaning-card">
-                                            <div className="cleaning-card-img-main">
-                                                <img
-                                                    src={serviceImages[item.slug] || serviceImageMap[item.img]}
-                                                    alt={serviceAlt[item.slug] || item.title}
-                                                    loading="lazy"
-                                                    width="1280"
-                                                    height="853"
-                                                />
-                                            </div>
-                                            <div className="services-svg-main">
-                                                <img
-                                                    src={serviceSvgMap[item.svg]}
-                                                    alt={item.title}
-                                                />
-                                            </div>
+                                        <Link to={`/consultation?service=${encodeURIComponent(item.slug)}#consultation-form`} className="cleaning-card service-request-card">
                                             <div className="card-containe">
+                                                <div className="services-svg-main" aria-hidden="true">
+                                                    <ServiceLineIcon slug={item.slug} />
+                                                </div>
                                                 <h3 className="services-name">{item.title}</h3>
                                                 <p className="services-card-sub-text">{item.desc}</p>
+                                                <span className="service-request-action">Request</span>
                                             </div>
-                                            <Link to={item.link} className="card-learn-more">
-                                                Learn More <img src={CrossArrow} alt="cross-arrow" />
-                                            </Link>
-                                        </div>
+                                        </Link>
                                     </div>
                                 ))}
                             </div>

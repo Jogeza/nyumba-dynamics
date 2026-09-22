@@ -11,12 +11,7 @@ import img5 from "../assets/images/services/slider-img5.jpg";
 import img6 from "../assets/images/services/slider-img6.jpg";
 import { serviceImages, serviceAlt } from '../data/siteImages.ts';
 
-import svg1 from "../assets/images/svg/services-svg1.svg";
-import svg2 from "../assets/images/svg/services-svg2.svg";
-import svg3 from "../assets/images/svg/services-svg3.svg";
-import svg4 from "../assets/images/svg/services-svg4.svg";
-import svg5 from "../assets/images/svg/services-svg5.svg";
-import svg6 from "../assets/images/svg/services-svg6.svg";
+import ServiceLineIcon from './ServiceLineIcon.tsx';
 
 export const serviceImageMap = {
     "slider-img1.jpg": img1,
@@ -27,21 +22,12 @@ export const serviceImageMap = {
     "slider-img6.jpg": img6,
 } as const;
 
-export const serviceSvgMap = {
-    "services-svg1.svg": svg1,
-    "services-svg2.svg": svg2,
-    "services-svg3.svg": svg3,
-    "services-svg4.svg": svg4,
-    "services-svg5.svg": svg5,
-    "services-svg6.svg": svg6,
-} as const;
-
 export interface ServiceItem {
     id: number;
     slug: string;
     category: string;
     img: keyof typeof serviceImageMap;
-    svg: keyof typeof serviceSvgMap;
+    svg: string;
     title: string;
     desc: string;
     description: string;
@@ -93,11 +79,8 @@ function ServicesFeatured() {
                             />
                         </div>
 
-                        <div className="services-svg-main">
-                            <img
-                                src={serviceSvgMap[item.svg]}
-                                alt={item.title}
-                            />
+                        <div className="services-svg-main" aria-hidden="true">
+                            <ServiceLineIcon slug={item.slug} />
                         </div>
 
                         <div className="card-containe">

@@ -29,6 +29,9 @@ import safety1       from '../assets/images/to use/IMG_20260920_083915_512.jpg.j
 import lifestyle1    from '../assets/images/to use/IMG_20260920_083926_907.jpg.jpeg';
 import field1        from '../assets/images/to use/IMG_20260920_083915_457.jpg.jpeg';
 import field2        from '../assets/images/to use/IMG_20260920_083951_523.jpg.jpeg';
+import roofTileCleaning from '../assets/images/services/roof-tile-cleaning-v2.png';
+import smartHomeCctv from '../assets/images/generated/smart-home-cctv-kampala.png';
+import smartLockInstallation from '../assets/images/generated/smart-lock-installation-kampala.png';
 
 export const siteImages = {
     // v1 originals
@@ -37,6 +40,7 @@ export const siteImages = {
     // v2 additions
     construction1, smartHome1, maintenance2, cctv1, cleaning2,
     plumbing2, safety1, lifestyle1, field1, field2,
+    smartHomeCctv, smartLockInstallation,
 } as const;
 
 // Per-service image map (for ServiceDetail and service cards)
@@ -61,7 +65,7 @@ export const serviceImages: Record<string, string> = {
     'pest-control':               garden,
     'interior-design':            plumbing,
     'swimming-pool-maintenance':  pool,
-    'roof-tile-cleaning':         cleaning,
+    'roof-tile-cleaning':         roofTileCleaning,
 };
 
 export const serviceAlt: Record<string, string> = {
@@ -85,5 +89,5 @@ export const serviceAlt: Record<string, string> = {
     'pest-control':               'Nyumba Dynamics technician treating a Kampala garden',
     'interior-design':            'Nyumba Dynamics technician completing a bathroom fitting',
     'swimming-pool-maintenance':  'Nyumba Dynamics technician cleaning a residential swimming pool',
-    'roof-tile-cleaning':         'Nyumba Dynamics cleaner washing an exterior surface',
+    'roof-tile-cleaning':         'Professional technician safely cleaning terracotta roof tiles in Kampala',
 };

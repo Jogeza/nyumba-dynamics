@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import OopsErrorGif from '../assets/images/error/OopsError.gif';
 import CrossArrow from '../assets/images/svg/cross-arrow.svg';
+import PageSEO from '../component/PageSEO.tsx';
 
 const NotFound: React.FC = () => {
     return (
         <>
+            <PageSEO title="Page Not Found" description="The requested Nyumba Dynamics page could not be found." />
             {/* <!-- ====================================== About Hero Section ===================================== --> */}
             <section className="heroSection">
                 <div className="container">
@@ -20,12 +21,9 @@ const NotFound: React.FC = () => {
             <section className="section-eight testimonial-page">
                 <div className="container">
                     <p className="cap-text cost-cal fade_up">404 ERROR</p>
-                    <h2 className="sec-text mazing  fade_up">Oops ! The Page Not Found.</h2>
-                    <p className="sec-sub-text scetur fade_up">We apologize for the inconvenience \u2014 that page
-                        doesn't exist or has moved. Head back home, or get in touch and we'll help you find what
-                        you're after.</p>
+                    <h2 className="sec-text mazing fade_up">We could not find that page.</h2>
+                    <p className="sec-sub-text scetur fade_up">The address may be outdated or the page may have moved. Return home to browse Nyumba Dynamics services.</p>
                     <div className="error-img-btn">
-                        <img className="error-img" src={OopsErrorGif} alt="" />
                         <Link to="/" className="btn-quote">Back To Home
                             <img src={CrossArrow} alt="cross-arrow" />
                         </Link>

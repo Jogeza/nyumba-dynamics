@@ -36,8 +36,8 @@ const Footer = () => {
                             Stay Updated With Nyumba Dynamics
                         </h2>
                         <p className="brand-statement">
-                            Hire The Right Professionals — construction, safety, smart home, and lifestyle
-                            services under one roof, built on trust and craftsmanship.
+                            <strong>Hire the right pros.</strong> Construction, safety, smart-home and lifestyle
+                            services for homes and businesses across Kampala.
                         </p>
                     </div>
 
@@ -210,13 +210,6 @@ const Footer = () => {
                                 <li>
                                     <Link to="/about">
                                         About Us
-                                    </Link>
-                                </li>
-
-
-                                <li>
-                                    <Link to="/team">
-                                        Our Team
                                     </Link>
                                 </li>
 

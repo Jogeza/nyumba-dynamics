@@ -91,7 +91,8 @@ const Project1: React.FC = () => {
                     </div>
                 </div>
 
-                <Swiper {...projectSlider2} key={activeCategory} className="swiper projectSlider2">
+                <div className="project-showcase-frame">
+                <Swiper {...projectSlider2} key={activeCategory} className="swiper projectSlider2 project-showcase-slider">
                     {filteredProjects.map((item: ProjectItem) => (
                         <SwiperSlide key={item.id}>
                             <div className="single-img">
@@ -116,6 +117,7 @@ const Project1: React.FC = () => {
                     <div className="swiper-button-next project-button-next"></div>
                     <div className="swiper-button-prev project-button-prev"></div>
                 </Swiper>
+                </div>
             </section>
         </>
     )

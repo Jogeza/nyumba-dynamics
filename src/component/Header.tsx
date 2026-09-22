@@ -5,7 +5,6 @@ import LogoSvg from "../assets/images/svg/logo.svg";
 import menu2 from "../assets/images/svg/menu2.svg";
 import CloseIcon from "../assets/images/svg/close-icon.svg";
 import DropdownArrow from "../assets/images/svg/dropdown-arrow.svg";
-import headphoneIcon from "../assets/images/svg/headphone-icon.svg";
 import CrossArrow from "../assets/images/svg/cross-arrow.svg";
 
 
@@ -104,12 +103,12 @@ const Header = () => {
                     link:"/about"
                 },
                 {
-                    label:"Our Team",
-                    link:"/team"
-                },
-                {
                     label:"Request a Quote",
                     link:"/consultation"
+                },
+                {
+                    label:"Join Nyumba as a Pro",
+                    link:"/contact?type=partner"
                 }
             ]
         },
@@ -398,6 +397,14 @@ const Header = () => {
 
                             </ul>
 
+                            <Link
+                                to="/contact?type=partner"
+                                className="mobile-join-pro"
+                                onClick={() => setMenuOpen(false)}
+                            >
+                                Join Nyumba as a Pro
+                            </Link>
+
 
                         </div>
 
@@ -410,47 +417,12 @@ const Header = () => {
 
                         <div className="nav-actions">
 
-
-
-
-
-                            <div className="call">
-
-
-                                <div className="headphone-main">
-
-
-                                    <img
-                                        src={headphoneIcon}
-                                        alt="Contact Nyumba Dynamics"
-                                    />
-
-
-                                </div>
-
-
-
-
-                                <div className="need-help-main">
-
-
-                                    <p>
-                                        Talk To An Expert
-                                    </p>
-
-
-                                    <a href="tel:+256761648679">
-
-                                        +256 7616 48679
-
-                                    </a>
-
-
-                                </div>
-
-
-
-                            </div>
+                            <Link
+                                to="/contact?type=partner"
+                                className="join-pro-cta"
+                            >
+                                Join Nyumba as a Pro
+                            </Link>
 
 
 

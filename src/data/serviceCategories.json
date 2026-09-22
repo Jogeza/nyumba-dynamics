@@ -3,7 +3,7 @@
         "slug": "construction-repair",
         "title": "Construction & Repair",
         "icon": "about-svg1.svg",
-        "description": "Electrical, plumbing, masonry, carpentry, welding and painting — the core trades that keep your property standing strong and running right.",
+        "description": "Electrical, plumbing, masonry, carpentry, welding and painting for homes and businesses.",
         "included": ["Electrical", "Plumbing", "Masonry", "Carpentry", "Welding", "Painting"],
         "serviceSlugs": ["electrical-services", "plumbing-services", "masonry-works", "carpentry", "welding", "painting"]
     },
@@ -11,7 +11,7 @@
         "slug": "safety-maintenance",
         "title": "Safety & Maintenance",
         "icon": "about-svg2.svg",
-        "description": "Baby proofing, locksmith services, appliance repair, air conditioning, preventive maintenance and security systems, so nothing catches you off guard.",
+        "description": "Safety checks, repairs and planned maintenance for everyday property needs.",
         "included": ["Baby Proofing", "Locksmith", "Appliance Repair", "Air Conditioning", "Preventive Maintenance", "Security Systems"],
         "serviceSlugs": ["baby-proofing", "locksmith", "appliance-repair", "air-conditioning", "preventive-maintenance", "safety-proofing", "security-systems"]
     },
@@ -19,7 +19,7 @@
         "slug": "smart-home-solutions",
         "title": "Smart Home Solutions",
         "icon": "about-svg3.svg",
-        "description": "CCTV, smart locks, smart lighting, home automation, video doorbells and remote monitoring — modern living, controlled from your phone.",
+        "description": "Connected security, lighting and access controls managed from simple interfaces.",
         "included": ["CCTV", "Smart Locks", "Smart Lighting", "Home Automation", "Video Doorbells", "Remote Monitoring"],
         "serviceSlugs": ["cctv-installation", "smart-homes"]
     },
@@ -27,7 +27,7 @@
         "slug": "lifestyle-enhancements",
         "title": "Lifestyle Enhancements",
         "icon": "about-svg4.svg",
-        "description": "Landscaping, interior design, cleaning and pest control — the finishing touches that make a property feel like home.",
+        "description": "Cleaning, landscaping, interiors and outdoor care for a well-kept property.",
         "included": ["Landscaping", "Interior Design", "Cleaning", "Pest Control"],
         "serviceSlugs": ["landscaping", "interior-design", "cleaning", "pest-control", "swimming-pool-maintenance", "roof-tile-cleaning"]
     }
