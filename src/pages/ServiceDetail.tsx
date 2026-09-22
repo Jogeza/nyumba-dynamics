@@ -6,7 +6,6 @@ import CrossArrow from '../assets/images/svg/cross-arrow.svg';
 import WhatsappSvg from '../assets/images/svg/whatsapp.svg';
 import PageSEO from '../component/PageSEO.tsx';
 import { serviceImages, serviceAlt } from '../data/siteImages.ts';
-import ServiceLineIcon from '../component/ServiceLineIcon.tsx';
 
 const ServiceDetail: React.FC = () => {
 
@@ -53,10 +52,6 @@ const ServiceDetail: React.FC = () => {
                         <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12">
 
                             <img className="service-detail-feature" src={serviceImages[service.slug] || serviceImageMap[service.img]} alt={serviceAlt[service.slug] || service.title} width="1280" height="853" />
-
-                            <div className="service-detail-icon">
-                                <ServiceLineIcon slug={service.slug} />
-                            </div>
 
                             <p className="cap-text fade_up">what's included</p>
                             <p className="sec-sub-text fade_up" style={{ marginBottom: 30 }}>{service.description}</p>

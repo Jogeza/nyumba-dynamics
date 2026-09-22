@@ -3417,7 +3417,6 @@ footer .footer-logo-link img {
   .trust-process-grid { grid-template-columns: 1fr; }
   .about-editorial-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 260px 150px; min-height: 0; }
   .about-editorial-main { grid-column: 1 / 3; grid-row: auto; }
-  .service-detail-feature + .service-detail-icon ~ .how-work-step-box,
   .all-services-row .how-work-step-box { grid-template-columns: 1fr !important; }
 }
 /*-----------------------[ 37.Scroll Reveal Animations CSS ]------------------------*/
@@ -3686,21 +3685,6 @@ section[id], [id].section-two, [id].section-three, [id].section-four,
   .contact-compact-card b { font-size: 20px; }
 }
 /*-----------------------[ 38.Service Detail Page CSS ]------------------------*/
-.service-detail-icon {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: var(--nyumba-black);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-.service-detail-icon img {
-    width: 30px;
-    height: 30px;
-}
-.service-detail-icon svg { width: 28px; height: 28px; color: #fff; }
 .services-svg-main svg { width: 22px; height: 22px; }
 .service-detail-check {
     width: 40px;
@@ -3829,7 +3813,6 @@ section[id], [id].section-two, [id].section-three, [id].section-four,
   .project-showcase-frame { margin: 32px 10px 0; padding: 7px; border-radius: 18px; }
   .project-showcase-slider .home-project-img { min-height: 460px; }
   .service-detail-feature { aspect-ratio: 4 / 3; margin-bottom: 22px; }
-  .service-detail-icon { width: 50px; height: 50px; }
   .service-detail-heading { margin-top: 38px; font-size: 28px; }
   .service-benefit-grid, .service-process-grid, .quote-process-grid { grid-template-columns: 1fr; }
   .service-benefit-item { min-height: 68px; }
