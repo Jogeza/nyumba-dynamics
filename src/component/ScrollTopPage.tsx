@@ -1,15 +1,23 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 export default function SmoothScrollToTop() {
-    const { pathname } = useLocation();
+    const { pathname, search } = useLocation();
 
-    useEffect(() => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    }, [pathname]);
+    useLayoutEffect(() => {
+        const previousRestoration = window.history.scrollRestoration;
+        window.history.scrollRestoration = "manual";
+
+        // Reset before the new route paints. A second reset on the next frame
+        // prevents late-loading route content from restoring the old position.
+        window.scrollTo(0, 0);
+        const frame = window.requestAnimationFrame(() => window.scrollTo(0, 0));
+
+        return () => {
+            window.cancelAnimationFrame(frame);
+            window.history.scrollRestoration = previousRestoration;
+        };
+    }, [pathname, search]);
 
     return null;
 }

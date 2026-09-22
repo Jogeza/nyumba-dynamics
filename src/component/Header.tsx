@@ -29,6 +29,11 @@ const Header = () => {
         return () => window.removeEventListener('scroll', updateHeader);
     }, []);
 
+    useEffect(() => {
+        setMenuOpen(false);
+        setOpenDropdown(null);
+    }, [location.pathname, location.search]);
+
 
     const toggleDropdown = (index:number) => {
         setOpenDropdown(
